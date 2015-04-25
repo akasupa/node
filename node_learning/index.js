@@ -32,10 +32,10 @@ http.createServer((req, res) => {
     if(req.headers['x-destination-url']){
     	url = req.headers['x-destination-url']
     }
-  console.log(`Proxying request to: ${destinationUrl + req.url}`)
+  console.log(`Proxying request to: ${url}`)
     let options = {
       headers: req.headers,
-      url: `http://${destinationUrl}${req.url}`
+      url: url
   }
   options.method = req.method;
   let downstreamResponse = req.pipe(request(options));
