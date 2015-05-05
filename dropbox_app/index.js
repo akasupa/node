@@ -38,26 +38,6 @@ tcpServer.on('connection', function(socket) {
     })
 })
 
-function publishChange(action, type, path, content) {
-	if (!tcpSocket) {
-		console.log('No clients available to sync')
-		return
-	}
-	let actionMessage = {
-		"action": action,
-		"type": type,
-    	"path": path,
-    	"content": content,
-    	"timestamp": Date.now()
-	}
-	tcpSocket.sendMessage(actionMessage, err => {
-		if (err) {
-			console.log(err)
-		}
-	})
-	console.log('Message sent to the client:\n ' + JSON.stringify(actionMessage))
-}
-
 app.listen(PORT, ()=> console.log(`Listening  @ http://127.0.0.1: ${PORT}`))
 
 app.get('*', setFileMeta, sendHeaders, (req, res) => { 
@@ -177,4 +157,24 @@ function sendHeaders(req, res, next) {
 		let contentType = mime.contentType(path.extname(req.filePath))
 		res.setHeader('Content-Type', contentType)
 	}(), next)	
+}
+
+function publishChange(action, type, path, content) {
+	if (!tcpSocket) {
+		console.log('No clients available to sync')
+		return
+	}
+	let actionMessage = {
+		"action": action,
+		"type": type,
+    	"path": path,
+    	"content": content,
+    	"timestamp": Date.now()
+	}
+	tcpSocket.sendMessage(actionMessage, err => {
+		if (err) {
+			console.log(err)
+		}
+	})
+	console.log('Message sent to the client:\n ' + JSON.stringify(actionMessage))
 }
