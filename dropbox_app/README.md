@@ -2,20 +2,14 @@
 
 This is a basic Dropbox clone to sync files across multiple remote folders.
 
-Time spent: 3hrs
+Time spent: 10hrs
 
 ### Features
+* Created Server that listens on 8000 by default.
+* Server has the following http methods implementations : PUT, POST, DELETE, GET and HEAD.
+* The default TCP port for accept client connections is 9000.
+* All changes are that server recieves are in sync on the client side too
+* The client has to be connected to the server to keep in sync
+* --dir can be used to specify the dir which server will use to create/update/delete files on
 
-#### Required
-
-### Features
-
-#### Required
-
-- [x] Client can make GET requests to get file or directory contents
-- [x] Client can make HEAD request to get just the GET headers
-- [x] Client can make PUT requests to create new directories and files with content
-- [x] Client can make POST requests to update the contents of a file
-- [x] Client can make DELETE requests to delete files and folders
-- [ ] Server will serve from `--dir` or cwd as root
-- [ ] Client will sync from server over TCP to cwd or CLI `dir` argument
+### Demo gif attached
