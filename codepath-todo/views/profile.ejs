@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <title>Blogger</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body         { padding-top:80px; word-wrap:break-word; }
+    </style>
+
+<script type="text/javascript">
+    function deletePost(id) {
+
+    }
+
+</script>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-user"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/post" class="btn btn-default btn-sm">Create New Post</a>
+    </div>
+
+    <% if (typeof message !== 'undefined' && message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <div class="row">
+
+        <div class="well">
+            <h3><span class="fa fa-laptop"></span> Local</h3>
+
+            <p>
+                <strong>id</strong>: <%= user.id %><br>
+                <strong>username</strong>: <%= user.username %><br>
+                <strong>email</strong>: <%= user.email %><br>
+                <strong>password</strong>: <%= user.password %><br>
+                <strong>Blog Title</strong>: <%= user.blogTitle %> <br>
+                <strong>Blog Description</strong>: <%= user.blogDescription %>
+            </p>
+                
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="well">
+            <h3><span class="glyphicon glyphicon-th-list"></span> Posts</h3>
+            <% if (posts !== 'undefined' && posts.length > 0) { %>
+               <table class="table">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Create Date</th>
+                    <th>Update Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                     <% for(var i=0; i<posts.length; i++) {%>
+                     <tr>
+                        <td>
+                            <a href="/blog/<%= posts[i].id %>"><%= posts[i].title %></a>
+                        </td>
+                        <td>
+                             <%= posts[i].createDate %> 
+                        </td>
+                        <td>
+                            <%= posts[i].updateDate %> 
+                        </td>
+                        <td>
+                            <div class="col-xs-1">
+                                <a href="/post/<%= posts[i].id %>"><span class="glyphicon glyphicon-edit"></span></a>
+                            </div>
+                            <div class="col-xs-1">
+                                <form action="/delete/<%= posts[i].id %>" method="post" id="myFormName">
+                                     <a href="#"  onclick="document.forms['myFormName'].submit(); return false;"><span class="glyphicon glyphicon-remove"></span></a>
+                               </form>
+                            </div>  
+                            <div>
+                                 <span style="padding-left:10px;padding-right:2px; color:#428bca"><%= posts[i].comments.length%></span><span class="glyphicon glyphicon-hand-left" style="margin:0px;color:#428bca"></span>
+                            </div>       
+                        </td>
+                       </tr> 
+                    <% } %> 
+                     
+                     </tbody> 
+                </table>
+                Latest comment: 
+                <% if(latestComment !== null) {%>
+                <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                        <%= latestComment.username %></a>
+                    </td>
+                    <td>
+                        <%= latestComment.comment %>.substring(0, 140);
+                    </td>
+                    <td>
+                         <a href="/post/<%= latestComment.postId %>">Open post</a>
+                    </td>
+                    <td>
+                        <%= latestComment.updateDate %> 
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+                <% } %> 
+            <% } %>   
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

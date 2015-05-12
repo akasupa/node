@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<title>Blogger</title>
+<link rel="stylesheet"
+  href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+  href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<style>
+.img-thumb {
+  margin-top: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.comment {
+  border-bottom: 1px dotted #d8d8d8;
+}
+
+.comment-field {
+  padding-top: 10px;
+}
+
+.bck-to-profile {
+  display: inline-block;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1>
+        <span class="fa fa-sign-in"></span>Blog
+      </h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a> <a
+        href="/post" class="btn btn-default btn-sm">Create New Post</a> <a
+        href="/profile" class="btn btn-default btn-sm">Back to profile</a>
+    </div>
+
+
+    <div class="row" data-id="<%= post.id%>">
+      <div class="col-xs-2">
+        <img src="<%= image%>" style="height: 100px; width: 200px;" />
+      </div>
+      <div class="col-xs-10">
+        <h3><%=post.title%></h3>
+        <h6>
+          <i> Last Modified: <%= post.updateDate%> </i>
+        </h6>
+        <p><%=post.content%></p>
+      </div>
+      <div class="col-xs-12">
+        <h4>Comments</h4>
+        <% for(var i=0; i
+        <post.comments.length; i++) {%>
+        <div class="comment">
+          <h5><%= post.comments[i].username%></h5>
+          <h6><%= post.comments[i].updateDate%></h6>
+          <p><%= post.comments[i].comment%></p>
+        </div>
+        <% } %> 
+      </div>
+      <div class="col-xs-12 comment-field">
+        <form action="/comment/<%= post.id %>" method="post">
+          <div class="row">
+            <div class="col-xs-9">
+              <textarea class="form-control" placeholder="Comment.."
+                name="commentElem"></textarea>
+                <% if(user) {%> 
+                  <button type="submit" style="margin-top : 20px" class="btn pull-right btn-primary btn-sm"
+                  data-post-id="<%= post.id %>">Post</button>
+                  <% } else {%>
+                   <a href="/" style="margin-top : 20px" class="btn pull-right btn-primary btn-sm"
+                  data-post-id="<%= post.id %>">Login</a>
+                 <% } %> 
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+</body>
+</html>
