@@ -16,3 +16,5 @@ Time spent: 12hrs
 * Profile page - Shows all posts and latest comment
 
 # Demo gif added
+
+![alt tag](https://github.com/akasupa/node/blob/master/codepath-todo/blogger.gif)
