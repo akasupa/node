@@ -21,6 +21,7 @@ Time spent: `18hrs`
 
 ### Walkthrough
 
+![alt tag](https://github.com/akasupa/node/blob/master/nodejs-socialfeed-demo/social-feed.gif)
 
 
 
