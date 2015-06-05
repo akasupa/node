@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+
+<script type="text/javascript">
+    function createGroup(){
+        $('#createGroupModal').modal('show');
+    }
+
+    function closeCreateGroupModal(){
+        $('#createGroupModal').modal('hide');
+    }
+
+    function editGroup(groupId, name, memberList){
+        $('#editGroupId').val(groupId);
+        $('#editGroupName').val(name);
+        $('#editMemberList').val(memberList);
+        $('#editGroupModal').modal('show');
+    }
+
+    function closeEditGroupModal(){
+        $('#editGroupModal').modal('hide');
+    }
+
+    function validate(){
+       if( $('#groupName').val() != '' ) {
+         $('#createGroupModalBannerMessage').html('');
+         $('#createGroupModalBannerDiv').hide();
+         $( "#createGroupForm" ).submit();
+       }
+       else {
+        $('#createGroupModalBannerMessage').html('Please enter value for name field');
+        $('#createGroupModalBannerDiv').show();
+       }
+    }
+
+    function validateEdit(){
+       if( $('#editGroupName').val() != '' ) {
+         var groupId = $('#editGroupId').val();
+         $('#editGroupModalBannerMessage').html('');
+         $('#editGroupModalBannerDiv').hide();
+          document.forms['editGroupForm'].submit();
+       }
+       else {
+        $('#editGroupModalBannerMessage').html('Please enter value for name field');
+        $('#editGroupModalBannerDiv').show();
+       }
+    }
+
+    function unsubscribe(groupId) {
+        document.forms['unsubscribeForm'+groupId].submit();
+    }
+
+    function removeGroup(groupId){
+        document.forms['removeGroupForm'+groupId].submit(); return false;
+    }
+
+</script>
+<body>
+<div class="container">
+<header>
+    <% include ../partials/header %>
+</header>
+
+<div class="panel panel-default" style="border-color: #B5BABB; margin-bottom: 0px">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-book">
+        </span>
+        Groups
+    </div>
+    <div class="panel-body" style="margin: 20px;">
+
+<!-- create group popup -->
+
+    <div id="createGroupModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-vertical-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="closeCreateGroupModal()"
+                        aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Create Group</h4>
+                </div>
+                <div id="createGroupModalBannerDiv" class="alert alert-warning" style="width:100%;display: none">
+                    <span class="glyphicon glyphicon-warning-sign notification-img-no-float"></span>
+                    <span id="createGroupModalBannerMessage" style="color:red">Message goes Here...</span>
+                </div>     
+                 <form action="/createGroup" method="post" id="createGroupForm">     
+                    <div class="modal-body">
+                        
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="groupName" id="groupName" placeholder="Group Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="memberList" id="memberList" placeholder="Semicolon seperated member emailIds" required>
+                            </div>      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default text-no-shadow"
+                            onclick="closeCreateGroupModal();">
+                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary text-no-shadow"
+                             id="createGroupBtn" onclick="validate()">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- edit group popup -->
+
+    <div id="editGroupModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-vertical-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="closeEditGroupModal()"
+                        aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Create Group</h4>
+                </div>
+                <div id="editGroupModalBannerDiv" class="alert alert-warning" style="width:100%;display: none">
+                    <span class="glyphicon glyphicon-warning-sign notification-img-no-float"></span>
+                    <span id="editGroupModalBannerMessage" style="color:red">Message goes Here...</span>
+                </div>     
+                 <form action="/editGroup" method="post" id="editGroupForm">     
+                    <div class="modal-body">
+                            <input type="hidden" id="editGroupId" name="editGroupId"/>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="groupName" id="editGroupName" placeholder="Group Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="memberList" id="editMemberList" placeholder="Semicolon seperated member emailIds" required>
+                            </div>      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default text-no-shadow"
+                            onclick="closeEditGroupModal();">
+                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary text-no-shadow"
+                             id="EditGroupBtn" onclick="validateEdit()">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <% if (typeof message !== 'undefined' && message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+
+    <div class="panel-group" id="accordion">
+    
+    <% for(var i = 0; i < groups.length; i++) { %>
+    <div class="panel panel-warning">
+
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <span data-toggle="collapse" data-parent="#accordion"><%= groups[i].name%></span>
+        <span style="float:right">
+            <%if(groups[i].enableRemove) {%>
+                 <span style="float: left;margin-right: 10px;">
+                     <form action="/deleteGroup" method="post" id="removeGroupForm<%= groups[i]._id %>">
+                         <input type="hidden" id="removeGroupId" name="removeGroupId" value="<%= groups[i]._id %>"/>
+                         <a href="#"  onclick="removeGroup('<%= groups[i]._id %>')"><span class="glyphicon glyphicon-remove"></span></a>
+                    </form>
+                </span>
+            <%}%>
+            <%if(groups[i].enableEdit) {%>
+                <span style="float: left;margin-right: 10px;">
+                    <a href="#"  onclick="editGroup('<%= groups[i]._id %>', '<%=groups[i].name%>', '<%=groups[i].emailList%>' )"><span class="glyphicon glyphicon-edit"></span></a>
+                </span>
+            <%}%>
+            <%if(groups[i].enableUnsubscribe) {%>
+                 <span style="float: left;margin-right: 10px;">
+                     <form action="/unsubscribe" method="post" id="unsubscribeForm<%= groups[i]._id %>">
+                         <input type="hidden" id="unsubscribeGroupId" name="unsubscribeGroupId" value="<%= groups[i]._id %>"/>
+                         <a href="#"  onclick="unsubscribe('<%= groups[i]._id %>')"><img src="images/unsubscribe.png" style="width: 20px;height: 20px;padding-bottom: 3px;"></img></a>
+                    </form>
+                </span>
+            <%}%>
+        </span>
+       </h4>
+    </div>
+    </div>
+
+     <% } %>
+    </div>
+    <% if (!groups || groups.length == 0) { %>
+        <div>No groups yet</div>
+    <% } %>
+
+    <button class="btn btn-primary btn-sm" style="margin-top:20px" onclick="createGroup()">Create Group</button>
+    </div>
+</div>
+</div>
+</body>
+</html>

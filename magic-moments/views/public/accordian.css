@@ -1,0 +1,278 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: lightgray;
+}
+
+.acc-container {
+    width: 100%;
+    margin: 20px auto 0 auto;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+
+}
+
+.acc-btn-dup {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px 20px;
+    background: slategray linear-gradient(
+            #526d98, #718798
+    );
+    border-bottom: 1px solid #3B5998;
+    border-radius: 5px;
+}
+
+.acc-btn {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.acc-content {
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    background: darkgray;
+}
+
+.acc-content-margin {
+    margin: -8px auto 0;
+}
+
+.acc-content-inner {
+    overflow: scroll;
+    padding: 30px;
+}
+
+.open {
+    height: auto;
+}
+
+h1 {
+    font: 700 20px/26px 'Lato', sans-serif;
+    color: #ffffff;
+}
+
+p {
+    font: 400 16px/24px 'Lato', sans-serif;
+    color: #798795;
+}
+
+.selected {
+    color: #1ABC9C;
+}
+
+/*
+*/
+@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli);
+#mainform {
+    width: 960px;
+    margin: 20px auto;
+    padding-top: 20px;
+    font-family: 'Fauna One', serif;
+    display: block;
+}
+
+h2 {
+    margin-left: 65px;
+    text-shadow: 1px 0px 3px gray;
+}
+
+h3 {
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px 0px 3px gray;
+}
+
+#onclick {
+    padding: 3px;
+    color: green;
+    cursor: pointer;
+    padding: 5px 5px 5px 15px;
+    width: 70px;
+    color: white;
+    background-color: #123456;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 3px;
+}
+
+b {
+    font-size: 18px;
+    text-shadow: 1px 0px 3px gray;
+}
+
+#popup {
+    padding-top: 80px;
+}
+
+.form {
+    border-radius: 2px;
+    padding: 20px 30px;
+    box-shadow: 0 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 350px;
+    margin: 20px 250px 0 35px;
+    float: left;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+input[type=button] {
+    background-color: #123456;
+    border: 1px solid white;
+    font-family: 'Fauna One', serif;
+    font-Weight: bold;
+    font-size: 18px;
+    color: white;
+    width: 49%;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 5px;
+    border-radius: 3px;
+    padding: 5px;
+    resize: none;
+}
+
+#contactdiv {
+    opacity: 0.92;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+}
+
+#logindiv {
+    opacity: 0.92;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+}
+
+#login, #contact {
+    width: 350px;
+    margin: 0px;
+    background-color: white;
+    font-family: 'Fauna One', serif;
+    position: relative;
+    border: 5px solid dimgray;
+}
+
+.img {
+    float: right;
+    margin-top: -35px;
+    margin-right: -37px;
+}
+
+#contact {
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -255px;
+}
+
+#login {
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -158px;
+}
+
+#loginbtn {
+    border: solid 1px #638a00;
+    border-radius: 3px;
+    moz-border-radius: 3px;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 1px 17px;
+    background-color: slategray;
+    font-family: Lato, sans-serif;
+    width: 100px
+}
+
+.tnail {
+    position: relative;
+    display: inline-block;
+}
+
+.tnail-overlay {
+    display: none;
+}
+
+.image:hover .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* All other styling - see example */
+
+img {
+    vertical-align: top; /* Default is baseline, this fixes a common alignment issue */
+}
+
+.font-white {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    align-content: center;
+}
+
+.container-fluid {
+    background: #526d98 linear-gradient(
+            #526d98, #70aaf0
+    );
+}
+
+.imgHover {
+    display: inline;
+    position: relative;
+}
+
+.imgHover .hover {
+    display: none;
+    position: absolute;
+    right: px;
+    top: 0px;
+
+    z-index: 2;
+}
+
+.display_none {
+    display: none
+}

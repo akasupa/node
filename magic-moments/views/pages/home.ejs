@@ -1,0 +1,185 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+<script>
+
+    $(document).ready(function () {
+        var animTime = 400, clickPolice = false;
+        $(document).on('touchstart click', '.acc-btn', function () {
+            if (!clickPolice) {
+                clickPolice = true;
+                var currIndex = $(this).index('.acc-btn'),
+                        targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
+
+                $('.acc-btn h1').removeClass('selected');
+
+                $(this).find('h1').addClass('selected');
+                var groupId = $(this).find("input").val()
+                $.ajax({
+                    url: "group/count/reset?groupId=" + groupId, success: function (result) {
+                        document.getElementById("new_" + groupId).style.display = "none";
+                    }
+                });
+
+                var acc = $(".acc-content");
+                acc.stop().animate({height: 0}, animTime);
+                acc.eq(currIndex).stop().animate({height: targetHeight}, animTime);
+
+                setTimeout(function () {
+                    clickPolice = false;
+                }, animTime);
+            }
+        });
+    });
+
+
+    function closePopup() {
+        $('#addImageDiv').css("display", "none");
+    }
+    function addImage(groupId) {
+        $("#addImageDiv").css("display", "block");
+        $('#groupId').val(groupId);
+        // Set Group Id to the hidden field
+    }
+
+    $(document).ready(function () {
+        $(".fancybox").fancybox();
+
+    });
+
+    $(function () {
+        $(".imgHover").hover(
+                function () {
+                    $(this).children("img").fadeTo(200, 0.85).end().children(".hover").show();
+                },
+                function () {
+                    $(this).children("img").fadeTo(200, 1).end().children(".hover").hide();
+                });
+    });
+    $(function () {
+        setTimeout($('.selectedGrp').click(), 1000)
+        var $messages = $('#error-message-wrapper');
+        $.validate({
+            validateOnBlur: false, // disable validation when input looses focus
+            errorMessagePosition: $messages,
+            scrollToTopOnError: false // Set this property to true if you have a long form
+        });
+
+    })
+</script>
+
+<form method="post" action="/images/add/234243" enctype="multipart/form-data">
+
+</form>
+
+
+<main>
+
+    <div class="acc-container">
+        <div id="addImageDiv">
+            <form class="form" method="post" action="/images/add" id="login" enctype="multipart/form-data">
+                <img onclick="closePopup()" src="close.png" class="img" id="cancel"/>
+
+                <h3>Add Image to Group</h3>
+
+                <hr/>
+                <div name='#error-message-wrapper'></div>
+                <input type="hidden" id="groupId" name="groupId"/>
+                <input data-validation-error-msg="Title is mandatory" data-validation="length"
+                       data-validation-length="1-200" placeholder="Title for image" type="text" name="title"
+                       id="title"/>
+                <input data-validation-error-msg="File upload is mandatory" data-validation="length"
+                       data-validation-length="1-1000" type="file" class="form-control" name="image">
+                <input type="submit" id="loginbtn" name="loginbtn" value="Add"/>
+                <br/>
+            </form>
+
+        </div>
+        <%
+        for(var i = 0; i < groups.length; i++) {
+        %>
+        <% var selectedGroupClass= groups[i].id == groupId ? "selectedGrp" : "" %>
+        <div class="acc-btn-dup" style="margin-bottom: 5px">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <div>
+                            <div class="acc-btn <%=selectedGroupClass%>">
+                                <h1 style="width: 70%" class=""><%= groups[i].name %>
+                                    <div style="float:left" id="new_<%= groups[i].id %>">
+                                        <% if(!groups[i].viewed && groups[i].images && groups[i].images.length > 0){ %>
+                                        <img src="/images/new_label.png" width="20px" height="20px"/>
+                                        <% } %>
+                                    </div>
+                                </h1>
+
+
+                                <input type="hidden" name="grpId" value="<%= groups[i].id %>"/>
+                            </div>
+                    </td>
+                    <td align="right">
+                        <div class="right-div-group"><span onclick="addImage('<%= groups[i].id %>')">
+                                <img width="25px"
+                                     height="25px"
+                                     src="/images/addImage.jpeg"/>
+                       </span></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="acc-content">
+            <div class="acc-content-inner">
+                <% if (groups[i].images && groups[i].images.length > 0) { %>
+                <ul class="rig columns-5 group_<%= groups[i].id %>">
+                    <%
+                    for (var j = 0; j < groups[i].images.length; j++){
+                        var groupImage = groups[i].images[j];
+                    %>
+
+                    <li>
+
+                        <div class="<%= groupImage.canDelete ? 'imgHover' : '' %>">
+                            <a class="fancybox" title="<%= groupImage.title %>" rel="group"
+                               href="/images/get/<%= groupImage.imageId %>.jpg?thumbnail=false"><img
+                                        src="/images/get/<%= groupImage.imageId %>.jpg?thumbnail=true" alt=""/></a>
+                            <% if (groupImage.canDelete) { %>
+                            <div class="hover"><a
+                                        href="image/delete/<%= groupImage.imageId %>?groupId=<%= groups[i].id %>"><img
+                                            width="20px"
+                                            height="25px"
+                                            src="images/delete.png"/>
+                                </a>
+
+
+                            </div>
+                            <% } %>
+                        </div>
+                        <div><span style="font-weight: bold">By: <%= groupImage.createdBy %></span></div>
+                    </li>
+
+                    <% } %>
+                </ul>
+                <% } else { %>
+                <div class="font-white">Start sharing, we are sure that you have lots of moments to share :)</div>
+                <% } %>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>
