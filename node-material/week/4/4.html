@@ -1,0 +1,896 @@
+<html lang="en-US">
+<head>
+<title>Resources: Week 4 - Intro to NodeJS | CodePath Courses</title>
+<link href="../../stylesheets/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/bootstrap-theme.min.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/typeahead-bootstrap.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/highlight.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/style.css" rel="stylesheet"
+	type="text/css">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="noindex, nofollow" name="robots">
+<script type="text/javascript" async=""
+	src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<script src="//js.honeybadger.io/v0.2/honeybadger.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	
+</script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div class="navbar navbar-default" id="main-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">CodePath Courses</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="javascript:void(0);"
+						style="overflow: hidden"><div class="pull-left">
+								<img width="20" class="img-circle img-responsive"
+									src="https://avatars.githubusercontent.com/u/12105296?v=3">
+							</div>&nbsp;
+							<div class="pull-right">
+								<b class="caret"></b>
+							</div></a>
+					<ul class="dropdown-menu">
+							<li><a data-method="delete" href="/sessions">Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title clearfix">
+			<h1>Intro to NodeJS Outline</h1>
+			<p class="alert alert-info">
+				Need help? Email us at <a class="alert-link"
+					href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>&nbsp;or
+				post on the <a target="blank" class="alert-link"
+					href="https://groups.google.com/forum/#!forum/nodejs-walmart-april">google
+					group</a> (<a href="mailto:nodejs-walmart-april@googlegroups.com">email</a>)
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a
+						href="./pages/bootcamp_structure">Overview</a></li>
+					<li ><a
+						href="../../week/1/1.html#!module"><span>Week
+								1 &nbsp;</span></a></li>
+					<li ><a href="../../week/2/2.html#!module"><span>Week
+								2 &nbsp;</span></a></li>
+					<li ><a href="../../week/3/3.html#!module"><span>Week
+								3 &nbsp;</span></a></li>
+					<li class="active"><a href="../../week/4/4.html#!module"><span>Week
+								4 &nbsp;</span></a></li>
+					<li><a href="../../week/5/5.html#!module"><span>Week
+								5 &nbsp;</span></a></li>
+					<li><a href="../../week/6/6.html#!module"><span>Week
+								6 &nbsp;</span></a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#module"
+						aria-expanded="true">Resources</a></li>
+					<li><a data-toggle="tab" href="#assignment">Assignment</a></li>
+					<li><a data-toggle="tab" href="#milestone">Group</a></li>
+					<li><a data-toggle="tab" href="#exercises">Exercises</a></li>
+				</ul>
+				<div class="tab-content section-content">
+					<div class="tab-pane active" id="module">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor"
+										id="heading-week-4-real-time-pubsub-high-concurrency"
+										href="#heading-week-4-real-time-pubsub-high-concurrency"><span
+										class="glyphicon glyphicon-link"></span></a>Week 4 - Real-time,
+									Pubsub, High Concurrency
+								</h2>
+
+								<p>This week, we'll cover some more advanced topics like
+									realtime PubSub and isomorphic modules. In addition, the
+									assignment will involve shared server-side and client-side
+									rendering and routing from the same isomorphic modules.</p>
+
+								<h3>
+									<a class="anchor" id="heading-assignment"
+										href="#heading-assignment"><span
+										class="glyphicon glyphicon-link"></span></a>Assignment
+								</h3>
+
+								<p>This week we'll continue working on the Social Feed
+									aggregator. The purpose of this project is to add realtime
+									support using socket.io and start writing isomorphic modules to
+									enable client-side and server-side rendering from the same
+									codebase.</p>
+
+								<ul>
+									<li><a href="#!assignment">Assignment 4: Social Feed
+											Redux</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-slides" href="#heading-slides"><span
+										class="glyphicon glyphicon-link"></span></a>Slides
+								</h3>
+
+								<ul>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=browserify.md">Browserify</a></li>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=socketio.md">Socket.io</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-lecture-video"
+										href="#heading-lecture-video"><span
+										class="glyphicon glyphicon-link"></span></a>Lecture Video
+								</h3>
+
+								<ul>
+									<li><a href="./Browserify-Lecture.mp4">Browserify</a></li>
+									<li><a href="./Socket.io.Lecture.mp4">Socket.io</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-group-milestone"
+										href="#heading-group-milestone"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone
+								</h3>
+
+								<p>
+									This lab we will be begin implementing the group project. Read
+									more about the&nbsp;<a
+										href="./pages/group_project"
+										alt="course-wide group project"
+										title="course-wide group project">course-wide group
+										project</a>.
+								</p>
+
+								<ul>
+									<li><a href="#!milestone">Group Milestone 4:
+											Wireframes</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="http://browserify.org"><code>browserify</code></a>
+										for isomorphic modules</li>
+									<li><a href="https://github.com/babel/babelify"><code>babelify</code></a>:</li>
+									<li><a
+										href="https://github.com/ForbesLindesay/browserify-middleware"><code>browserify-middleware</code></a>:</li>
+									<li><a href="http://oboejs.com">Oboe.js</a> for streaming
+										JSON parsing</li>
+									<li><a href="https://github.com/rendrjs/rendr">Rendr</a>
+										for server-side rendering</li>
+									<li><a href="http://backbonejs.org">Backbone.js</a> for
+										data models</li>
+									<li><a href="https://dev.twitter.com/rest/public">Twitter</a>
+										and <a
+										href="https://developers.facebook.com/docs/apis-and-sdks/">Facebook</a>
+										REST APIs.</li>
+									<li><a href="https://socket.io"><code>socket.io</code></a></li>
+									<li><a
+										href="https://www.npmjs.com/package/socket.io-stream"><code>socket.io-stream</code></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="assignment">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-4-project-socialfeed-redux"
+										href="#heading-week-4-project-socialfeed-redux"><span
+										class="glyphicon glyphicon-link"></span></a>Week 4 Project:
+									SocialFeed Redux
+								</h2>
+
+								<p>
+									<strong>Due:</strong> Monday, May 25th at 10pm
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-overview"
+										href="#heading-overview"><span
+										class="glyphicon glyphicon-link"></span></a>Overview
+								</h3>
+
+								<p>Build a realtime isomorphic Social Feed aggregator.</p>
+
+								<p>Congratulations on reaching this far. Your final
+									assignment is to update your SocialFeed app to be realtime and
+									isomorphic.</p>
+
+								<!-- <img src='http://i.imgur.com/OUSCQyYl.png' title='Hamburger' width='250' alt='Hamburger' />&nbsp;&nbsp;<img src='http://i.imgur.com/QZe53xhl.png' title='User Profile' width='250' alt='User Profile' />-->
+
+								<h3>
+									<a class="anchor" id="heading-submission-instructions"
+										href="#heading-submission-instructions"><span
+										class="glyphicon glyphicon-link"></span></a>Submission
+									instructions
+								</h3>
+
+								<p>
+									Follow the guide for <a
+										href="./pages/submitting_assignments"
+										alt="Submitting Assignments" title="Submitting Assignments">Submitting
+										Assignments</a>. Remember to include an animated gif and # of
+									hours spent in the README.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-project-requirements"
+										href="#heading-project-requirements"><span
+										class="glyphicon glyphicon-link"></span></a>Project Requirements
+								</h3>
+
+								<ul>
+									<li>Realtime
+
+										<ul>
+											<li>The feed should update in realtime without a page
+												refresh using socket.io</li>
+											<li>Posts should be cached to minimize social network
+												API requests</li>
+											<li>Social network API requests should only load the
+												posts since the lastest cached post</li>
+										</ul>
+									</li>
+									<li>Isomorphic
+
+										<ul>
+											<li>Models should be loaded on the client using
+												browserify and used for client-side validation</li>
+											<li>Clients should support client-side routing and
+												rendering (no HTTP redirect)</li>
+											<li>Server-side routes like <code>/compose</code> should
+												use Rendr to render the UI using isomorphic code
+											</li>
+										</ul>
+									</li>
+									<li><em>Optional:</em> Use <code>oboe</code> with <code>request</code>
+										to streaming parse the incoming data and streaming stringify
+										the data to the client in realtime with <code>socket.io-stream</code>.</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-video-walkthroughs"
+										href="#heading-video-walkthroughs"><span
+										class="glyphicon glyphicon-link"></span></a>Video Walkthroughs
+								</h3>
+
+								<ul>
+									<li><a href="https://vimeo.com/crabdude/socialfeedredux">Social
+											Feed Redux Walkthrough</a>. This walkthrough takes you through
+										setting up the initial project, the authorization flow,
+										session persistance, and the post API.</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="http://browserify.org"><code>browserify</code></a>
+										for isomorphic modules</li>
+									<li><a href="https://github.com/babel/babelify"><code>babelify</code></a>:</li>
+									<li><a
+										href="https://github.com/ForbesLindesay/browserify-middleware"><code>browserify-middleware</code></a>:</li>
+									<li><a href="http://oboejs.com">Oboe.js</a> for streaming
+										JSON parsing</li>
+									<li><a href="https://github.com/rendrjs/rendr">Rendr</a>
+										for server-side rendering</li>
+									<li><a href="http://backbonejs.org">Backbone.js</a> for
+										data models</li>
+									<li><a href="https://dev.twitter.com/rest/public">Twitter</a>
+										and <a
+										href="https://developers.facebook.com/docs/apis-and-sdks/">Facebook</a>
+										REST APIs.</li>
+									<li><a href="https://socket.io"><code>socket.io</code></a></li>
+									<li><a
+										href="https://www.npmjs.com/package/socket.io-stream"><code>socket.io-stream</code></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="milestone">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-group-milestone-project-planning"
+										href="#heading-group-milestone-project-planning"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone -
+									Project Planning
+								</h2>
+
+								<p>
+									<strong>Deliverable:</strong> Before May 28th, submit an issue
+									on Github with user stories and wireframes for your app in your
+									project readme.
+								</p>
+
+								<ol>
+									<li>Create your organization and project
+
+										<ul>
+											<li>Create an <a
+												href="https://github.com/organizations/new">organization
+													on Github</a></li>
+											<li>Add each team member in your group to the
+												organization</li>
+											<li>Generate a new Node.js project for your group</li>
+											<li>Be sure to have Github create a <a
+												href="https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore">node.js
+													.gitignore at the root</a> of your project.
+											</li>
+											<li>Review the <a
+												href="http://guides.codepath.com/nodejs/Collaborating-on-Projects-with-Git">collaboration
+													with git guide</a> before continuing.
+											</li>
+											<li>Push the repository to your new project
+												organization.</li>
+										</ul>
+									</li>
+									<li>Sketch our functional user stories
+
+										<ul>
+											<li>Add a README to your project repo with the following
+												elements:</li>
+											<li>Paragraph that describes your app and what it does</li>
+											<li>Required (core) user stories for your app in a
+												bulleted list</li>
+											<li>Optional (nice to have) user stories listed
+												separately</li>
+											<li><strong>Tip:</strong> You can follow a similar
+												format to stories specified for the weekly projects</li>
+										</ul>
+									</li>
+									<li>Create simple wireframes for your app
+
+										<ul>
+											<li>Choose a <a
+												href="./pages/wireframing_tool"
+												alt="wireframing tool" title="wireframing tool">wireframing
+													tool</a> or use pen and paper to create the screens
+											</li>
+											<li>Draw out each screen with key elements (action bar
+												items, input fields, list item display) and add annotations
+												for non-UI functionality</li>
+											<li>Be sure to identify the flow between screens within
+												your app</li>
+											<li>Your app should have at least 3 distinct major
+												features so think about the various <a
+												href="http://guides.codepath.com/nodejs/Server-Archetypes">server
+													archetypes</a>
+											</li>
+											<li>Add the wireframes to your project repo on Github
+												(either uploading the files or linking to them)</li>
+										</ul>
+									</li>
+									<li>Create an issue on Github (/cc @codepathreview
+										@codepath) once your stories and wireframes are ready for
+										review.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="exercises">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-4-challenge-chat"
+										href="#heading-week-4-challenge-chat"><span
+										class="glyphicon glyphicon-link"></span></a>Week 4 Challenge -
+									Chat
+								</h2>
+
+								<p>Thie exercise is to build a realtime chat server with
+									socket.io and browserify.</p>
+
+								<p>
+									<img src="http://i.imgur.com/kK6mtRZ.png" title="Chat"
+										width="250" alt="Chat">
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-getting-started"
+										href="#heading-getting-started"><span
+										class="glyphicon glyphicon-link"></span></a>Getting Started
+								</h3>
+
+								<p>The checkpoints below should be implemented as pairs. In
+									pair programming, there are two roles: supervisor and driver.</p>
+
+								<p>The supervisor makes the decision on what step to do
+									next. Their job is to describe the step using high level
+									language ("Let's print out something when the user is
+									scrolling"). They also have a browser open in case they need to
+									do any research. The driver is typing and their role is to
+									translate the high level task into code ("Set the scroll view
+									delegate, implement the didScroll method).</p>
+
+								<p>After you finish each checkpoint, switch the supervisor
+									and driver roles. The person on the right will be the first
+									supervisor.</p>
+
+								<h3>
+									<a class="anchor" id="heading-milestones"
+										href="#heading-milestones"><span
+										class="glyphicon glyphicon-link"></span></a>Milestones
+								</h3>
+
+								<ol>
+									<li><p>Setup</p>
+
+										<ul>
+											<li>Clone the <a
+												href="https://github.com/CrabDude/nodejs-chat-starter"><code>chat</code>
+													Starter Project</a></li>
+											<li><p>
+													Install all dependencies declared in
+													<code>package.json</code>
+													:
+												</p> <pre class="highlight shell">
+													<code>
+														<span class="gp">chat$ </span>npm install
+</code>
+												</pre>
+
+												<p>
+													Beyond the usual dependencies (e.g.,
+													<code>express</code>
+													,
+													<code>nodeify</code>
+													, ...), we'll be using:
+												</p>
+
+												<ul>
+													<li><a href="http://browserify.org"><code>browserify</code></a>
+														to write node.js modules on the client</li>
+													<li><a href="http://browserify.org"><code>browserify-middleware</code></a>
+														to browserify our code on the fly</li>
+													<li><a href="https://github.com/babel/babelify"><code>babelify</code></a>
+														to write ESNext on the client</li>
+													<li><a href="https://api.jquery.com/"><code>jquery</code></a>
+														for DOM interactions</li>
+													<li><a href="http://socket.io/"><code>socket.io</code></a>
+														for <a
+														href="https://developer.mozilla.org/en-US/docs/WebSockets">WebSocket</a>
+														powered <a
+														href="http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">PubSub</a>
+														with <a
+														href="https://github.com/Automattic/engine.io#goals">fallbacks</a></li>
+													<li><a
+														href="https://www.npmjs.com/package/socket.io-client/"><code>socket.io-client</code></a>
+														for client-side socket.io support</li>
+												</ul></li>
+											<li><p>Start the server and ensure it runs:</p> <pre
+													class="highlight shell">
+													<code>npm start
+</code>
+												</pre></li>
+										</ul></li>
+									<li><p>Server Bootstrap</p>
+
+										<ul>
+											<li><p>
+													Instead of the usual grab-bag procedural server setup,
+													we'll be using ESNext
+													<code>class</code>
+													support to bring a little structure to our app. Create
+													<code>/app/app.js</code>
+													with a class called
+													<code>App</code>
+													and move the express server code into the
+													<code>constructor()</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>// app/app.js
+class App {
+    constructor(config) {
+        let app = this.app = express()
+        this.port = process.env.PORT || 8000
+        app.use(...)
+        app.use(...)
+        app.use(...)
+        app.use(...)
+    }
+}
+</code>
+												</pre></li>
+											<li><p>
+													Because
+													<code>app.listen(port)</code>
+													is asynchronous, put that in an
+													<code>async</code>
+													function called
+													<code>initialize()</code>
+													instead of the
+													<code>constructor</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>class App {
+    constructor(config) {
+        ...
+    }
+
+    async initialize(port) {
+        await this.app.promise.listen(port)
+        // Return this to allow chaining
+        return this
+    }
+}
+</code>
+												</pre></li>
+											<li><p>
+													Now update
+													<code>/index.js</code>
+													to contain on the minimal code necessary to bootstrap our
+													server:
+												</p> <pre class="highlight plaintext">
+													<code>// index.js
+let App = require('./app/app')
+
+let config = requireDir('./config', {recurse: true})
+let port = process.env.PORT || 8000
+let app = new App(config)
+
+app.initialize(port)
+  .then(()=&gt; console.log(`Listening @ http://127.0.0.1:${port}`))
+  // ALWAYS REMEMBER TO CATCH!
+  .catch(e =&gt; console.log(e.stack ? e.stack : e))
+</code>
+												</pre></li>
+											<li><p>Good job. Verify your server still starts.</p></li>
+										</ul></li>
+									<li><p>HTTP Implementation</p>
+
+										<ul>
+											<li><p>
+													Setup the routes bootstrap in
+													<code>/app/routes.js</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>// app/routes.js
+module.exports = (app) =&gt; {
+    app.get('...', (req, res) =&gt; ...)
+}
+</code>
+												</pre>
+
+												<p>
+													and in
+													<code>/app/app.js</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>// app/app.js
+let routes = require('./routes')
+
+class App {
+    constructor(config) {
+        ...
+        // Just pass app to routes
+        routes(this.app)
+    }
+}
+</code>
+												</pre></li>
+											<li><p>Now add the 3 base routes for our chat
+													server:</p> <pre class="highlight plaintext">
+													<code>// app/routes.js
+
+module.exports = (app) =&gt; {
+    app.get('/', (req, res) =&gt; res.render('index.ejs'))
+    app.post('/', (req, res) =&gt; {
+        // TODO: Save username to req.session.username
+        res.redirect('/chat')
+    })
+    app.get('/chat', (req, res) =&gt; {
+        let username = req.session.username
+        let state = JSON.stringify({username})
+        res.render('chat.ejs', {username, state})
+    })
+}
+</code>
+												</pre></li>
+											<li><p>
+													And implement the
+													<code>"TODO:"</code>
+													in the
+													<code>/app/routes.js</code>
+													code sample above
+												</p></li>
+											<li><p>
+													Now enter a "Username" at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+													and verify "Chatting as @&lt;your username" appears at the
+													top of <a href="http://127.0.0.1:8000/chat">http://127.0.0.1:8000/chat</a>
+													when redirected
+												</p></li>
+										</ul></li>
+									<li><p>Browserify Implementation</p>
+
+										<ul>
+											<li><p>
+													To use node.js APIs on the client, we'll use
+													<code>browserify</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>// app/app.js
+class App {
+    constructor(config) {
+        ...
+        browserify.settings({transform: ['babelify']})
+        app.use('/js/index.js', browserify('./public/js/index.js'))
+    }
+}
+</code>
+												</pre></li>
+											<li><p>
+													Now add a "hello world" to your
+													<code>/public/js/index.js</code>
+													:
+												</p> <pre class="highlight plaintext">
+													<code>// Node-style (commonjs) require in the browser!
+let $ = require('jquery')
+$('body').html('Hello world!')
+</code>
+												</pre></li>
+										</ul></li>
+									<li><p>Socket.io (realtime) Implementation</p>
+
+										<ul>
+											<li><p>You're almost there. Now setup your socket.io
+													server:</p> <pre class="highlight plaintext">
+													<code>// app/app.js
+let Server = require('http').Server
+let io = require('socket.io')
+
+class App {
+    constructor(config) {
+        ...
+        this.server = Server(app)
+        this.io = io(this.server)
+
+        // And add some connection listeners:
+        this.io.on('connection', socket =&gt; {
+            console.log('a user connected')
+            socket.on('disconnect', () =&gt; console.log('user disconnected'))
+       })
+    }
+    initialize(port) {
+        // Replace this.app with this.server
+        await this.server.promise.listen(port)
+        ...
+    }
+}
+</code>
+												</pre></li>
+											<li><p>And connect to it on the client:</p> <pre
+													class="highlight plaintext">
+													<code>// public/js/index.js
+let io = require('socket.io-client')
+let socket = io('http://127.0.0.1:8000')
+
+// ESNext in the browser!!!
+socket.on('connect', ()=&gt;console.log('connected'))
+</code>
+												</pre></li>
+											<li><p>
+													Now we'll use the
+													<code>socket.emit(event, payload)</code>
+													API to send messages:
+												</p> <pre class="highlight plaintext">
+													<code>// public/js/index.js
+let $ = require('jquery')
+let io = require('socket.io-client')
+let socket = io('http://127.0.0.1:8000')
+socket.on('connect', ()=&gt;console.log('connected'))
+
+// Enable the form now that our code has loaded
+$('#send').removeAttr('disabled')
+
+// Emit a starter message and log it when the server echoes back
+socket.on('im', msg =&gt; console.log(msg))
+socket.emit('im', 'hello world!')
+</code>
+												</pre>
+
+												<p>And have the server listen and echo the message back:</p>
+												<pre class="highlight plaintext">
+													<code>// app/app.js
+let Server = require('http').Server
+let io = require('socket.io')
+
+class App {
+    constructor(config) {
+        ...
+        this.io.on('connection', socket =&gt; {
+            ...
+            socket.on('im', msg =&gt; {
+                // im received
+                console.log(msg)
+                // echo im back
+                this.io.emit('im', msg)
+            })
+       })
+    }
+}
+</code>
+												</pre>
+
+												<p>If you open the browser console, you should see your
+													im echoed back to you on refresh.</p></li>
+											<li><p>Use the html form inputs instead for your IM
+													input and ouput:</p> <pre class="highlight plaintext">
+													<code>// public/js/index.js
+...
+let $template = $('#template')
+
+socket.on('im', msg =&gt; {
+    let $li = $template.clone().show()
+    $li.children('span').text(msg)
+    $('#messages').append($li)
+})
+$('form').submit(() =&gt; {
+    socket.emit('im', $('#m').val())
+    $('#m').val('')
+    return false
+})
+</code>
+												</pre></li>
+											<li><p>Verify your chat server is working for
+													multiple users by opening the server in a separate tab or
+													window!</p></li>
+											<li><p>
+													Finally, render the username associated with each
+													<code>im</code>
+													event:
+												</p> <pre class="highlight plaintext">
+													<code>// app/app.js        
+class App {
+    constructor(config) {
+        ...
+        // 1. Save expose your sessions to socket.io:
+        this.sessionMiddleware = session({...})
+        app.use(this.sessionMiddleware)
+        this.io.use((socket, next) =&gt; {
+            this.sessionMiddleware(socket.request, socket.request.res, next)
+        })
+        this.io.on('connection', socket =&gt; {
+            ...
+            // 2. Store the username for each socket:
+            let username = socket.request.session.username
+            socket.on('im', msg =&gt; {
+                // 3. Include the username in the payload
+                this.io.emit('im', {username, msg})
+            })
+       })
+    }
+}
+</code>
+												</pre>
+
+												<p>And update the client im event handler:</p> <pre
+													class="highlight plaintext">
+													<code>// public/js/index.js
+...
+let $template = $('#template')
+
+socket.on('im', ({username, msg}) =&gt; {
+    ...
+    $li.children('i').text(username+': ')
+    ...
+})
+</code>
+												</pre></li>
+										</ul></li>
+									<li><p>
+											<em>Bonus:</em> Add session persistance through a session
+											store
+										</p></li>
+									<li><p>
+											<em>Bonus:</em> Add chatroom persistance through a database
+										</p>
+
+										<ul>
+											<li>Store all incoming messages into your database</li>
+											<li>When rendering <code>/chat</code>, fetch and render
+												all messages from the database
+											</li>
+										</ul></li>
+									<li><p>
+											<em>Bonus:</em> Add support for chatrooms
+										</p></li>
+									<li><p>
+											<em>Bonus:</em> Add support for changing your username on the
+											fly
+										</p></li>
+								</ol>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<h4>
+									<a class="anchor" id="heading-reference-implementation"
+										href="#heading-reference-implementation"><span
+										class="glyphicon glyphicon-link"></span></a>Reference
+									Implementation
+								</h4>
+
+								<ul>
+									<li>You can clone a reference implementation of this
+										exercise <a
+										href="https://github.com/crabdude/nodejs-chat-demo">here</a>.
+									</li>
+								</ul>
+
+								<h4>
+									<a class="anchor" id="heading-packages"
+										href="#heading-packages"><span
+										class="glyphicon glyphicon-link"></span></a>Packages
+								</h4>
+
+								<ul>
+									<li><a href="http://browserify.org"><code>browserify</code></a>
+										for isomorphic modules</li>
+									<li><a href="https://github.com/babel/babelify"><code>babelify</code></a>
+										to use ESNext on the client</li>
+									<li><a
+										href="https://github.com/ForbesLindesay/browserify-middleware"><code>browserify-middleware</code></a></li>
+									<li><a href="http://socket.io/"><code>socket.io</code></a>
+										for <a
+										href="http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">PubSub</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../javascripts/jquery.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery-ujs.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/sugar.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/typeahead.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/pdfobject.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/jquery.fitvids.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/oauth.js" type="text/javascript"></script>
+	<script src="../../javascripts/application.js"
+		type="text/javascript"></script>
+</body>
+</html>

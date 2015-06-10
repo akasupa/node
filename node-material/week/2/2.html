@@ -1,0 +1,1666 @@
+<html lang="en-US">
+<head>
+<title>Resources: Week 2 - Intro to NodeJS | CodePath Courses</title>
+<link href="../../stylesheets/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/bootstrap-theme.min.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/typeahead-bootstrap.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/highlight.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/style.css" rel="stylesheet"
+	type="text/css">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="noindex, nofollow" name="robots">
+<script type="text/javascript" async=""
+	src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<script src="//js.honeybadger.io/v0.2/honeybadger.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	
+</script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div class="navbar navbar-default" id="main-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">CodePath Courses</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="javascript:void(0);"
+						style="overflow: hidden"><div class="pull-left">
+								<img width="20" class="img-circle img-responsive"
+									src="https://avatars.githubusercontent.com/u/12105296?v=3">
+							</div>&nbsp;
+							<div class="pull-right">
+								<b class="caret"></b>
+							</div></a>
+					<ul class="dropdown-menu">
+							<li><a data-method="delete" href="/sessions">Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title clearfix">
+			<h1>Intro to NodeJS Outline</h1>
+			<p class="alert alert-info">
+				Need help? Email us at <a class="alert-link"
+					href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>&nbsp;or
+				post on the <a target="blank" class="alert-link"
+					href="https://groups.google.com/forum/#!forum/nodejs-walmart-april">google
+					group</a> (<a href="mailto:nodejs-walmart-april@googlegroups.com">email</a>)
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a
+						href="./pages/bootcamp_structure">Overview</a></li>
+					<li ><a
+						href="../../week/1/1.html#!module"><span>Week
+								1 &nbsp;</span></a></li>
+					<li class="active"><a href="../../week/2/2.html#!module"><span>Week
+								2 &nbsp;</span></a></li>
+					<li><a href="../../week/3/3.html#!module"><span>Week
+								3 &nbsp;</span></a></li>
+					<li><a href="../../week/4/4.html#!module"><span>Week
+								4 &nbsp;</span></a></li>
+					<li><a href="../../week/5/5.html#!module"><span>Week
+								5 &nbsp;</span></a></li>
+					<li><a href="../../week/6/6.html#!module"><span>Week
+								6 &nbsp;</span></a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#module"
+						aria-expanded="true">Resources</a></li>
+					<li><a data-toggle="tab" href="#assignment">Assignment</a></li>
+					<li><a data-toggle="tab" href="#hints">Project Hints</a></li>
+					<li><a data-toggle="tab" href="#milestone">Group</a></li>
+					<li><a data-toggle="tab" href="#exercises">Exercises</a></li>
+				</ul>
+				<div class="tab-content section-content">
+					<div class="tab-pane active" id="module">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor"
+										id="heading-week-2-rest-authentication-and-orms"
+										href="#heading-week-2-rest-authentication-and-orms"><span
+										class="glyphicon glyphicon-link"></span></a>Week 2 - REST,
+									Authentication and ORMs
+								</h2>
+
+								<p>This week, we'll explore routing, middleware,
+									serialization/deserialization, database access and
+									authentication, specifically for RESTful APIs. We will also
+									recommend some design patterns for implementing model classes.</p>
+
+								<h3>
+									<a class="anchor" id="heading-assignment"
+										href="#heading-assignment"><span
+										class="glyphicon glyphicon-link"></span></a>Assignment
+								</h3>
+
+								<p>Blogger. The purpose of this project is to explore
+									building RESTful APIs that take form submission to perform
+									actions like login, signup, posting and commenting. We will
+									then save that data to the database using an ORM to be
+									retrieved later and rendered out to the client.</p>
+
+								<ul>
+									<li><a href="#!assignment">Assignment 2: Blogger</a> due <strong>Monday,
+											May 11th at 11:59pm</strong></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-group-milestone"
+										href="#heading-group-milestone"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone
+								</h3>
+
+								<p>
+									During the latter half of this lab we will begin the process of
+									group formation. You will have an hour to interview each other
+									and decide who you would prefer to work with. Come prepared
+									with <a href="./pages/group_project"
+										alt="course-wide group project"
+										title="course-wide group project">course-wide group
+										project</a> ideas to share.
+								</p>
+
+								<ul>
+									<li><a href="#!milestone">Group Milestone 2: Group
+											Formation</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-slides" href="#heading-slides"><span
+										class="glyphicon glyphicon-link"></span></a>Slides
+								</h3>
+
+								<ul>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=streams.md">Streams</a></li>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=express.md">Express</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-lecture-video"
+										href="#heading-lecture-video"><span
+										class="glyphicon glyphicon-link"></span></a>Lecture Video
+								</h3>
+
+								<p>
+									<a href="./Node-streams-lecture.mp4">Streams</a> <a
+										href="./Node-Express-Lecture.mp4">Express</a>
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h3>
+
+								<ul>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Express-&amp;-Middleware">Express
+											&amp; Middleware</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Authorization-&amp;-Authentication">Authorization
+											&amp; Authentication</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/Streams">Streams</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/ORMs">ORMs</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="http://npmjs.com/package/express"><code>express</code></a></li>
+									<li><a href="http://npmjs.com/package/passport"><code>passport</code></a></li>
+									<li><a href="http://npmjs.com/package/passport-local"><code>passport-local</code></a></li>
+									<li><a href="http://npmjs.com/package/bcrypt"><code>bcrypt</code></a></li>
+									<li><a href="http://npmjs.com/package/connect-flash"><code>connect-flash</code></a></li>
+									<li><a href="http://npmjs.com/package/mongoose"><code>mongoose</code></a></li>
+									<li><a href="http://npmjs.com/package/express-then"><code>express-then</code></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="assignment">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-2-project-blogger"
+										href="#heading-week-2-project-blogger"><span
+										class="glyphicon glyphicon-link"></span></a>Week 2 Project:
+									Blogger
+								</h2>
+
+								<p>
+									<strong>Due:</strong> Monday, May 11th at 10pm
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-overview"
+										href="#heading-overview"><span
+										class="glyphicon glyphicon-link"></span></a>Overview
+								</h3>
+
+								<p>Build a blogging platform including features like
+									persistent local authentication, account creation, blog posts
+									with unique urls, comments and optionally a rating system.</p>
+
+								<!-- TODO replace gif
+<img src='http://i.imgur.com/4m5iyt5l.png' title='Yelp' width='250' alt='Yelp' />&nbsp;&nbsp;<img src='http://i.imgur.com/rczfg7kl.png' title='Filter view' width='198' alt='Filter view' />
+-->
+
+								<p>
+									<strong>Walkthrough:</strong> Check out the provided&nbsp;<span
+										class="glyphicon glyphicon-film"></span>&nbsp;<a
+										href="./Blogger-Walkthrough.mp4"
+										alt="video walkthrough" title="video walkthrough">video
+										walkthrough</a> for this project to get you started.
+								</p>
+
+								<p>
+									<strong>Questions?</strong> If you have any questions or
+									concerns, please feel free to email us at <a
+										href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-submission-instructions"
+										href="#heading-submission-instructions"><span
+										class="glyphicon glyphicon-link"></span></a>Submission
+									instructions
+								</h3>
+
+								<p>
+									Follow the guide for <a
+										href="./pages/submitting_assignments"
+										alt="Submitting Assignments" title="Submitting Assignments">Submitting
+										Assignments</a>. Remember to include an animated gif and # of
+									hours spent in the README. You can get started by copying this
+									<a
+										href="https://github.com/CrabDude/nodejs-blogger-starter/blob/master/README.md">Blog
+										README template</a> and checking things off as you complete them.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-project-requirements"
+										href="#heading-project-requirements"><span
+										class="glyphicon glyphicon-link"></span></a>Project Requirements
+								</h3>
+
+								<ul>
+									<li><p>Signup</p>
+
+										<ul>
+											<li>On <code>/login</code>, Clicking "Sign Up" should
+												redirect to <code>/signup</code></li>
+											<li><p>
+													On
+													<code>/signup</code>
+													, clicking "Sign Up" should create a new user with the
+													provided details
+												</p>
+
+												<ul>
+													<li>Required fields: email, password, username</li>
+													<li>Optional fields: blog name, blog description</li>
+													<li>(optional) Additional optional fields: vanity url,
+														tags</li>
+													<li>(optional) Offer tag recommendations based on
+														already used tags</li>
+													<li>If the email or username is taken or invalid, show
+														an error message</li>
+													<li>Username restrictions:
+
+														<ul>
+															<li>Case insensitive (for uniqueness), but maintain
+																capitalization for display</li>
+															<li>Alphanumeric</li>
+														</ul>
+													</li>
+													<li><p>Add the following password restrictions:</p>
+
+														<ul>
+															<li>Minimum length: 4</li>
+															<li>At least 1 uppercase and 1 lowercase letter</li>
+															<li>At least 1 number</li>
+															<li>(optional) Disallow the <a
+																href="http://splashdata.com/press/worst-passwords-of-2014.htm">top
+																	25</a> most common passwords
+															</li>
+														</ul>
+
+														<p>
+															Using <a
+																href="http://mongoosejs.com/docs/validation.html">Mongoose</a>:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="nx">UserSchema</span><span class="p">.</span><span
+																	class="nx">path</span><span class="p">(</span><span
+																	class="s1">'password'</span><span class="p">).</span><span
+																	class="nx">validate</span><span class="p">((</span><span
+																	class="nx">password</span><span class="p">)</span> <span
+																	class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// ... Test if password is valid</span>
+    <span class="k">return</span> <span class="nx">isValid</span>
+<span class="p">})</span>
+</code>
+														</pre></li>
+													<li><p>
+															On success, log in user and redirect to
+															<code>/profile</code>
+														</p>
+
+														<p>
+															<em>Note:</em> Store user data in memory until the User
+															Model task is completed.
+														</p></li>
+												</ul></li>
+										</ul></li>
+									<li><p>User Model</p>
+
+										<ul>
+											<li>Store new users in a persistent database (e.g., <a
+												href="https://www.mongodb.com">mongodb</a> with the <a
+												href="http://mongoosejs.com">mongoose</a> ORM)
+											</li>
+											<li>Store the pertinent fields from <code>/signup</code>
+												and any other meta data
+											</li>
+											<li><p>Password:</p>
+
+												<ul>
+													<li>Store as a hash, preferably using <a
+														href="https://www.npmjs.com/package/bcrypt"><code>bcrypt</code></a>
+														or <a
+														href="https://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback"><code>crypto.pbkdf2</code></a></li>
+													<li>(optional) Hash with a <a
+														href="http://barkingiguana.com/2009/08/03/securing-passwords-with-salt-pepper-and-rainbows/">salt</a>.
+													</li>
+												</ul>
+
+												<p>
+													<em>Note:</em> A salt is a string appended to the
+													plain-text password before generating the password hash.
+													Salts should be unique and generated every time a password
+													changes:
+												</p> <pre class="highlight javascript">
+													<code>  <span class="c1">// pseudo-code</span>
+  <span class="c1">// Hash generation</span>
+  <span class="nx">user</span><span class="p">.</span><span class="nx">salt</span> <span
+															class="o">=</span> <span class="nx">generateSalt</span><span
+															class="p">()</span>
+  <span class="nx">user</span><span class="p">.</span><span class="nx">password</span> <span
+															class="o">=</span> <span class="nx">hashingAlgorithm</span><span
+															class="p">(</span><span class="nx">plainTextPassword</span> <span
+															class="o">+</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">salt</span><span
+															class="p">)</span>
+
+  <span class="c1">// Hash comparison</span>
+  <span class="kd">let</span> <span class="nx">hash</span> <span
+															class="o">=</span> <span class="nx">hashingAlgorithm</span><span
+															class="p">(</span><span class="nx">loginPassword</span> <span
+															class="o">+</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">salt</span><span
+															class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span> <span
+															class="o">!==</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">password</span><span
+															class="p">)</span> <span class="k">return</span> <span
+															class="nx">res</span><span class="p">.</span><span
+															class="nx">send</span><span class="p">(</span><span
+															class="mi">402</span><span class="p">,</span> <span
+															class="s1">'Unauthorized.'</span><span class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li>(optional) Hash with a <a
+														href="http://barkingiguana.com/2009/08/03/securing-passwords-with-salt-pepper-and-rainbows/">pepper</a>
+														(global salt)
+													</li>
+												</ul>
+
+												<p>
+													<em>Note:</em> A pepper is a global string appended to the
+													plain-text password before generating the password hash:
+												</p> <pre class="highlight javascript">
+													<code>  <span class="c1">// pseudo-code</span>
+  <span class="c1">// Hard coded (can be passed through configuration)</span>
+  <span class="kr">const</span> <span class="nx">PEPPER</span> <span
+															class="o">=</span> <span class="s1">'azxcv034957025lknvz897sadf325h'</span>
+  <span class="nx">user</span><span class="p">.</span><span class="nx">password</span> <span
+															class="o">=</span> <span class="nx">hashingAlgorithm</span><span
+															class="p">(</span><span class="nx">plainTextPassword</span> <span
+															class="o">+</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">salt</span> <span
+															class="o">+</span> <span class="nx">PEPPER</span><span
+															class="p">)</span>
+
+  <span class="c1">// Hash comparison</span>
+  <span class="kd">let</span> <span class="nx">hash</span> <span
+															class="o">=</span> <span class="nx">hashingAlgorithm</span><span
+															class="p">(</span><span class="nx">loginPassword</span> <span
+															class="o">+</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">salt</span> <span
+															class="o">+</span> <span class="nx">PEPPER</span><span
+															class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span> <span
+															class="o">!==</span> <span class="nx">user</span><span
+															class="p">.</span><span class="nx">password</span><span
+															class="p">)</span> <span class="k">return</span> <span
+															class="nx">res</span><span class="p">.</span><span
+															class="nx">send</span><span class="p">(</span><span
+															class="mi">402</span><span class="p">,</span> <span
+															class="s1">'Unauthorized.'</span><span class="p">)</span>
+</code>
+												</pre></li>
+										</ul></li>
+									<li><p>Login</p>
+
+										<ul>
+											<li>Serve from <code>/login</code></li>
+											<li>Clicking "Log In" should sign in user and redirect
+												to <code>/profile</code>
+
+												<ul>
+													<li>Show an error message if the email, username or
+														password are invalid</li>
+													<li>Persist session across restarts using a store (See
+														<a
+														href="https://github.com/expressjs/session#sessionoptions">compatible
+															express session stores</a>)
+													</li>
+													<li>(optional) Add a "Remember me" checkbox and set a
+														<a
+														href="http://stackoverflow.com/questions/244882/what-is-the-best-way-to-implement-remember-me-for-a-website">persistent
+															Login cookie</a>
+													</li>
+												</ul>
+											</li>
+										</ul></li>
+									<li><p>Toolbar</p>
+
+										<ul>
+											<li>Clicking "Log Out" should log out the user and
+												redirect to <code>/</code>
+											</li>
+										</ul></li>
+									<li><p>
+											Create/Edit Post at
+											<code>/post/&lt;postID&gt;</code>
+										</p>
+
+										<ul>
+											<li>Include the following fields:
+
+												<ul>
+													<li>Title</li>
+													<li>Content text field</li>
+													<li>Images</li>
+													<li>(optional) Use a text editor for the content field
+														(<a href="">List of recommended text editors</a>)
+													</li>
+													<li>(optional) Location</li>
+													<li>(optional) Add tags (give recommendations from DB)</li>
+													<li>(optional) Release date</li>
+													<li>(optional) Vanity url</li>
+												</ul>
+											</li>
+											<li>Clicking "Post" should create the blog post in
+												memory</li>
+											<li>Create a Post Model &amp; persist the pertinent
+												fields in the database</li>
+											<li>Switch to "Edit" mode if an existing post <code>id</code>
+												is provided in the path
+
+												<ul>
+													<li>Replace all occurrences of "create" with "edit"</li>
+													<li>Prefill fields with existing post's data</li>
+													<li>"Post" button should update the post in the
+														database</li>
+												</ul></li>
+										</ul></li>
+									<li><p>Profile</p>
+
+										<ul>
+											<li>Show a list of blog posts created by the logged in
+												user
+
+												<ul>
+													<li>Each post in the list should at least show title,
+														creation date, update date</li>
+													<li>Each post in the list should have a functioning
+														"Delete" and "Edit" link</li>
+													<li>Show comment count</li>
+													<li>(optional) Show post image thumbnails</li>
+													<li>(optional) Show aggregate rating</li>
+												</ul>
+											</li>
+											<li>Show a list of latest comments to logged in user's
+												posts with:
+
+												<ul>
+													<li>username</li>
+													<li>140 characters of content</li>
+													<li>link to post</li>
+													<li>comment date</li>
+												</ul>
+											</li>
+										</ul></li>
+									<li><p>
+											Blog at
+											<code>/blog/&lt;blogId&gt;</code>
+										</p>
+
+										<ul>
+											<li>Show a list of blog posts for that user including:
+
+												<ul>
+													<li>Title, content, images (full size or thumb), the
+														later of create or update dates</li>
+													<li>(optional) Show all optional fields as well</li>
+													<li>(optional) Use release date if exists and
+														postdates create or update</li>
+												</ul>
+											</li>
+											<li>Comments:
+
+												<ul>
+													<li>Require login to comment</li>
+													<li>Comment creation should include a simple text
+														field with a "Post" or "Login &amp; Post" button</li>
+													<li>Show comments beneath each post with associated
+														username</li>
+													<li>(optional) Add comment upvote/downvote</li>
+													<li>(optional) Sort by date or votes</li>
+													<li>(optional) Edit comment link (can redirect to an
+														edit page or be inline)</li>
+												</ul>
+											</li>
+											<li>(optional) Hide posts with a future release date</li>
+											<li>(optional) Allow star rating of blog posts, persist
+												for user</li>
+										</ul></li>
+									<li><p>(optional) Public Profile</p>
+
+										<ul>
+											<li>Show all of a user's posts and comments
+
+												<ul>
+													<li>For posts, show titles and most recent
+														create/update/release date</li>
+													<li>For comments, show 140 characters and link to post</li>
+												</ul>
+											</li>
+											<li>Allow users to set additional information to make
+												public
+
+												<ul>
+													<li>Email</li>
+													<li>Comment counts</li>
+													<li>Blog ratings</li>
+												</ul>
+											</li>
+										</ul></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-getting-started"
+										href="#heading-getting-started"><span
+										class="glyphicon glyphicon-link"></span></a>Getting Started
+								</h3>
+
+								<p>
+									You can use the <a
+										href="https://github.com/crabdude/nodejs-authenticator-demo">Authenticator
+										Demo Project</a> as a starter project, which has Local
+									Authentication and
+									<code>/login</code>
+									,
+									<code>/singup</code>
+									and
+									<code>/profile</code>
+									pages implemented.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-video-walkthroughs"
+										href="#heading-video-walkthroughs"><span
+										class="glyphicon glyphicon-link"></span></a>Video Walkthroughs
+								</h3>
+
+								<ul>
+									<li>The <a href="https://vimeo.com/crabdude/blogger">Blog
+											Video Walkthrough</a> covers how to handle most of the intial
+										CRUD routes like persisting and rendering <code>Post</code>
+										data in addition to rehashing the Local Authentication steps
+										from the <a
+										href="http://courses.codepath.com./week/2#!exercises">Week
+											2 Exercise</a>.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="hints">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor"
+										id="heading-unsupported-content-type-or-image-file-not-submitted"
+										href="#heading-unsupported-content-type-or-image-file-not-submitted"><span
+										class="glyphicon glyphicon-link"></span></a>"unsupported
+									content-type" or image file not submitted
+								</h2>
+
+								<p>
+									When submitting HTML
+									<code>&lt;file&gt;</code>
+									data, you will need to add the
+									<code>enctype="multipart/form-data"</code>
+									attribute to your forms:
+								</p>
+								<pre class="highlight html">
+									<code>
+										<span class="nt">&lt;form</span> <span class="na">action=</span><span
+											class="s">"/post/&lt;&#8203;%= post.id %&gt;"</span> <span
+											class="na">method=</span><span class="s">"post"</span> <span
+											class="na">enctype=</span><span class="s">"multipart/form-data"</span><span
+											class="nt">&gt;</span>
+</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="milestone">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-group-milestone-brainstorming"
+										href="#heading-group-milestone-brainstorming"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone -
+									Brainstorming
+								</h2>
+
+								<p>
+									In this program, we want to ensure that each of you leaves the
+									class with the ability to conceptualize, design and most
+									importantly <strong>architect your own apps from
+										scratch</strong>. Many engineers at larger organizations understand the
+									server codebase and can fix bugs or add features to an existing
+									app. We want to take a step back and provide you the ability to
+									architect apps which requires an even deeper understanding of
+									server and product development.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-generating-ideas"
+										href="#heading-generating-ideas"><span
+										class="glyphicon glyphicon-link"></span></a>Generating Ideas
+								</h3>
+
+								<p>
+									There will be no group work in this week's lab. Outside of
+									class, focus on brainstorming app ideas in small groups as well
+									as reviewing how to evaluate the ideas to identify the best
+									projects to build. When brainstorming with your group, be sure
+									to enter the top ideas into the <a
+										href="https://docs.google.com/spreadsheets/d/19yFB0vzQYNWyIIjhwxotUsMthVt3FM3BknByR2st1KQ/edit?usp=sharing">Project
+										Brainstorming Spreadsheet</a>.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-evaluating-ideas"
+										href="#heading-evaluating-ideas"><span
+										class="glyphicon glyphicon-link"></span></a>Evaluating Ideas
+								</h3>
+
+								<p>When evaluating projects consider the following:</p>
+
+								<ul>
+									<li><strong>Story:</strong> How compelling is the story
+										around this app once completed?
+
+										<ul>
+											<li>How clear is the value of this app to your audience?</li>
+											<li>How well would your friends or peers respond to this
+												product idea?</li>
+										</ul></li>
+									<li><strong>Market:</strong> How large or unique is the
+										market for this app?
+
+										<ul>
+											<li>What's the size and scale of your potential user
+												base?</li>
+											<li>Does this app provide huge value to a niche group of
+												people?</li>
+											<li>Do you have a well-defined audience of people for
+												this app?</li>
+										</ul></li>
+									<li><strong>Habit:</strong> How habit-forming or addictive
+										is this app?
+
+										<ul>
+											<li>How frequently would an average user open and use
+												this app?</li>
+											<li>Does an average user just consume your app or do
+												they create?</li>
+										</ul></li>
+									<li><strong>Scope:</strong> How well-formed is the scope
+										for this app?
+
+										<ul>
+											<li>How technically challenging will it be to complete
+												this app by the end of the program?</li>
+											<li>Is a stripped-down version of this app still
+												interesting to build?</li>
+											<li>How clearly defined is the product you want to
+												build?</li>
+										</ul></li>
+								</ul>
+
+								<p>Our goal is to infuse you with not just technical but
+									also product knowledge. You need to be able to tell a great
+									story to convince people of your ideas. If you're trying to
+									raise funding for a startup idea, you'll need to sell investors
+									on your story. If you're trying to recruit other engineers, you
+									need to be able to articulate these points to convince them to
+									join you.</p>
+
+								<p>Remember that you can have a great story but small
+									market. Try to assess the strengths of one criteria against the
+									other ones.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="exercises">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-2-challenge-authenticator"
+										href="#heading-week-2-challenge-authenticator"><span
+										class="glyphicon glyphicon-link"></span></a>Week 2 Challenge -
+									Authenticator
+								</h2>
+
+								<p>
+									Most apps will require some level of authentication and
+									database access. This exercise will explore both by using <a
+										href="https://www.npmjs.com/package/passport"><code>passport</code></a>
+									for local authentication and <a
+										href="https://www.npmjs.com/package/mongoose"><code>mongoose</code></a>
+									for MongoDB ORM access. We will also cover web-client
+									rendering.
+								</p>
+
+								<p>
+									Here's what we'll be building: <img
+										src="http://i.imgur.com/n2p6ns6.png"
+										title="Excercise Login Page" width=""
+										alt="Excercise Login Page">
+								</p>
+
+								<p>
+									And after the user is logged in: <img
+										src="http://i.imgur.com/8omW2kR.png"
+										title="Excercise TODO App" width="" alt="Excercise TODO App">
+								</p>
+
+								<h4>
+									<a class="anchor" id="heading-getting-started"
+										href="#heading-getting-started"><span
+										class="glyphicon glyphicon-link"></span></a>Getting Started
+								</h4>
+
+								<p>The checkpoints below should be implemented as pairs. In
+									pair programming, there are two roles: supervisor and driver.</p>
+
+								<p>The supervisor makes the decision on what step to do
+									next. Their job is to describe the step using high level
+									language ("Let's print out something when the user is
+									scrolling"). They also have a browser open in case they need to
+									do any research. The driver is typing and their role is to
+									translate the high level task into code ("Set the scroll view
+									delegate, implement the didScroll method).</p>
+
+								<p>After you finish each checkpoint, switch the supervisor
+									and driver roles. The person on the right will be the first
+									supervisor.</p>
+
+								<h4>
+									<a class="anchor" id="heading-milestones"
+										href="#heading-milestones"><span
+										class="glyphicon glyphicon-link"></span></a>Milestones
+								</h4>
+
+								<ol>
+									<li><p>Setup:</p>
+
+										<ul>
+											<li>Clone the <a
+												href="https://github.com/CrabDude/nodejs-authenticator-starter">Authenticator
+													Starter Project</a>.
+											</li>
+											<li>If not already installed, <a
+												href="http://docs.mongodb.org/manual/installation/">install
+													MongoDB</a>.
+											</li>
+											<li><p>Setup our new express server:</p>
+
+												<ul>
+													<li>Run <code>project_root/$ npm init</code> and name
+														your app "codepath-todo" using defaults for everything
+														else.
+													</li>
+													<li><p>
+															Install initial dependencies (See <a
+																href="#heading-references">References</a> for links):
+														</p> <pre class="highlight shell">
+															<code>npm install --save express morgan
+</code>
+														</pre></li>
+													<li><p>
+															Add initial server code to
+															<code>/index.js</code>
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="kd">let</span> <span class="nx">express</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'express'</span><span
+																	class="p">)</span>
+<span class="kd">let</span> <span class="nx">morgan</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'morgan'</span><span
+																	class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">NODE_ENV</span> <span
+																	class="o">=</span> <span class="nx">process</span><span
+																	class="p">.</span><span class="nx">env</span><span
+																	class="p">.</span><span class="nx">NODE_ENV</span>
+<span class="kr">const</span> <span class="nx">PORT</span> <span
+																	class="o">=</span> <span class="nx">process</span><span
+																	class="p">.</span><span class="nx">env</span><span
+																	class="p">.</span><span class="nx">PORT</span> <span
+																	class="o">||</span> <span class="mi">8000</span>
+
+<span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span
+																	class="nx">express</span><span class="p">()</span>
+
+<span class="c1">// start server </span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span
+																	class="p">(</span><span class="nx">PORT</span><span
+																	class="p">,</span> <span class="p">()</span><span
+																	class="o">=&gt;</span> <span class="nx">console</span><span
+																	class="p">.</span><span class="nx">log</span><span
+																	class="p">(</span><span class="err">`</span><span
+																	class="nx">Listening</span> <span class="err">@</span> <span
+																	class="nx">http</span><span class="err">:</span><span
+																	class="c1">//127.0.0.1:${PORT}`))</span>
+</code>
+														</pre>
+
+														<p>
+															<em>Note:</em> The last line in the sample above is using
+															<a
+																href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings">Template
+																strings</a>.
+														</p></li>
+													<li><p>
+															Add a start script to
+															<code>/package.json</code>
+															:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="s2">"scripts"</span><span class="err">:</span> <span
+																	class="p">{</span>
+        <span class="s2">"start"</span><span class="err">:</span> <span
+																	class="s2">"nodemon --exec babel-node -- --stage 1 --optional strict -- index.js"</span>
+    <span class="p">}</span>    
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code>
+														</pre></li>
+													<li><p>Run your server, and leave it running (it
+															will auto-restart on file changes):</p> <pre
+															class="highlight shell">
+															<code>npm start
+</code>
+														</pre></li>
+												</ul></li>
+											<li><p>
+													The starter project comes with our views ready to be used.
+													We'll use the <a href="https://www.npmjs.com/package/ejs"><code>ejs</code></a>
+													template rendering engine to render them.
+												</p>
+
+												<ul>
+													<li><p>
+															Install
+															<code>ejs</code>
+															:
+														</p> <pre class="highlight shell">
+															<code>npm install --save ejs
+</code>
+														</pre></li>
+													<li><p>
+															Set
+															<code>ejs</code>
+															as the express rendering engine and specify the view
+															directory.
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="c1">// And add the following just before app.listen</span>
+<span class="c1">// Use ejs for templating, with the default directory /views</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span
+																	class="p">(</span><span class="s1">'view engine'</span><span
+																	class="p">,</span> <span class="s1">'ejs'</span><span
+																	class="p">)</span>
+
+<span class="c1">// And add your root route after app.listen</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+																	class="p">(</span><span class="s1">'/'</span><span
+																	class="p">,</span> <span class="p">(</span><span
+																	class="nx">req</span><span class="p">,</span> <span
+																	class="nx">res</span><span class="p">)</span> <span
+																	class="o">=&gt;</span> <span class="nx">res</span><span
+																	class="p">.</span><span class="nx">render</span><span
+																	class="p">(</span><span class="s1">'index.ejs'</span><span
+																	class="p">,</span> <span class="p">{}))</span>
+</code>
+														</pre></li>
+													<li><p>
+															Verify
+															<code>/views/index.ejs</code>
+															is rendered when navigating to
+															<code>http://127.0.0.1:8000/</code>
+														</p></li>
+												</ul></li>
+										</ul></li>
+									<li><p>Authentication:</p>
+
+										<ul>
+											<li><p>
+													Currently, the server functions as a view renderer.
+													Authentication logic needs to be added. Start by
+													installing, requiring and using the passport authentication
+													middleware <strong>prerequisites</strong>:
+												</p>
+
+												<ul>
+													<li><p>
+															Install local dependencies to
+															<code>/node_modules/</code>
+															and save to
+															<code>/package.json</code>
+															<code>"dependencies"</code>
+															(See <a href="#heading-references">References</a> for
+															links):
+														</p> <pre class="highlight shell">
+															<code>npm install --save cookie-parser express-session passport body-parser
+</code>
+														</pre></li>
+													<li><p>Require dependencies:</p> <pre
+															class="highlight javascript">
+															<code>
+																<span class="c1">// Add to the top of index.js</span>
+<span class="kd">let</span> <span class="nx">bodyParser</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'body-parser'</span><span
+																	class="p">)</span>
+<span class="kd">let</span> <span class="nx">cookieParser</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'cookie-parser'</span><span
+																	class="p">)</span>
+<span class="kd">let</span> <span class="nx">session</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'express-session'</span><span
+																	class="p">)</span>
+<span class="kd">let</span> <span class="nx">passport</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'passport'</span><span
+																	class="p">)</span>
+</code>
+														</pre></li>
+													<li><p>
+															Setup the express middleware by appending to the
+															middleware stack with
+															<code>app.use()</code>
+															:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="c1">// Place the following just before app.use(express.static('public'))</span>
+
+<span class="c1">// Read cookies, required for sessions</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">cookieParser</span><span
+																	class="p">(</span><span class="s1">'ilovethenodejs'</span><span
+																	class="p">))</span>            
+<span class="c1">// Get POST/PUT body information (e.g., from html forms like login)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">bodyParser</span><span
+																	class="p">.</span><span class="nx">json</span><span
+																	class="p">())</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">bodyParser</span><span
+																	class="p">.</span><span class="nx">urlencoded</span><span
+																	class="p">({</span> <span class="na">extended</span><span
+																	class="p">:</span> <span class="kc">true</span> <span
+																	class="p">}))</span>
+
+<span class="c1">// In-memory session support, required by passport.session()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">session</span><span
+																	class="p">({</span>
+  <span class="na">secret</span><span class="p">:</span> <span
+																	class="s1">'ilovethenodejs'</span><span class="p">,</span>
+  <span class="na">resave</span><span class="p">:</span> <span
+																	class="kc">true</span><span class="p">,</span>
+  <span class="na">saveUninitialized</span><span class="p">:</span> <span
+																	class="kc">true</span>
+<span class="p">}))</span>
+
+<span class="c1">// Use the passport middleware to enable passport</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">passport</span><span
+																	class="p">.</span><span class="nx">initialize</span><span
+																	class="p">())</span>
+
+<span class="c1">// Enable passport persistent sessions</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="nx">passport</span><span
+																	class="p">.</span><span class="nx">session</span><span
+																	class="p">())</span>
+</code>
+														</pre>
+
+														<p>This may look like a wall of code, but one virtue
+															of express is configurability and its nothing-bundled
+															default. When you're starting out, though, it can feel
+															verbose.</p></li>
+													<li><p>
+															Verify everything is still working at
+															<code>http://127.0.0.1:8000/</code>
+														</p></li>
+													<li><p>
+															Now, setup local authentication. Start by installing,
+															requiring and constructing a <a
+																href="https://github.com/jaredhanson/passport-local"><code>passport-local</code></a>
+															authentication strategy (Checkout the <a
+																href="http://guides.codepath.com/nodejs/Authorization-&amp;-Authentication">Authentication
+																Guide</a>):
+														</p> <pre class="highlight shell">
+															<code>npm install --save passport-local nodeifyit
+</code>
+														</pre> <pre class="highlight javascript">
+															<code>
+																<span class="c1">// Add to top of index.js with other requires</span>
+<span class="kd">let</span> <span class="nx">LocalStrategy</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'passport-local'</span><span
+																	class="p">).</span><span class="nx">Strategy</span>
+<span class="kd">let</span> <span class="nx">nodeifyit</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'nodeifyit'</span><span
+																	class="p">)</span>
+
+<span class="c1">// Add in-memory user before app.listen()</span>
+<span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span
+																	class="p">{</span>
+    <span class="na">email</span><span class="p">:</span> <span
+																	class="s1">'foo@foo.com'</span><span class="p">,</span>
+    <span class="na">password</span><span class="p">:</span> <span
+																	class="s1">'asdf'</span>
+<span class="p">}</span>
+
+<span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="k">new</span> <span
+																	class="nx">LocalStrategy</span><span class="p">({</span>
+    <span class="c1">// Use "email" field instead of "username"</span>
+    <span class="na">usernameField</span><span class="p">:</span> <span
+																	class="s1">'email'</span>
+<span class="p">},</span> <span class="nx">nodeifyit</span><span
+																	class="p">(</span><span class="nx">async</span> <span
+																	class="p">(</span><span class="nx">email</span><span
+																	class="p">,</span> <span class="nx">password</span><span
+																	class="p">)</span> <span class="o">=&gt;</span> <span
+																	class="p">{</span>
+    <span class="nx">email</span> <span class="o">=</span> <span
+																	class="p">(</span><span class="nx">email</span> <span
+																	class="o">||</span> <span class="s1">''</span><span
+																	class="p">).</span><span class="nx">toLowerCase</span><span
+																	class="p">()</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">email</span> <span
+																	class="o">!==</span> <span class="nx">user</span><span
+																	class="p">.</span><span class="nx">email</span><span
+																	class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span><span
+																	class="kc">false</span><span class="p">,</span> <span
+																	class="p">{</span><span class="na">message</span><span
+																	class="p">:</span> <span class="s1">'Invalid username'</span><span
+																	class="p">}]</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">password</span> <span
+																	class="o">!==</span> <span class="nx">user</span><span
+																	class="p">.</span><span class="nx">password</span><span
+																	class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span><span
+																	class="kc">false</span><span class="p">,</span> <span
+																	class="p">{</span><span class="na">message</span><span
+																	class="p">:</span> <span class="s1">'Invalid password'</span><span
+																	class="p">}]</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">user</span>
+<span class="p">},</span> <span class="p">{</span><span class="na">spread</span><span
+																	class="p">:</span> <span class="kc">true</span><span
+																	class="p">})))</span>
+</code>
+														</pre></li>
+													<li><p>
+															For session support, passport also requires
+															<code>.serializeUser()</code>
+															and
+															<code>.deserializeUser()</code>
+															to be implemented. Serialization is a way of converting a
+															user object to a single value to store in the session. On
+															later requests, that value will be deserialized to obtain
+															a reference to an equivalent user object.
+														</p>
+
+														<p>Since there's only one user, these values aren't
+															imporant. Typically, the user's id is used though.</p> <pre
+															class="highlight javascript">
+															<code>
+																<span class="c1">// Use email since id doesn't exist</span>
+<span class="nx">passport</span><span class="p">.</span><span class="nx">serializeUser</span><span
+																	class="p">(</span><span class="nx">nodeifyit</span><span
+																	class="p">(</span><span class="nx">async</span> <span
+																	class="p">(</span><span class="nx">user</span><span
+																	class="p">)</span> <span class="o">=&gt;</span> <span
+																	class="nx">user</span><span class="p">.</span><span
+																	class="nx">email</span><span class="p">))</span>
+<span class="nx">passport</span><span class="p">.</span><span class="nx">deserializeUser</span><span
+																	class="p">(</span><span class="nx">nodeifyit</span><span
+																	class="p">(</span><span class="nx">async</span> <span
+																	class="p">(</span><span class="nx">id</span><span
+																	class="p">)</span> <span class="o">=&gt;</span> <span
+																	class="nx">user</span><span class="p">))</span>
+</code>
+														</pre></li>
+													<li><p>
+															Next, add the
+															<code>/login</code>
+															routes, which the "Log In" form will post to:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="c1">// process the login form</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span
+																	class="p">(</span><span class="s1">'/login'</span><span
+																	class="p">,</span> <span class="nx">passport</span><span
+																	class="p">.</span><span class="nx">authenticate</span><span
+																	class="p">(</span><span class="s1">'local'</span><span
+																	class="p">,</span> <span class="p">{</span>
+    <span class="na">successRedirect</span><span class="p">:</span> <span
+																	class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureRedirect</span><span class="p">:</span> <span
+																	class="s1">'/'</span><span class="p">,</span>
+    <span class="na">failureFlash</span><span class="p">:</span> <span
+																	class="kc">true</span>
+<span class="p">}))</span>
+</code>
+														</pre></li>
+													<li><p>
+															Verify login is working by navigating to
+															<code>http://127.0.0.1:8000</code>
+															and logging in with the above email and password. On
+															success, it should redirect to
+															<code>/profile</code>
+															, which for now will render
+															<code>Cannot GET /profile</code>
+															.
+														</p></li>
+													<li><p>
+															For security reasons, passwords should not be stored in
+															plain text. Instead, use <a
+																href="https://www.npmjs.com/package/bcrypt"><code>bcrypt</code></a>
+															(or <a
+																href="https://nodejs.org/api/crypto.html#crypto_crypto_pbkdf2_password_salt_iterations_keylen_digest_callback"><code>crypto.pbkdf2</code></a>)
+															password hashes:
+														</p> <pre class="highlight shell">
+															<code>npm install --save bcrypt songbird
+</code>
+														</pre> <pre class="highlight javascript">
+															<code>
+																<span class="c1">// Add to top of index.js with other requires</span>
+<span class="kd">let</span> <span class="nx">bcrypt</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'bcrypt'</span><span
+																	class="p">)</span>
+
+<span class="c1">// Will allow bcrypt.promise.compare(...)</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'songbird'</span><span
+																	class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">SALT</span> <span
+																	class="o">=</span> <span class="nx">bcrypt</span><span
+																	class="p">.</span><span class="nx">genSaltSync</span><span
+																	class="p">(</span><span class="mi">10</span><span
+																	class="p">)</span>
+
+<span class="c1">// Add in-memory user before app.listen()</span>
+<span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span
+																	class="p">{</span>
+    <span class="na">email</span><span class="p">:</span> <span
+																	class="s1">'foo@foo.com'</span><span class="p">,</span>
+    <span class="na">password</span><span class="p">:</span> <span
+																	class="nx">bcrypt</span><span class="p">.</span><span
+																	class="nx">hashSync</span><span class="p">(</span><span
+																	class="s1">'asdf'</span><span class="p">,</span> <span
+																	class="nx">SALT</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span
+																	class="p">(</span><span class="k">new</span> <span
+																	class="nx">LocalStrategy</span><span class="p">({</span>
+    <span class="c1">// Use "email" field instead of "username"</span>
+    <span class="na">usernameField</span><span class="p">:</span> <span
+																	class="s1">'email'</span><span class="p">,</span>
+    <span class="c1">// We'll need this later</span>
+    <span class="na">failureFlash</span><span class="p">:</span> <span
+																	class="kc">true</span>
+<span class="p">},</span> <span class="nx">nodeifyit</span><span
+																	class="p">(</span><span class="nx">async</span> <span
+																	class="p">(</span><span class="nx">email</span><span
+																	class="p">,</span> <span class="nx">password</span><span
+																	class="p">)</span> <span class="o">=&gt;</span> <span
+																	class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">email</span> <span
+																	class="o">!==</span> <span class="nx">user</span><span
+																	class="p">.</span><span class="nx">email</span><span
+																	class="p">)</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="p">[</span><span
+																	class="kc">false</span><span class="p">,</span> <span
+																	class="p">{</span><span class="na">message</span><span
+																	class="p">:</span> <span class="s1">'Invalid username'</span><span
+																	class="p">}]</span>
+   <span class="p">}</span>
+
+   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span
+																	class="nx">await</span> <span class="nx">bcrypt</span><span
+																	class="p">.</span><span class="nx">promise</span><span
+																	class="p">.</span><span class="nx">compare</span><span
+																	class="p">(</span><span class="nx">password</span><span
+																	class="p">,</span> <span class="nx">user</span><span
+																	class="p">.</span><span class="nx">password</span><span
+																	class="p">))</span> <span class="p">{</span>
+       <span class="k">return</span> <span class="p">[</span><span
+																	class="kc">false</span><span class="p">,</span> <span
+																	class="p">{</span><span class="na">message</span><span
+																	class="p">:</span> <span class="s1">'Invalid password'</span><span
+																	class="p">}]</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="nx">user</span>
+<span class="p">},</span> <span class="p">{</span><span class="na">spread</span><span
+																	class="p">:</span> <span class="kc">true</span><span
+																	class="p">})))</span>
+</code>
+														</pre></li>
+													<li><p>
+															Verify login is working by navigating to
+															<code>http://127.0.0.1:8000</code>
+															and logging in with the above email and password.
+														</p></li>
+													<li><p>If login fails, the error message needs to
+															be displayed. To do this:</p>
+
+														<ul>
+															<li><p>
+																	Add the <a
+																		href="https://www.npmjs.com/package/connect-flash"><code>connect-flash</code></a>
+																	middleware:
+																</p> <pre class="highlight shell">
+																	<code>npm install --save connect-flash
+</code>
+																</pre> <pre class="highlight javascript">
+																	<code>
+																		<span class="c1">// Add connect-flash middleware to index.js</span>
+<span class="kd">let</span> <span class="nx">flash</span> <span
+																			class="o">=</span> <span class="nx">require</span><span
+																			class="p">(</span><span class="s1">'connect-flash'</span><span
+																			class="p">)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+																			class="p">(</span><span class="nx">flash</span><span
+																			class="p">())</span>
+</code>
+																</pre></li>
+															<li><p>Then pass the flash error message to the
+																	view:</p> <pre class="highlight javascript">
+																	<code>
+																		<span class="c1">// Replace existing / route with...</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+																			class="p">(</span><span class="s1">'/'</span><span
+																			class="p">,</span> <span class="p">(</span><span
+																			class="nx">req</span><span class="p">,</span> <span
+																			class="nx">res</span><span class="p">)</span> <span
+																			class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span
+																			class="p">(</span><span class="s1">'index.ejs'</span><span
+																			class="p">,</span> <span class="p">{</span><span
+																			class="na">message</span><span class="p">:</span> <span
+																			class="nx">req</span><span class="p">.</span><span
+																			class="nx">flash</span><span class="p">(</span><span
+																			class="s1">'error'</span><span class="p">)})</span>
+<span class="p">})</span>
+</code>
+																</pre></li>
+															<li><p>
+																	The view should already be configured to display the
+																	message, verify by logging in with a bad password at
+																	<code>http://127.0.0.1:8000</code>
+																</p></li>
+														</ul></li>
+												</ul>
+
+												<p>
+													<em>Note:</em> The
+													<code>failureFlash</code>
+													passed to
+													<code>LocalStrategy</code>
+													above was required to enable
+													<code>req.flash('error')})</code>
+													.
+												</p></li>
+										</ul></li>
+									<li><p>
+											Login isn't very useful without "Sign Up" functionality.
+											Implement the
+											<code>/signup</code>
+											route:
+										</p>
+
+										<ul>
+											<li><p>
+													A
+													<code>User</code>
+													model will be required to save and retrieve MongoDB data.
+													Create one with <a
+														href="https://www.npmjs.com/package/mongoose"><code>mongoose</code></a>
+													:
+												</p> <pre class="highlight shell">
+													<code>npm install --save mongoose
+</code>
+												</pre> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// user.js</span>
+<span class="kd">let</span> <span class="nx">mongoose</span> <span
+															class="o">=</span> <span class="nx">require</span><span
+															class="p">(</span><span class="s1">'mongoose'</span><span
+															class="p">)</span>
+<span class="kd">let</span> <span class="nx">bcrypt</span> <span
+															class="o">=</span> <span class="nx">require</span><span
+															class="p">(</span><span class="s1">'bcrypt'</span><span
+															class="p">)</span>
+
+<span class="kd">let</span> <span class="nx">userSchema</span> <span
+															class="o">=</span> <span class="nx">mongoose</span><span
+															class="p">.</span><span class="nx">Schema</span><span
+															class="p">({</span>
+    <span class="na">email</span><span class="p">:</span> <span
+															class="nb">String</span><span class="p">,</span>
+    <span class="na">password</span><span class="p">:</span> <span
+															class="nb">String</span>
+<span class="p">})</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span
+															class="o">=</span> <span class="nx">mongoose</span><span
+															class="p">.</span><span class="nx">model</span><span
+															class="p">(</span><span class="s1">'User'</span><span
+															class="p">,</span> <span class="nx">userSchema</span><span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<p>
+													And connect to the database in
+													<code>index.js</code>
+													:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="kd">let</span> <span class="nx">mongoose</span> <span
+															class="o">=</span> <span class="nx">require</span><span
+															class="p">(</span><span class="s1">'mongoose'</span><span
+															class="p">)</span>
+<span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span
+															class="p">(</span><span class="s1">'mongodb://127.0.0.1:27017/authenticator'</span><span
+															class="p">)</span>
+</code>
+												</pre></li>
+											<li><p>
+													Since
+													<code>/signup</code>
+													requires different logic from
+													<code>/login</code>
+													, create a second
+													<code>LocalStrategy</code>
+													that leverages our new
+													<code>User</code>
+													model:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">passport</span><span class="p">.</span><span
+															class="nx">use</span><span class="p">(</span><span
+															class="s1">'local-signup'</span><span class="p">,</span> <span
+															class="k">new</span> <span class="nx">LocalStrategy</span><span
+															class="p">({</span>
+   <span class="c1">// Use "email" field instead of "username"</span>
+   <span class="na">usernameField</span><span class="p">:</span> <span
+															class="s1">'email'</span>
+<span class="p">},</span> <span class="nx">nodeifyit</span><span
+															class="p">(</span><span class="nx">async</span> <span
+															class="p">(</span><span class="nx">email</span><span
+															class="p">,</span> <span class="nx">password</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span>
+    <span class="nx">email</span> <span class="o">=</span> <span
+															class="p">(</span><span class="nx">email</span> <span
+															class="o">||</span> <span class="s1">''</span><span
+															class="p">).</span><span class="nx">toLowerCase</span><span
+															class="p">()</span>
+    <span class="c1">// Is the email taken?</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">await</span> <span
+															class="nx">User</span><span class="p">.</span><span
+															class="nx">promise</span><span class="p">.</span><span
+															class="nx">findOne</span><span class="p">({</span><span
+															class="nx">email</span><span class="p">}))</span> <span
+															class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span><span
+															class="kc">false</span><span class="p">,</span> <span
+															class="p">{</span><span class="na">message</span><span
+															class="p">:</span> <span class="s1">'That email is already taken.'</span><span
+															class="p">}]</span>
+    <span class="p">}</span>
+
+    <span class="c1">// create the user</span>
+    <span class="kd">let</span> <span class="nx">user</span> <span
+															class="o">=</span> <span class="k">new</span> <span
+															class="nx">User</span><span class="p">()</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span
+															class="o">=</span> <span class="nx">email</span>
+    <span class="c1">// Use a password hash instead of plain-text</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">password</span> <span
+															class="o">=</span> <span class="nx">await</span> <span
+															class="nx">bcrypt</span><span class="p">.</span><span
+															class="nx">promise</span><span class="p">.</span><span
+															class="nx">hash</span><span class="p">(</span><span
+															class="nx">password</span><span class="p">,</span> <span
+															class="nx">SALT</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">await</span> <span
+															class="nx">user</span><span class="p">.</span><span
+															class="nx">save</span><span class="p">()</span>
+<span class="p">},</span> <span class="p">{</span><span class="na">spread</span><span
+															class="p">:</span> <span class="kc">true</span><span
+															class="p">})))</span>
+</code>
+												</pre></li>
+											<li><p>
+													Update the
+													<code>passport.deserializeUser()</code>
+													to load from the database
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">passport</span><span class="p">.</span><span
+															class="nx">deserializeUser</span><span class="p">(</span><span
+															class="nx">nodeifyit</span><span class="p">(</span><span
+															class="nx">async</span> <span class="p">(</span><span
+															class="nx">email</span><span class="p">)</span> <span
+															class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">await</span> <span
+															class="nx">User</span><span class="p">.</span><span
+															class="nx">findOne</span><span class="p">({</span><span
+															class="nx">email</span><span class="p">}).</span><span
+															class="nx">exec</span><span class="p">())</span>
+<span class="p">}))</span>
+</code>
+												</pre></li>
+											<li><p>
+													Finally, add the
+													<code>/signup</code>
+													form processing route:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// process the signup form</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span
+															class="p">(</span><span class="s1">'/signup'</span><span
+															class="p">,</span> <span class="nx">passport</span><span
+															class="p">.</span><span class="nx">authenticate</span><span
+															class="p">(</span><span class="s1">'local-signup'</span><span
+															class="p">,</span> <span class="p">{</span>
+    <span class="na">successRedirect</span><span class="p">:</span> <span
+															class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureRedirect</span><span class="p">:</span> <span
+															class="s1">'/'</span><span class="p">,</span>
+    <span class="na">failureFlash</span><span class="p">:</span> <span
+															class="kc">true</span>
+<span class="p">}))</span>
+</code>
+												</pre></li>
+											<li><p>
+													Verify that
+													<code>/signup</code>
+													works by creating a new user, and redirecting to
+													<code>/profile</code>
+												</p></li>
+											<li><p>
+													Update
+													<code>/login</code>
+													to load
+													<code>user</code>
+													from the database
+												</p></li>
+											<li><p>
+													Now, just add the
+													<code>/profile</code>
+													route with a login check and you're done:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="kd">function</span> <span class="nx">isLoggedIn</span><span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">,</span> <span class="nx">next</span><span
+															class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span
+															class="p">.</span><span class="nx">isAuthenticated</span><span
+															class="p">())</span> <span class="k">return</span> <span
+															class="nx">next</span><span class="p">()</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span
+															class="p">(</span><span class="s1">'/'</span><span
+															class="p">)</span>
+<span class="p">}</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+															class="p">(</span><span class="s1">'/profile'</span><span
+															class="p">,</span> <span class="nx">isLoggedIn</span><span
+															class="p">,</span> <span class="p">(</span><span
+															class="nx">req</span><span class="p">,</span> <span
+															class="nx">res</span><span class="p">)</span> <span
+															class="o">=&gt;</span> <span class="nx">res</span><span
+															class="p">.</span><span class="nx">render</span><span
+															class="p">(</span><span class="s1">'profile.ejs'</span><span
+															class="p">,</span> <span class="p">{}))</span>
+</code>
+												</pre></li>
+										</ul></li>
+								</ol>
+
+								<p>
+									Congratulations! You've successfully implemented Local
+									Authentication and Sign Up using
+									<code>passport</code>
+									and
+									<code>express</code>
+									! Try implementing one of these additional features: - <em>Bonus:</em>
+									Update
+									<code>/views/profile.ejs</code>
+									<a href="http://canjs.com/guides/EJS.html">EJS Template</a> and
+									the
+									<code>/profile</code>
+									route to render the user's id, email and password. - <em>Bonus:</em>
+									Implement
+									<code>/logout</code>
+									which is called when "Logout" is clicked on
+									<code>/profile</code>
+									. (See Passport's <a href="http://passportjs.org/guide/logout/">Log
+										Out Doc</a>) - <em>Bonus:</em> Add a "Remember me" checkbox and
+									set a <a
+										href="http://stackoverflow.com/questions/244882/what-is-the-best-way-to-implement-remember-me-for-a-website">persistent
+										Login cookie</a>
+								</p>
+
+								<h4>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h4>
+
+								<ul>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Express-&amp;-Middleware">Express
+											&amp; Middleware</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Authorization-&amp;-Authentication">Authorization
+											&amp; Authentication</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/Streams">Streams</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/ORMs">ORMs</a></li>
+								</ul>
+
+								<h4>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h4>
+
+								<ul>
+									<li><a href="http://npmjs.com/package/express"><code>express</code></a></li>
+									<li><a href="http://npmjs.com/package/passport"><code>passport</code></a></li>
+									<li><a href="http://npmjs.com/package/passport-local"><code>passport-local</code></a></li>
+									<li><a href="http://npmjs.com/package/morgan"><code>morgan</code></a></li>
+									<li><a href="http://npmjs.com/package/ejs"><code>ejs</code></a></li>
+									<li><a href="http://npmjs.com/package/cookie-parser"><code>cookie-parser</code></a></li>
+									<li><a href="http://npmjs.com/package/express-session"><code>express-session</code></a></li>
+									<li><a href="http://npmjs.com/package/body-parser"><code>body-parser</code></a></li>
+									<li><a href="http://npmjs.com/package/songbird"><code>songbird</code></a></li>
+									<li><a href="http://npmjs.com/package/bluebird-nodeify"><code>bluebird-nodeify</code></a></li>
+									<li><a href="http://npmjs.com/package/bluebird"><code>bluebird</code></a></li>
+									<li><a href="http://npmjs.com/package/bcrypt"><code>bcrypt</code></a></li>
+									<li><a href="http://npmjs.com/package/connect-flash"><code>connect-flash</code></a></li>
+									<li><a href="http://npmjs.com/package/mongoose"><code>mongoose</code></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../javascripts/jquery.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery-ujs.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/sugar.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/typeahead.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/pdfobject.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/jquery.fitvids.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/oauth.js" type="text/javascript"></script>
+	<script src="../../javascripts/application.js"
+		type="text/javascript"></script>
+</body>
+</html>

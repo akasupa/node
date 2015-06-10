@@ -1,0 +1,1275 @@
+<html lang="en-US">
+<head>
+<title>Resources: Week 3 - Intro to NodeJS | CodePath Courses</title>
+<link href="../../stylesheets/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/bootstrap-theme.min.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/typeahead-bootstrap.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/highlight.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/style.css" rel="stylesheet"
+	type="text/css">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="noindex, nofollow" name="robots">
+<script type="text/javascript" async=""
+	src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<script src="//js.honeybadger.io/v0.2/honeybadger.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	
+</script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div class="navbar navbar-default" id="main-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">CodePath Courses</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="javascript:void(0);"
+						style="overflow: hidden"><div class="pull-left">
+								<img width="20" class="img-circle img-responsive"
+									src="https://avatars.githubusercontent.com/u/12105296?v=3">
+							</div>&nbsp;
+							<div class="pull-right">
+								<b class="caret"></b>
+							</div></a>
+					<ul class="dropdown-menu">
+							<li><a data-method="delete" href="/sessions">Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title clearfix">
+			<h1>Intro to NodeJS Outline</h1>
+			<p class="alert alert-info">
+				Need help? Email us at <a class="alert-link"
+					href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>&nbsp;or
+				post on the <a target="blank" class="alert-link"
+					href="https://groups.google.com/forum/#!forum/nodejs-walmart-april">google
+					group</a> (<a href="mailto:nodejs-walmart-april@googlegroups.com">email</a>)
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a
+						href="./pages/bootcamp_structure">Overview</a></li>
+					<li ><a
+						href="../../week/1/1.html#!module"><span>Week
+								1 &nbsp;</span></a></li>
+					<li ><a href="../../week/2/2.html#!module"><span>Week
+								2 &nbsp;</span></a></li>
+					<li class="active"><a href="../../week/3/3.html#!module"><span>Week
+								3 &nbsp;</span></a></li>
+					<li><a href="../../week/4/4.html#!module"><span>Week
+								4 &nbsp;</span></a></li>
+					<li><a href="../../week/5/5.html#!module"><span>Week
+								5 &nbsp;</span></a></li>
+					<li><a href="../../week/6/6.html#!module"><span>Week
+								6 &nbsp;</span></a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#module"
+						aria-expanded="true">Resources</a></li>
+					<li><a data-toggle="tab" href="#assignment">Assignment</a></li>
+					<li><a data-toggle="tab" href="#hints">Project Hints</a></li>
+					<li><a data-toggle="tab" href="#milestone">Group</a></li>
+					<li><a data-toggle="tab" href="#exercises">Exercises</a></li>
+				</ul>
+				<div class="tab-content section-content">
+					<div class="tab-pane active" id="module">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-3-authorization-middle-tier"
+										href="#heading-week-3-authorization-middle-tier"><span
+										class="glyphicon glyphicon-link"></span></a>Week 3 - Authorization
+									&amp; Middle-Tier
+								</h2>
+
+								<p>
+									This week we'll begin to explore using Node.js as a <a
+										href="http://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture">Middle-Tier</a>
+									Microservice, one of the most common use cases for Node.js. Due
+									to the ease with which Node.js scales in IO-bound (e.g.,
+									networking) environments, you will typically build your Node.js
+									servers using a Service Oriented Architecture (SOA).
+								</p>
+
+								<p>
+									We'll cover making <a
+										href="http://en.wikipedia.org/wiki/Upstream_server">downstream</a>
+									requests, data <a href="#data+transformations">transformation</a>,
+									<a href="#data+decoration">decoration</a>, <a
+										href="#authentication">authorization</a> and <a
+										href="#authorization">authorization</a>. In addition, we'll
+									also cover rendering and isomorphic code (a fancy word for code
+									that can be run on the server or client). For an exploration of
+									the topic, see <a
+										href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/">AirBnb's
+										post on writing isomorphic applications using Node.js</a>.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-assignment"
+										href="#heading-assignment"><span
+										class="glyphicon glyphicon-link"></span></a>Assignment
+								</h3>
+
+								<p>
+									Social Feed. The purpose of this project is to explore how to
+									combine multiple downstream APIs into a single API for
+									front-end consumption. Our goal is to build a single Social
+									Feed API using <a href="https://dev.twitter.com/rest/public">Twitter</a>,
+									<a href="https://developers.facebook.com/docs/apis-and-sdks/">Facebook</a>
+									and <a href="https://developer.linkedin.com/docs/rest-api">LinkedIn's</a>
+									REST APIs with support for server-side rendering.
+								</p>
+
+								<ul>
+									<li><a href="#!assignment">Assignment 3: Social Feed</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-group-milestonve"
+										href="#heading-group-milestonve"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestonve
+								</h3>
+
+								<p>
+									During the latter half of this lab we will begin the process of
+									group formation. You will have an hour to interview each other
+									and decide who you would prefer to work with. Come prepared
+									with <a href="./pages/group_project"
+										alt="course-wide group project"
+										title="course-wide group project">course-wide group
+										project</a> ideas to share.
+								</p>
+
+								<ul>
+									<li><a href="#!milestone">Group Milestone 3: Group
+											Formation</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-slides" href="#heading-slides"><span
+										class="glyphicon glyphicon-link"></span></a>Slides
+								</h3>
+
+								<ul>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=asyncawait.md">AsyncAwait</a></li>
+									<li><a
+										href="https://gnab.github.io/remark/remarkise?url=browserify.md">Browserify</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-lecture-video"
+										href="#heading-lecture-video"><span
+										class="glyphicon glyphicon-link"></span></a>Lecture Video
+								</h3>
+
+								<ul>
+									<li><a href="./Callbacks-Promises.mp4">Callbacks
+											&amp; Promises</a></li>
+									<li><a href="./AsyncAwait-Lecture.mp4">Async/Await</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h3>
+
+								<ul>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Express-&amp;-Middleware">Express
+											&amp; Middleware</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Authorization-&amp;-Authentication">Authorization
+											&amp; Authentication</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/Streams">Streams</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="https://github.com/rendrjs/rendr">Rendr</a>
+										for server-side rendering</li>
+									<li><a href="http://browserify.org">browserify</a> for
+										isomorphic modules</li>
+									<li><a href="http://backbonejs.org">Backbone.js</a> for
+										data models</li>
+									<li><a href="https://www.npmjs.com/package/request">request</a></li>
+									<li><a href="http://passportjs.org">passport</a> for <a
+										href="http://passportjs.org/guide/authenticate/">authentication</a>
+										and <a href="http://passportjs.org/guide/authorize/">authorization</a></li>
+									<li><a href="http://expressjs.com">express</a> for <a
+										href="http://expressjs.com/guide/routing.html">routing</a> and
+										<a href="http://expressjs.com/guide/using-middleware.html">middleware</a></li>
+									<li><a href="http://oboejs.com">Oboe.js</a> for streaming
+										JSON parsing</li>
+									<li><a href="https://dev.twitter.com/rest/public">Twitter</a>,
+										<a href="https://developers.facebook.com/docs/apis-and-sdks/">Facebook</a>
+										and <a href="https://developer.linkedin.com/docs/rest-api">LinkedIn's</a>
+										REST APIs.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="assignment">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-3-project-social-feed"
+										href="#heading-week-3-project-social-feed"><span
+										class="glyphicon glyphicon-link"></span></a>Week 3 Project: Social
+									Feed
+								</h2>
+
+								<p>
+									<strong>Due:</strong> Monday, May 18th at 11:59pm
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-overview"
+										href="#heading-overview"><span
+										class="glyphicon glyphicon-link"></span></a>Overview
+								</h3>
+
+								<p>Build a simple Social Feed aggregator that allows login
+									to Facebook and Twitter, and aggregates the timelines from each
+									into a single normalized feed UI. For each social network, load
+									the latest posts from the timeline and display them to the
+									user.</p>
+
+								<p>Additionally, each post within the feed will show the
+									same data, and allow the same interactions: share (repost),
+									like and reply (comment).</p>
+
+								<p>
+									<img src="http://i.imgur.com/vqgH3fg.gif"
+										title="Social Feed Demo" width="250" alt="Social Feed Demo">
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-submission-instructions"
+										href="#heading-submission-instructions"><span
+										class="glyphicon glyphicon-link"></span></a>Submission
+									instructions
+								</h3>
+
+								<p>
+									Follow the guide for <a
+										href="./pages/submitting_assignments"
+										alt="Submitting Assignments" title="Submitting Assignments">Submitting
+										Assignments</a>. Remember to include an animated gif and # of
+									hours spent in the README. You can get started by cloning the <a
+										href="http://github.com/CrabDude/nodejs-socialfeed-starter/">Social
+										Feed Starter Project</a> and checking things off the Requirements
+									and Optionals in the README as you complete them.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-project-requirements"
+										href="#heading-project-requirements"><span
+										class="glyphicon glyphicon-link"></span></a>Project Requirements
+								</h3>
+
+								<ul>
+									<li>User can sign in and connect to Facebook and Twitter
+										using <code>passport</code>
+									</li>
+									<li>User can view the last 20 posts on their aggregated
+										timeline</li>
+									<li>The current signed in user will be persisted across
+										server restarts</li>
+									<li>In the home timeline, user can view posts with the
+										user profile picture, username, content, origin social network
+										and timestamp. In other words, data presentation should appear
+										consistent for posts across social network sources.</li>
+									<li>In the timeline, user can like and unlike posts.</li>
+									<li>User can click share in the timeline, and share with a
+										custom message on a separate page.</li>
+									<li>User can click reply in the timeline, and submit a
+										reply on a separate page.</li>
+									<li>User can click compose anywhere, and submit a new post
+										on a separate page.</li>
+									<li>When composing, user can select to which networks to
+										post.</li>
+									<li>Optional: User can click a post and view it on a
+										separate page with controls to share, like, and reply.</li>
+									<li>Optional: User should be able to unshare their posts.</li>
+									<li>Optional: User should be able to delete their posts.</li>
+									<li>Optional: Replies should be prefixed with the username
+										and link to the conversation thread.</li>
+									<li>Optional: User can click a "Next" button at the bottom
+										to load more</li>
+									<li>Optional: Add Google+ support through their <a
+										href="https://developers.google.com/+/domains/">Domains
+											API</a> (Request addition to the nodejsboot.camp domain)
+									</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-video-walkthroughs"
+										href="#heading-video-walkthroughs"><span
+										class="glyphicon glyphicon-link"></span></a>Video Walkthroughs
+								</h3>
+
+								<ul>
+									<li><a href="/SocialFeed-Walkthrough.mp4">Social
+											Feed Walkthrough</a>. This walkthrough takes you through setting
+										up the initial project, the authorization flow, session
+										persistance, and the post API.</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="http://backbonejs.org">Backbone.js</a> for
+										data models</li>
+									<li><a href="https://www.npmjs.com/package/request">request</a></li>
+									<li><a href="http://passportjs.org">passport</a> for <a
+										href="http://passportjs.org/guide/authenticate/">authentication</a>
+										and <a href="http://passportjs.org/guide/authorize/">authorization</a></li>
+									<li><a href="http://expressjs.com">express</a> for <a
+										href="http://expressjs.com/guide/routing.html">routing</a> and
+										<a href="http://expressjs.com/guide/using-middleware.html">middleware</a></li>
+									<li><a href="https://dev.twitter.com/rest/public">Twitter</a>,
+										<a href="https://developers.facebook.com/docs/apis-and-sdks/">Facebook</a>
+										and <a href="https://developers.google.com/+/api/latest/">Google+</a>
+										REST APIs.</li>
+								</ul>
+
+								<!--
+- [browserify](http://browserify.org) for isomorphic modules
+- [`babelify`](https://github.com/babel/babelify):
+- [`beefy`](http://didact.us/beefy/):
+- [`browserify-middleware`](https://github.com/ForbesLindesay/browserify-middleware):
+- [`exorcist`](https://www.npmjs.com/package/exorcist)
+- [Oboe.js](http://oboejs.com) for streaming JSON parsing
+- [Rendr](https://github.com/rendrjs/rendr) for server-side rendering
+-->
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="hints">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h3>
+									<a class="anchor" id="heading-accessing-the-facebook-stream"
+										href="#heading-accessing-the-facebook-stream"><span
+										class="glyphicon glyphicon-link"></span></a>Accessing the Facebook
+									stream
+								</h3>
+
+								<p>You have 2 equally valid options for getting data from
+									the Facebook stream.</p>
+
+								<p>
+									<strong>Option 1: <code>request</code> (or more
+										specfically <code>request-promise</code>)
+									</strong>
+								</p>
+
+								<p>Remember the Facebook API is just a simple REST API,
+									which you will need to become very comfortable with when using
+									node.js.</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="kd">let</span> <span class="nx">response</span> <span
+											class="o">=</span> <span class="nx">await</span> <span
+											class="nx">rp</span><span class="p">({</span>
+        <span class="na">uri</span><span class="p">:</span> <span
+											class="err">`</span><span class="na">https</span><span
+											class="p">:</span><span class="c1">//graph.facebook.com/me/home/?access_token=${token}`,</span>
+        <span class="na">resolveWithFullResponse</span><span class="p">:</span> <span
+											class="kc">true</span>
+    <span class="p">})</span>
+</code>
+								</pre>
+
+								<p>
+									<strong>Option 2: <code>fb</code></strong>
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="nx">FB</span><span class="p">.</span><span
+											class="nx">setAccessToken</span><span class="p">(</span><span
+											class="nx">token</span><span class="p">)</span>
+<span class="nx">FB</span><span class="p">.</span><span class="nx">api</span><span
+											class="p">(</span><span class="s1">'/me/home'</span><span
+											class="p">,</span> <span class="p">(</span><span class="nx">response</span><span
+											class="p">)</span> <span class="o">=&gt;</span> <span
+											class="p">{...})</span>
+</code>
+								</pre>
+
+								<h3>
+									<a class="anchor"
+										id="heading-fbapi-is-passing-data-on-the-error"
+										href="#heading-fbapi-is-passing-data-on-the-error"><span
+										class="glyphicon glyphicon-link"></span></a>
+									<code>FB.api</code>
+									is passing data on the error
+								</h3>
+
+								<p>
+									<code>FB.api</code>
+									does not accept an errback. Instead it accepts a callback with
+									the response with a parsed body as the only argument:
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="nx">FB</span><span class="p">.</span><span
+											class="nx">api</span><span class="p">(</span><span class="s1">'/me/home'</span><span
+											class="p">,</span> <span class="nx">response</span> <span
+											class="o">=&gt;</span> <span class="nx">console</span><span
+											class="p">.</span><span class="nx">log</span><span class="p">(</span><span
+											class="nx">response</span><span class="p">.</span><span
+											class="nx">body</span><span class="p">))</span>
+</code>
+								</pre>
+
+								<p>
+									Therefore you cannot simply use
+									<code>await FB.promise.api</code>
+									. Instead you will need to use the
+									<code>Promise</code>
+									constructor:
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="kd">let</span> <span class="nx">response</span> <span
+											class="o">=</span> <span class="nx">await</span> <span
+											class="k">new</span> <span class="nx">Promise</span><span
+											class="p">((</span><span class="nx">resolve</span><span
+											class="p">,</span> <span class="nx">reject</span><span
+											class="p">)</span> <span class="o">=&gt;</span> <span
+											class="nx">FB</span><span class="p">.</span><span class="nx">api</span><span
+											class="p">(</span><span class="s1">'/me/home'</span><span
+											class="p">,</span> <span class="nx">resolve</span><span
+											class="p">))</span>
+<span class="kd">let</span> <span class="nx">body</span> <span class="o">=</span> <span
+											class="nx">response</span><span class="p">.</span><span
+											class="nx">body</span>
+
+<span class="c1">// or... for shorthand</span>
+<span class="kd">let</span> <span class="p">{</span><span class="nx">body</span><span
+											class="p">}</span> <span class="o">=</span> <span class="nx">await</span> <span
+											class="k">new</span> <span class="nx">Promise</span><span
+											class="p">(</span><span class="nx">resolve</span> <span
+											class="o">=&gt;</span> <span class="nx">FB</span><span
+											class="p">.</span><span class="nx">api</span><span class="p">(</span><span
+											class="s1">'/me/home'</span><span class="p">,</span> <span
+											class="nx">resolve</span><span class="p">))</span>
+</code>
+								</pre>
+
+								<h3>
+									<a class="anchor" id="heading-requires-extended-permission"
+										href="#heading-requires-extended-permission"><span
+										class="glyphicon glyphicon-link"></span></a>Requires extended
+									permission
+								</h3>
+
+								<p>
+									If the
+									<code>FB.api</code>
+									<code>response</code>
+									contains the following...
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="p">{</span><span class="s2">"error"</span><span
+											class="err">:</span><span class="p">{</span><span class="s2">"message"</span><span
+											class="err">:</span><span class="s2">"(#200) Requires extended permission: read_stream"</span><span
+											class="p">,</span><span class="s2">"type"</span><span
+											class="err">:</span><span class="s2">"OAuthException"</span><span
+											class="p">,</span><span class="s2">"code"</span><span
+											class="err">:</span><span class="mi">200</span><span
+											class="p">}}</span>
+</code>
+								</pre>
+
+								<p>
+									You need to make sure to inclue the
+									<code>"read_stream"</code>
+									scope variable when authenticating with
+									<code>passport-facebook</code>
+									:
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="nx">app</span><span class="p">.</span><span
+											class="nx">get</span><span class="p">(</span><span class="s1">'/auth/facebook'</span><span
+											class="p">,</span> <span class="nx">passport</span><span
+											class="p">.</span><span class="nx">authenticate</span><span
+											class="p">(</span><span class="s1">'facebook'</span><span
+											class="p">,</span> <span class="p">{</span><span class="na">scope</span><span
+											class="p">:</span> <span class="p">[</span><span class="s1">'read_stream'</span><span
+											class="p">]}))</span>
+</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="milestone">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-group-milestone-group-formation"
+										href="#heading-group-milestone-group-formation"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone -
+									Group Formation
+								</h2>
+
+								<p>
+									This lab we will focus on beginning the process of group
+									formation. Once groups are formed they can select any of the
+									suggested projects or pick their own project that follows the
+									requirements listed in the <a
+										href="./pages/group_project"
+										alt="Group Project Overview" title="Group Project Overview">Group
+										Project Overview</a>. Review the following reference before
+									selecting a project with your team:
+								</p>
+
+								<ul>
+									<li><a
+										href="https://docs.google.com/spreadsheets/d/19yFB0vzQYNWyIIjhwxotUsMthVt3FM3BknByR2st1KQ/edit?usp=sharing">Project
+											Brainstorming Spreadsheet</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-formation-mixer"
+										href="#heading-formation-mixer"><span
+										class="glyphicon glyphicon-link"></span></a>Formation Mixer
+								</h3>
+
+								<p>During the latter half of this lab, we will give every
+									person a chance to chat with as many other participants as
+									possible in the following format:</p>
+
+								<ul>
+									<li>Each engineer will be given a list of all the
+										participants in the program.</li>
+									<li>Engineers will be given an hour with the mission to
+										briefly meet every other engineer in the room and mark them
+										down on their list.</li>
+									<li>Engineers can discuss their backgrounds / skill-sets,
+										favorite app ideas and other key factors such as location.</li>
+									<li>Keep in mind the people you'd <strong>like to
+											work with</strong> as well as those that you'd prefer <strong>not
+											to work with</strong>.
+									</li>
+								</ul>
+
+								<p>At the end of the session, we will send a survey
+									collecting your preferences and we will announce the final
+									groups before May 12th.</p>
+
+								<p>Our goal is to infuse with you not just technical but
+									also product knowledge. You need to be able to tell a great
+									story to convince people of your ideas. If you're trying to
+									raise funding for a startup idea, you'll need to sell investors
+									on your story. If you're trying to recruit other engineers, you
+									need to be able to articulate these points to convince them to
+									join you.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="exercises">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor"
+										id="heading-week-3-challenge-social-authenticator"
+										href="#heading-week-3-challenge-social-authenticator"><span
+										class="glyphicon glyphicon-link"></span></a>Week 3 Challenge -
+									Social Authenticator
+								</h2>
+
+								<p>Most apps will require some level of authentication and
+									database access.</p>
+
+								<p>integration with an external service. One of the most
+									popular services to integrate with is Facebook, whether it's
+									authentication, retrieving the list of friends, or getting the
+									news feed.</p>
+
+								<p>This exercise is to explore the Facebook API by building
+									a simple Facebook Feed Viewer. We will practice authentication,
+									data transformation, streaming, rendering and making downstream
+									requests.</p>
+
+								<p>
+									Here's what we'll be building: <img
+										src="http://i.imgur.com/RaFUiHl.png"
+										title="Social Authenticator Login Page" width=""
+										alt="Social Authenticator Login Page">
+								</p>
+
+								<p>
+									And after the user has logged in with all their credentials: <img
+										src="http://i.imgur.com/NXKb6eS.png"
+										title="Social Authenticator Profile Page" width=""
+										alt="Social Authenticator Profile Page">
+								</p>
+
+								<h4>
+									<a class="anchor" id="heading-getting-started"
+										href="#heading-getting-started"><span
+										class="glyphicon glyphicon-link"></span></a>Getting Started
+								</h4>
+
+								<p>The checkpoints below should be implemented as pairs. In
+									pair programming, there are two roles: supervisor and driver.</p>
+
+								<p>The supervisor makes the decision on what step to do
+									next. Their job is to describe the step using high level
+									language ("Let's print out something when the user is
+									scrolling"). They also have a browser open in case they need to
+									do any research. The driver is typing and their role is to
+									translate the high level task into code ("Set the scroll view
+									delegate, implement the didScroll method).</p>
+
+								<p>After you finish each checkpoint, switch the supervisor
+									and driver roles. The person on the right will be the first
+									supervisor.</p>
+
+								<h4>
+									<a class="anchor" id="heading-milestones"
+										href="#heading-milestones"><span
+										class="glyphicon glyphicon-link"></span></a>Milestones
+								</h4>
+
+								<ol>
+									<li><p>Setup:</p>
+
+										<ul>
+											<li>Add <code>socialauthenticator.com</code> to your
+												hosts file. (For help, see <a
+												href="http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/">here</a>)
+											</li>
+											<li>Clone the <a
+												href="https://github.com/CrabDude/nodejs-socialauthenticator-starter">Social
+													Authenticator Starter Project</a>.
+											</li>
+											<li>Install the dependencies with <code>npm
+													install</code></li>
+											<li><p>
+													Add the mongoDB configuration data to
+													<code>/config/database.js</code>
+													:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// config/database.js</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span
+															class="o">=</span> <span class="p">{</span>
+    <span class="s1">'development'</span><span class="p">:</span> <span
+															class="p">{</span>
+        <span class="s1">'type'</span><span class="p">:</span> <span
+															class="s1">'mongo'</span><span class="p">,</span>
+        <span class="s1">'url'</span><span class="p">:</span> <span
+															class="s1">'mongodb://127.0.0.1:27017/social-authenticator'</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code>
+												</pre></li>
+											<li><p>
+													Go to <a href="https://developers.facebook.com/">https://developers.facebook.com/</a>
+													and sign up as a developer.
+												</p></li>
+											<li><p>
+													<a href="https://developers.facebook.com/apps/">Create
+														a new app</a> by clicking "Add a new app" in the upper right.
+												</p>
+
+												<ul>
+													<li><img src="http://i.imgur.com/FYpazWBt.png"
+														title="Add a new app" width="" alt="Add a new app"></li>
+													<li>At the bottom of the "Add a New App" modal, click
+														"advanced setup".</li>
+													<li>Choose a "Display Name" (e.g., "Authenticator").</li>
+													<li>Select any Category (e.g., "Photo").</li>
+													<li>Click "Create App ID"</li>
+												</ul></li>
+											<li><p>
+													In the starter project, add the "App ID" and "App Secret"
+													(found in the Facebook App Dashboard) to
+													<code>./config/auth.js</code>
+													:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// config/auth.js</span>
+
+<span class="c1">// expose our config directly to our application using module.exports</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span
+															class="o">=</span> <span class="p">{</span>
+    <span class="s1">'facebookAuth'</span> <span class="p">:</span> <span
+															class="p">{</span>
+        <span class="s1">'consumerKey'</span><span class="p">:</span> <span
+															class="s1">'YOUR_APP_ID'</span><span class="p">,</span>
+        <span class="s1">'consumerSecret'</span><span class="p">:</span> <span
+															class="s1">'YOUR_APP_SECRET'</span><span class="p">,</span>
+        <span class="s1">'callbackUrl'</span><span class="p">:</span> <span
+															class="s1">'http://socialauthenticator.com:8000/auth/facebook/callback'</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code>
+												</pre></li>
+											<li><p>
+													Even though no routes are setup, start your server with
+													<code>npm start</code>
+													, which should now run without crashing.
+												</p></li>
+										</ul></li>
+									<li><p>
+											Add the following basic routes to
+											<code>/app/routes.js</code>
+											(these are nearly identical with the Authenticator exercise
+											and Blogger Assignment):
+										</p>
+
+										<p>
+											Remember to
+											<code>require('./app/middlewares/isLoggedIn')</code>
+											at the top.
+										</p> <pre class="highlight javascript">
+											<code>
+												<span class="nx">module</span><span class="p">.</span><span
+													class="nx">exports</span> <span class="o">=</span> <span
+													class="p">(</span><span class="nx">app</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+    <span class="kd">let</span> <span class="nx">passport</span> <span
+													class="o">=</span> <span class="nx">app</span><span
+													class="p">.</span><span class="nx">passport</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+													class="p">(</span><span class="s1">'/'</span><span
+													class="p">,</span> <span class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">res</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="nx">res</span><span class="p">.</span><span
+													class="nx">render</span><span class="p">(</span><span
+													class="s1">'index.ejs'</span><span class="p">))</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+													class="p">(</span><span class="s1">'/profile'</span><span
+													class="p">,</span> <span class="nx">isLoggedIn</span><span
+													class="p">,</span> <span class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">res</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span
+													class="nx">render</span><span class="p">(</span><span
+													class="s1">'profile.ejs'</span><span class="p">,</span> <span
+													class="p">{</span>
+            <span class="na">user</span><span class="p">:</span> <span
+													class="nx">req</span><span class="p">.</span><span
+													class="nx">user</span><span class="p">,</span>
+            <span class="na">message</span><span class="p">:</span> <span
+													class="nx">req</span><span class="p">.</span><span
+													class="nx">flash</span><span class="p">(</span><span
+													class="s1">'error'</span><span class="p">)</span>
+        <span class="p">})</span>
+    <span class="p">})</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+													class="p">(</span><span class="s1">'/logout'</span><span
+													class="p">,</span> <span class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">res</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+        <span class="nx">req</span><span class="p">.</span><span
+													class="nx">logout</span><span class="p">()</span>
+        <span class="nx">res</span><span class="p">.</span><span
+													class="nx">redirect</span><span class="p">(</span><span
+													class="s1">'/'</span><span class="p">)</span>
+    <span class="p">})</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+													class="p">(</span><span class="s1">'/login'</span><span
+													class="p">,</span> <span class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">res</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span
+													class="nx">render</span><span class="p">(</span><span
+													class="s1">'login.ejs'</span><span class="p">,</span> <span
+													class="p">{</span><span class="na">message</span><span
+													class="p">:</span> <span class="nx">req</span><span
+													class="p">.</span><span class="nx">flash</span><span
+													class="p">(</span><span class="s1">'error'</span><span
+													class="p">)})</span>
+    <span class="p">})</span>
+
+    <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+													class="p">(</span><span class="s1">'/signup'</span><span
+													class="p">,</span> <span class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">res</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span
+													class="nx">render</span><span class="p">(</span><span
+													class="s1">'signup.ejs'</span><span class="p">,</span> <span
+													class="p">{</span><span class="na">message</span><span
+													class="p">:</span> <span class="nx">req</span><span
+													class="p">.</span><span class="nx">flash</span><span
+													class="p">(</span><span class="s1">'error'</span><span
+													class="p">)</span> <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</code>
+										</pre>
+
+										<ul>
+											<li>Visit <a href="http://socialauthenticator.com:8000">http://socialauthenticator.com:8000</a>
+												and verify your "Local Login" and "Local Signup" button
+												links work.
+											</li>
+										</ul></li>
+									<li><p>
+											Add
+											<code>POST /signup</code>
+											and
+											<code>POST /login</code>
+											routes:
+										</p>
+
+										<ul>
+											<li>Create a <code>User</code> model in <code>/app/models/user.js</code>
+												using <code>mongoose</code> with a <code>'local'</code>
+												property:
+											</li>
+										</ul> <pre class="highlight javascript">
+											<code>   <span class="nx">local</span><span
+													class="err">:</span> <span class="p">{</span>
+       <span class="nl">email</span><span class="p">:</span> <span
+													class="nb">String</span><span class="p">,</span>
+       <span class="nx">password</span><span class="err">:</span> <span
+													class="nb">String</span>
+   <span class="p">}</span>
+</code>
+										</pre>
+
+										<ul>
+											<li>Make the <code>'email'</code> and <code>'password'</code>
+												properties required.
+
+												<ul>
+													<li>Add two <code>LocalStrategy</code> instances using
+														the <a
+														href="https://github.com/jaredhanson/passport-local/"><code>passport-local</code></a>
+														package to <code>/app/middlewares/passport.js</code>:
+													</li>
+												</ul></li>
+										</ul>
+
+										<p>
+											<em>Hint:</em> Follow the steps from the <a
+												href="http://courses.codepath.com./week/2#!exercises">previous
+												exercise</a>
+										</p> <pre class="highlight javascript">
+											<code>   <span class="nx">passport</span><span
+													class="p">.</span><span class="nx">use</span><span
+													class="p">(</span><span class="s1">'local-login'</span><span
+													class="p">,</span> <span class="k">new</span> <span
+													class="nx">LocalStrategy</span><span class="p">({</span>
+       <span class="c1">// ...</span>
+   <span class="p">},</span> <span class="nx">nodeifyit</span><span
+													class="p">(</span><span class="nx">async</span> <span
+													class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">email</span><span
+													class="p">,</span> <span class="nx">password</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+       <span class="c1">// ...</span>
+   <span class="p">},</span> <span class="p">{</span><span class="na">spread</span><span
+													class="p">:</span> <span class="kc">true</span><span
+													class="p">}))</span>
+
+   <span class="nx">passport</span><span class="p">.</span><span
+													class="nx">use</span><span class="p">(</span><span
+													class="s1">'local-signup'</span><span class="p">,</span> <span
+													class="k">new</span> <span class="nx">LocalStrategy</span><span
+													class="p">({</span>
+       <span class="c1">// ...</span>
+   <span class="p">},</span> <span class="nx">nodeifyit</span><span
+													class="p">(</span><span class="nx">async</span> <span
+													class="p">(</span><span class="nx">req</span><span
+													class="p">,</span> <span class="nx">email</span><span
+													class="p">,</span> <span class="nx">password</span><span
+													class="p">)</span> <span class="o">=&gt;</span> <span
+													class="p">{</span>
+       <span class="c1">// ...</span>
+   <span class="p">},</span> <span class="p">{</span><span class="na">spread</span><span
+													class="p">:</span> <span class="kc">true</span><span
+													class="p">}))</span>
+</code>
+										</pre></li>
+								</ol>
+								<pre class="highlight plaintext">
+									<code>   - Load the user from the `User` model and complete the `local-login` and `local-signup` logic.
+   - Add `passport.serializeUser()` and `passport.deserializeUser()` implementations to `middlewares/passport.js`
+   - Verify local `/login` and `/signup` are working:
+       -  Create a new user by signing up
+       -  Logout
+       -  Login with new user
+</code>
+								</pre>
+
+								<ul>
+									<li><p>Add Facebook login/signup</p>
+
+										<ul>
+											<li><p>Add the authentication (Login &amp; Signup)
+													and authorization (Linking) routes:</p> <pre
+													class="highlight javascript">
+													<code>
+														<span class="c1">// Scope specifies the desired data fields from the user account</span>
+<span class="kd">let</span> <span class="nx">scope</span> <span
+															class="o">=</span> <span class="s1">'email'</span>
+
+<span class="c1">// Authentication route &amp; Callback URL</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+															class="p">(</span><span class="s1">'/auth/facebook'</span><span
+															class="p">,</span> <span class="nx">passport</span><span
+															class="p">.</span><span class="nx">authenticate</span><span
+															class="p">(</span><span class="s1">'facebook'</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="nx">scope</span><span class="p">}))</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+															class="p">(</span><span class="s1">'/auth/facebook/callback'</span><span
+															class="p">,</span> <span class="nx">passport</span><span
+															class="p">.</span><span class="nx">authenticate</span><span
+															class="p">(</span><span class="s1">'facebook'</span><span
+															class="p">,</span> <span class="p">{</span>
+    <span class="na">successRedirect</span><span class="p">:</span> <span
+															class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureRedirect</span><span class="p">:</span> <span
+															class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureFlash</span><span class="p">:</span> <span
+															class="kc">true</span>
+<span class="p">}))</span>
+
+<span class="c1">// Authorization route &amp; Callback URL</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+															class="p">(</span><span class="s1">'/connect/facebook'</span><span
+															class="p">,</span> <span class="nx">passport</span><span
+															class="p">.</span><span class="nx">authorize</span><span
+															class="p">(</span><span class="s1">'facebook'</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="nx">scope</span><span class="p">}))</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+															class="p">(</span><span class="s1">'/connect/facebook/callback'</span><span
+															class="p">,</span> <span class="nx">passport</span><span
+															class="p">.</span><span class="nx">authorize</span><span
+															class="p">(</span><span class="s1">'facebook'</span><span
+															class="p">,</span> <span class="p">{</span>
+    <span class="na">successRedirect</span><span class="p">:</span> <span
+															class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureRedirect</span><span class="p">:</span> <span
+															class="s1">'/profile'</span><span class="p">,</span>
+    <span class="na">failureFlash</span><span class="p">:</span> <span
+															class="kc">true</span>
+<span class="p">}))</span>
+</code>
+												</pre></li>
+											<li><p>
+													Use
+													<code>passport-facebook</code>
+													to create a
+													<code>FacebookStrategy</code>
+												</p>
+
+												<p>Since creating various passport strategies is very
+													similar, use the provided factory function:</p> <pre
+													class="highlight javascript">
+													<code>
+														<span class="kd">function</span> <span class="nx">useExternalPassportStrategy</span><span
+															class="p">(</span><span class="nx">OauthStrategy</span><span
+															class="p">,</span> <span class="nx">config</span><span
+															class="p">,</span> <span class="nx">accountType</span><span
+															class="p">)</span> <span class="p">{</span>
+    <span class="nx">config</span><span class="p">.</span><span
+															class="nx">passReqToCallback</span> <span class="o">=</span> <span
+															class="kc">true</span>
+    <span class="nx">passport</span><span class="p">.</span><span
+															class="nx">use</span><span class="p">(</span><span
+															class="k">new</span> <span class="nx">OauthStrategy</span><span
+															class="p">(</span><span class="nx">config</span><span
+															class="p">,</span> <span class="nx">nodeifyit</span><span
+															class="p">(</span><span class="nx">authCB</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="na">spread</span><span class="p">:</span> <span
+															class="kc">true</span><span class="p">})))</span>
+
+    <span class="nx">async</span> <span class="nx">authCB</span><span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">token</span><span
+															class="p">,</span> <span class="nx">_ignored_</span><span
+															class="p">,</span> <span class="nx">account</span><span
+															class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Your generic 3rd-party passport strategy implementation here</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code>
+												</pre>
+
+												<ul>
+													<li>And create the <code>FacebookStrategy</code>:
+													</li>
+												</ul> <pre class="highlight javascript">
+													<code>
+														<span class="nx">useExternalPassportStrategy</span><span
+															class="p">(</span><span class="nx">FacebookStrategy</span><span
+															class="p">,</span> <span class="p">{</span>
+    <span class="na">clientID</span><span class="p">:</span> <span
+															class="nx">config</span><span class="p">.</span><span
+															class="nx">facebook</span><span class="p">.</span><span
+															class="nx">consumerKey</span><span class="p">,</span>
+    <span class="na">clientSecret</span><span class="p">:</span> <span
+															class="nx">config</span><span class="p">.</span><span
+															class="nx">facebook</span><span class="p">.</span><span
+															class="nx">consumerSecret</span><span class="p">,</span>
+    <span class="na">callbackURL</span><span class="p">:</span> <span
+															class="nx">config</span><span class="p">.</span><span
+															class="nx">facebook</span><span class="p">.</span><span
+															class="nx">callbackUrl</span>
+<span class="p">},</span> <span class="s1">'facebook'</span><span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<p>
+													<em>Note:</em>
+													<code>config</code>
+													from
+													<code>/config/auth.js</code>
+													should already be passed in the
+													<code>/app/middlewares/passport.js</code>
+													<code>configure</code>
+													function.
+												</p></li>
+											<li><p>
+													Complete the
+													<code>authCB</code>
+													in
+													<code>useExternalPassportStrategy</code>
+													:
+												</p>
+
+												<p>
+													<code>authCB</code>
+													will be used both for
+													<code>/login</code>
+													/
+													<code>/signup</code>
+													(authentication) and connecting social accounts to existing
+													users (authorization). During <strong>authentication</strong>,
+													the
+													<code>authCB</code>
+													return value will become
+													<code>req.user</code>
+													. During <strong>authorization</strong>, we will store the
+													account info on the
+													<code>req.user</code>
+													object.
+												</p>
+
+												<ul>
+													<li><p>
+															Add the
+															<code>'facebook'</code>
+															property to
+															<code>UserSchema</code>
+															:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="nx">facebook</span><span class="err">:</span> <span
+																	class="p">{</span>
+   <span class="nl">id</span><span class="p">:</span> <span class="nb">String</span><span
+																	class="p">,</span>
+   <span class="nx">token</span><span class="err">:</span> <span
+																	class="nb">String</span><span class="p">,</span>
+   <span class="nx">email</span><span class="err">:</span> <span
+																	class="nb">String</span><span class="p">,</span>
+   <span class="nx">name</span><span class="err">:</span> <span
+																	class="nb">String</span>
+<span class="p">}</span>
+</code>
+														</pre></li>
+												</ul>
+
+												<p>
+													In
+													<code>useExternalPassportStrategy</code>
+												</p>
+
+												<ul>
+													<li>Use <code>account.id</code> to Load the user from
+														the database (e.g., <code>user.facebook.id</code>)
+													</li>
+													<li>If <code>req.user</code> exists, the user is
+														adding an account (authorization):
+
+														<ul>
+															<li>Validate <code>req.user.facebook.id</code>
+																equals <code>user.facebook.id</code></li>
+															<li>Store the Facebook user data in <code>account</code>
+																in <code>user.facebook</code></li>
+														</ul></li>
+													<li>Else, the user is logging in / signing up
+														(authentication) with a third-party account. If we are in
+														the authCB, then third-party authentication succeeded, so
+														Signup or Login will always succeed:
+
+														<ul>
+															<li>Create the user if none loaded from the database</li>
+															<li>Link the account with the user</li>
+														</ul>
+													</li>
+												</ul></li>
+										</ul></li>
+									<li><p>
+											Repeat with <a
+												href="https://console.developers.google.com/project">Google</a>
+											(<a href="heading-references">Passport references</a>) using
+											<code>scope = ['email', 'profile']</code>
+										</p></li>
+									<li><p>
+											Repeat with <a href="https://apps.twitter.com/app/new">Twitter</a>
+											(<a href="heading-references">Passport references</a>) using
+											<code>scope = 'email'</code>
+										</p></li>
+									<li><p>
+											Repeat with <a
+												href="https://www.linkedin.com/secure/developer?newapp=">LinkedIn</a>
+											(<a href="heading-references">Passport references</a>) using
+											<code>scope = ['r_fullprofile', 'r_emailaddress']</code>
+										</p>
+
+										<p>
+											<em>Hint:</em> The scope will need to be passed in directly
+											to
+											<code>useExternalPassportStrategy</code>
+											in addition to the
+											<code>state</code>
+											field:
+										</p> <pre class="highlight plaintext">
+											<code>```node
+usePassportStrategy(LinkedInStrategy, {
+    clientID: config.linkedin.consumerKey,
+    clientSecret: config.linkedin.consumerSecret,
+    callbackURL: config.linkedin.callbackUrl,
+    // Let Passport handle required CSRF state field
+    state: true,
+    scope: ['r_basicprofile', 'r_emailaddress']
+}, 'linkedin')
+```
+</code>
+										</pre></li>
+									<li><p>
+											<em>Bonus:</em> Add support for connecting a local acccount <strong>after</strong>
+											signing up with a third-party account.
+										</p>
+
+										<p>
+											<em>Hint:</em> Use the
+											<code>/views/connect-local.ejs</code>
+											template and implement
+											<code>GET /connect/local</code>
+											and
+											<code>POST /connect/local</code>
+										</p></li>
+									<li><p>
+											<em>Bonus:</em> Add "Unlink" support for removing an account
+											at
+											<code>/unlink/:type</code>
+										</p></li>
+									<li><p>
+											<em>Bonus:</em> Remove and Logout user if after clicking
+											"Unlink", they have no more associated accounts (including
+											local)
+										</p></li>
+								</ul>
+
+								<h4>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h4>
+
+								<ul>
+									<li><a
+										href="https://github.com/jaredhanson/passport-local/"><code>passport-local</code></a>
+										&amp; <a href="http://passportjs.org/guide/username-password/">Passport
+											Guide</a></li>
+									<li><a
+										href="https://github.com/jaredhanson/passport-linkedin"><code>passport-linkedin</code></a></li>
+									<li><a
+										href="https://github.com/jaredhanson/passport-facebook"><code>passport-facebook</code></a>
+										&amp; <a href="http://passportjs.org/guide/facebook/">Passport
+											Guide</a></li>
+									<li><a
+										href="https://github.com/jaredhanson/passport-twitter"><code>passport-twitter</code></a>
+										&amp; <a href="http://passportjs.org/guide/twitter/">Passport
+											Guide</a></li>
+									<li><a
+										href="https://github.com/jaredhanson/passport-google"><code>passport-google</code></a>
+										&amp; <a href="http://passportjs.org/guide/google/">Passport
+											Guide</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../javascripts/jquery.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery-ujs.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/sugar.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/typeahead.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/pdfobject.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/jquery.fitvids.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/oauth.js" type="text/javascript"></script>
+	<script src="../../javascripts/application.js"
+		type="text/javascript"></script>
+</body>
+</html>

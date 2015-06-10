@@ -1,0 +1,213 @@
+/*
+    GENERAL
+*/
+
+body > div.container > h1 {
+  margin-top: 0em;
+  margin-bottom: 0.6em;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+
+
+/*
+  SHARED
+*/
+
+.title h1 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+  .title h1 {
+    float: left;
+  }
+
+  .title .alert {
+    margin-bottom: 0;
+    float: right;
+  }
+}
+
+
+/*
+    SECTION CONTENT
+*/
+
+.section-content {
+  font-size: 15px;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  line-height: 1.7;
+}
+
+.section-content h2 {
+  margin-top: 0.1em;
+}
+
+.section-content ul > li > ul {
+  margin-top: 0.4em;
+}
+
+.section-content ul li {
+  margin-bottom: 0.4em;
+}
+
+.section-content code {
+  color: #53703C;
+}
+
+.section-content .section-actions {
+  float: right;
+  position: relative;
+  top: 14px;
+  left: 6px;
+  font-size: 1.3em;
+  z-index: 100;
+}
+
+
+/*
+   VIDEO FIT
+   Source: http://labs.jonsuh.com/responsive-video-embed/
+*/
+
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.js-video.widescreen {
+  padding-bottom: 57.25%;
+}
+
+.js-video.vimeo {
+  padding-top: 0;
+}
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*
+  CUSTOM STYLES FOR TEMPLATES
+*/
+
+.section-content .homework-preview {
+  float: right;
+  margin-top: -30px;
+  border: 1px solid black;
+}
+
+@media print {
+    div#main-nav {
+       display: hidden;
+    }
+}
+
+/*
+  HEADING ANCHOR STYLES
+*/
+
+.markdown-body a.anchor
+{
+  display: none;
+  cursor: pointer;
+}
+
+.markdown-body a.anchor:focus
+{
+  outline: none;
+}
+
+.markdown-body h1:hover a.anchor,.markdown-body h2:hover a.anchor,.markdown-body h3:hover a.anchor,
+.markdown-body h4:hover a.anchor,.markdown-body h5:hover a.anchor,.markdown-body h6:hover a.anchor
+{
+  text-decoration: none;
+}
+
+.anchored-content a.anchor {
+  display: block;
+  vertical-align: middle;
+  font-size: 0.8em;
+  float: right;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.anchored-content .anchor span {
+  vertical-align: middle;
+}
+
+.anchored-content h2 {
+  z-index: 10;
+  position: relative;
+}
+
+.anchored-content h1:hover .anchor,
+.anchored-content h2:hover .anchor,
+.anchored-content h3:hover .anchor {
+  display: block;
+  opacity: 1;
+}
+
+/*
+  SNIPPET STYLES
+*/
+
+.section-content.padded .panel-body {
+  padding: 1em 2em 2em 2em;
+}
+
+.snippet-body {
+  font-size: 16px;
+}
+
+.snippet-body > h1 {
+  margin-top: 0;
+  padding-top: 0.4em;
+  padding-bottom: 0.2em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.snippet-body > h2 {
+  margin-top: 0;
+  padding-top: 0.3em;
+  padding-bottom: 0.2em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.snippet-body > h3 {
+  font-weight: bold;
+  line-height: 1.43;
+}
+
+.snippet-body > p {
+  padding-top: 0.2em;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.snippet-toc > .panel-body > ul {
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.snippet-toc > .panel-body > ul ul ul {
+  display: none;
+}

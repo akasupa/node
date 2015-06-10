@@ -1,0 +1,1730 @@
+<html lang="en-US">
+<head>
+<title>Resources: Week 1 - Intro to NodeJS | CodePath Courses</title>
+<link href="../../stylesheets/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/bootstrap-theme.min.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/typeahead-bootstrap.css"
+	rel="stylesheet" type="text/css">
+<link href="../../stylesheets/highlight.css" rel="stylesheet"
+	type="text/css">
+<link href="../../stylesheets/style.css" rel="stylesheet"
+	type="text/css">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="noindex, nofollow" name="robots">
+<script type="text/javascript" async=""
+	src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<script src="//js.honeybadger.io/v0.2/honeybadger.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	
+</script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div class="navbar navbar-default" id="main-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">CodePath Courses</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="javascript:void(0);"
+						style="overflow: hidden"><div class="pull-left">
+								<img width="20" class="img-circle img-responsive"
+									src="https://avatars.githubusercontent.com/u/12105296?v=3">
+							</div>&nbsp;
+							<div class="pull-right">
+								<b class="caret"></b>
+							</div></a>
+					<ul class="dropdown-menu">
+							<li><a data-method="delete" href="/sessions">Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title clearfix">
+			<h1>Intro to NodeJS Outline</h1>
+			<p class="alert alert-info">
+				Need help? Email us at <a class="alert-link"
+					href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>&nbsp;or
+				post on the <a target="blank" class="alert-link"
+					href="https://groups.google.com/forum/#!forum/nodejs-walmart-april">google
+					group</a> (<a href="mailto:nodejs-walmart-april@googlegroups.com">email</a>)
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a
+						href="./pages/bootcamp_structure">Overview</a></li>
+					<li class="active"><a
+						href="../../week/1/1.html#!module"><span>Week
+								1 &nbsp;</span></a></li>
+					<li><a href="../../week/2/2.html#!module"><span>Week
+								2 &nbsp;</span></a></li>
+					<li><a href="../../week/3/3.html#!module"><span>Week
+								3 &nbsp;</span></a></li>
+					<li><a href="../../week/4/4.html#!module"><span>Week
+								4 &nbsp;</span></a></li>
+					<li><a href="../../week/5/5.html#!module"><span>Week
+								5 &nbsp;</span></a></li>
+					<li><a href="../../week/6/6.html#!module"><span>Week
+								6 &nbsp;</span></a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#module"
+						aria-expanded="true">Resources</a></li>
+					<li><a data-toggle="tab" href="#assignment">Assignment</a></li>
+					<li><a data-toggle="tab" href="#hints">Project Hints</a></li>
+					<li><a data-toggle="tab" href="#milestone">Group</a></li>
+					<li><a data-toggle="tab" href="#exercises">Exercises</a></li>
+				</ul>
+				<div class="tab-content section-content">
+					<div class="tab-pane active" id="module">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-1-app-fundamentals"
+										href="#heading-week-1-app-fundamentals"><span
+										class="glyphicon glyphicon-link"></span></a>Week 1 - App
+									Fundamentals
+								</h2>
+
+								<p>This week, we'll setup our environment, walk through the
+									fundamentals of the node.js runtime with a focus on
+									asynchronous programming, control-flow and IO. Then we'll cover
+									the basic architecture of a server, and put together a simple
+									REST API with express.</p>
+
+								<h3>
+									<a class="anchor" id="heading-assignment"
+										href="#heading-assignment"><span
+										class="glyphicon glyphicon-link"></span></a>Assignment
+								</h3>
+
+								<p>This week, we'll build a Dropbox clone. The purpose of
+									this project is to develop a basic express API and start
+									playing with building a server, control-flow and the
+									filesystem.</p>
+
+								<ul>
+									<li><a href="#!assignment">Assignment 1: Dropbox</a> due <strong>Monday,
+											May 4th at 11:59pm</strong></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-group-milestone"
+										href="#heading-group-milestone"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone
+								</h3>
+
+								<p>
+									This lab we will be forming the groups that will span over the
+									6 weeks. Read more about the&nbsp;<a
+										href="./pages/group_project"
+										alt="course-wide group project"
+										title="course-wide group project">course-wide group
+										project</a>.
+								</p>
+
+								<ul>
+									<li><a href="#!milestone">Group Milestone 1: Consider
+											Ideas for Group Project</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-lecture-video"
+										href="#heading-lecture-video"><span
+										class="glyphicon glyphicon-link"></span></a>Lecture Video
+								</h3>
+
+								<p>
+									<a href="./Node-Asynchrony.mp4">Node.js &amp;
+										Asynchrony</a>
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h3>
+
+								<ul>
+									<li>Setup:
+
+										<ul>
+											<li><a href="http://guides.codepath.com/nodejs/Setup">Setting
+													Up your Environment</a></li>
+										</ul>
+									</li>
+									<li>Runtime:
+
+										<ul>
+											<li><a
+												href="http://guides.codepath.com/nodejs/JavaScript:-Basics">Introduction
+													to JavaScript</a></li>
+											<li><a
+												href="http://guides.codepath.com/nodejs/Introduction-to-Node.js">Introduction
+													to Node.js</a></li>
+										</ul>
+									</li>
+									<li>App Structure:
+
+										<ul>
+											<li><a
+												href="http://guides.codepath.com/nodejs/New-Express-Project">Starting
+													a new Express Project</a></li>
+										</ul>
+									</li>
+									<li>Core Fundamentals:
+
+										<ul>
+											<li><a
+												href="http://guides.codepath.com/nodejs/Filesystem">Filesystem</a></li>
+											<li><a
+												href="http://guides.codepath.com/nodejs/Networking">Networking</a></li>
+											<li><a href="http://guides.codepath.com/nodejs/CLI">Command-Line
+													Interfaces</a></li>
+											<li><a href="http://guides.codepath.com/nodejs/Streams">Streams</a></li>
+										</ul>
+									</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="http://guides.codepath.com/nodejs/">Master
+											List of References</a></li>
+								</ul>
+
+								<!-- TODO, Build and add to "Runtime" above
+  * [Intermediate JavaScript](http://guides.codepath.com/nodejs/JavaScript:-Intermediate)
+-->
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="assignment">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-week-1-project-dropbox"
+										href="#heading-week-1-project-dropbox"><span
+										class="glyphicon glyphicon-link"></span></a>Week 1 Project:
+									Dropbox
+								</h2>
+
+								<p>
+									<strong>Due:</strong> Monday, May 4th at 11:59pm
+								</p>
+
+								<!-- TODO: INSERT IMAGE HERE
+
+![Dropbox|250]()
+-->
+
+								<h3>
+									<a class="anchor" id="heading-overview"
+										href="#heading-overview"><span
+										class="glyphicon glyphicon-link"></span></a>Overview
+								</h3>
+
+								<p>Week 1 Dropbox Project steps:</p>
+
+								<ol>
+									<li>HTTP Server</li>
+									<li>File CRDU module</li>
+									<li>TCP Server</li>
+									<li>TCP Client</li>
+									<li>Additional Requirements</li>
+									<li>Submit the project for review via Github</li>
+									<li>Extend your Dropbox App with additional ("optional")
+										functionality</li>
+								</ol>
+
+								<p>The goal for this week's assignment is to build a Dropbox
+									Clone, which is a fancy way of saying a directory that exists
+									in multiple locations that is kept in sync to be a perfect
+									mirror. If a file is added to the server directory, it should
+									get pushed to the client and appear in the client's directory.</p>
+
+								<p>
+									For this project, you will build a server and a client. The
+									server will expose an HTTP server with a Virtual Filesystem
+									(VFS) CRUD (<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate
+									&amp; <strong>D</strong>elete) API, and a TCP server to push
+									filesystem updates to connected clients. The client will then
+									take those TCP updates and update the local filesystem to keep
+									it in sync (mirroring) the server directory.
+								</p>
+
+								<p>
+									<strong>Walkthrough:</strong> Check out the provided&nbsp;<span
+										class="glyphicon glyphicon-film"></span>&nbsp;<a
+										href="./dropbox-clone.html"
+										alt="video walkthrough" title="video walkthrough">video
+										walkthrough</a> for this project to get you started.
+								</p>
+
+								<p>
+									<strong>Questions?</strong> If you have any questions or
+									concerns, please feel free to email us at <a
+										href="mailto:nodejs@codepath.com">nodejs@codepath.com</a>.
+								</p>
+
+								<h4>
+									<a class="anchor" id="heading-submission-instructions"
+										href="#heading-submission-instructions"><span
+										class="glyphicon glyphicon-link"></span></a>Submission
+									instructions
+								</h4>
+
+								<p>
+									Follow the guide for <a
+										href="./pages/submitting_assignments"
+										alt="Submitting Assignments" title="Submitting Assignments">Submitting
+										Assignments</a>. Remember to include an animated gif and # of
+									hours spent in the README. You can get started by copying this
+									<a
+										href="http://courses.codepath.com./pages/dropbox_readme">Dropbox
+										README template</a> and checking things off as you complete them.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-server" href="#heading-server"><span
+										class="glyphicon glyphicon-link"></span></a>Server
+								</h3>
+
+								<p>
+									Throughout the Node.js Bootcamp, we'll be using <a
+										href="http://expressjs.com/starter/hello-world.html"><code>express</code></a>
+									for http routing since it is the most widely adopted Node.js
+									http framework (currently 90% of http framework installs), but
+									this is not a requirement. Feel free to use popular
+									alternatives like <a href="http://hapijs.com"><code>hapi</code></a>,
+									<a href="https://www.npmjs.com/package/koa"><code>koa</code></a>
+									or <a href="https://www.npmjs.com/package/sails"><code>sails</code></a>,
+									but support and example code will be limited.
+								</p>
+
+								<ul>
+									<li>Should be runnable by executing: <code>npm
+											start</code></li>
+									<li>Use the CWD as the root of your file path: <code>process.cwd()</code></li>
+									<li><p>Setup an HTTP server listening on port 8000</p> <pre
+											class="highlight javascript">
+											<code>
+												<span class="kd">let</span> <span class="nx">express</span> <span
+													class="o">=</span> <span class="nx">require</span><span
+													class="p">(</span><span class="s1">'express'</span><span
+													class="p">)</span>
+<span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span
+													class="nx">express</span><span class="p">()</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span
+													class="p">(</span><span class="mi">8000</span><span
+													class="p">)</span>
+</code>
+										</pre></li>
+									<li><p>
+											Implement an HTTP route for
+											<code>/path/to/file.js</code>
+										</p>
+
+										<ul>
+											<li><p>
+													<code>GET</code>
+													:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">app</span><span class="p">.</span><span
+															class="nx">get</span><span class="p">(</span><span
+															class="s1">'*'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span> <span class="p">}</span> <span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li>Return the contents of <code>$CWD/path/to/file.js</code>:
+														<code>fs.readFile(filePath)</code></li>
+													<li>Stream the contents: <code>fs.createReadStream(filePath)</code></li>
+													<li>(optional) Support streaming video by respecting
+														the <code>Accept-Ranges</code> header. (<a
+														href="http://stackoverflow.com/questions/24976123/streaming-a-video-file-to-an-html5-video-player-with-node-js-so-that-the-video-c">Example</a>)
+													</li>
+												</ul></li>
+											<li><p>
+													<code>HEAD</code>
+													:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">app</span><span class="p">.</span><span
+															class="nx">head</span><span class="p">(</span><span
+															class="s1">'*'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span> <span class="p">}</span> <span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li><p>Return an empty body wtih the following
+															headers:</p>
+
+														<ul>
+															<li><code>Content-Length</code>: The integer size of
+																the file in bytes</li>
+															<li><code>Content-Type</code>: See <a
+																href="http://en.wikipedia.org/wiki/Internet_media_type">Internet
+																	media types</a> and use the <a
+																href="https://www.npmjs.com/package/mime-types"><code>mime-types</code></a>
+																package</li>
+														</ul> <pre class="highlight javascript">
+															<code>
+																<span class="nx">req</span><span class="p">.</span><span
+																	class="nx">setHeader</span><span class="p">(</span><span
+																	class="s1">'Content-Length'</span><span class="p">,</span> <span
+																	class="nx">data</span><span class="p">.</span><span
+																	class="nx">length</span><span class="p">)</span>
+</code>
+														</pre></li>
+													<li><p>
+															Include these headers when sending the
+															<code>GET</code>
+															response. Separate the header logic into a seperate
+															<code>sendHeaders</code>
+															middleware, leaving your route callbacks lean.
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="kd">function</span> <span class="nx">sendHeaders</span><span
+																	class="p">(</span><span class="nx">req</span><span
+																	class="p">,</span> <span class="nx">res</span><span
+																	class="p">,</span> <span class="nx">next</span><span
+																	class="p">)</span> <span class="p">{</span>
+    <span class="c1">// send headers logic</span>
+<span class="p">}</span>
+
+<span class="c1">// Use sendHeaders as a middleware</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+																	class="p">(</span><span class="s1">'*'</span><span
+																	class="p">,</span> <span class="nx">sendHeaders</span><span
+																	class="p">,</span> <span class="p">(</span><span
+																	class="nx">req</span><span class="p">,</span> <span
+																	class="nx">res</span><span class="p">)</span> <span
+																	class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Just the logic to serve the file or array</span>
+<span class="p">})</span>
+
+<span class="c1">// Just close the request, headers sent already</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">head</span><span
+																	class="p">(</span><span class="s1">'*'</span><span
+																	class="p">,</span> <span class="nx">sendHeaders</span><span
+																	class="p">,</span> <span class="p">(</span><span
+																	class="nx">req</span><span class="p">,</span> <span
+																	class="nx">res</span><span class="p">)</span> <span
+																	class="o">=&gt;</span> <span class="nx">res</span><span
+																	class="p">.</span><span class="nx">end</span><span
+																	class="p">())</span>
+</code>
+														</pre>
+
+														<p>
+															<em>Note:</em> When testing, use
+															<code>curl ... --head</code>
+															instead of
+															<code>curl ... -X HEAD</code>
+														</p></li>
+												</ul></li>
+											<li><p>
+													<code>PUT</code>
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">app</span><span class="p">.</span><span
+															class="nx">put</span><span class="p">(</span><span
+															class="s1">'*'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span> <span class="p">}</span> <span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li><p>Success: Save the request body's content to
+															the specified path</p> <pre class="highlight javascript">
+															<code>
+																<span class="nx">req</span><span class="p">.</span><span
+																	class="nx">pipe</span><span class="p">(</span><span
+																	class="nx">fs</span><span class="p">.</span><span
+																	class="nx">createWriteStream</span><span class="p">(</span><span
+																	class="nx">filePath</span><span class="p">))</span>
+</code>
+														</pre></li>
+													<li><p>Failure: Return 405 Method Not Allowed if
+															the file exists</p></li>
+												</ul></li>
+											<li><p>
+													<code>POST</code>
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">app</span><span class="p">.</span><span
+															class="nx">post</span><span class="p">(</span><span
+															class="s1">'*'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span> <span class="p">}</span> <span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li><p>Success: Update the file with the contents
+															of the request body</p>
+
+														<p>
+															<em>Note:</em> Be sure to truncate the file first with
+															<code>fs.truncate()</code>
+														</p></li>
+													<li><p>Failure: Return 405 Method Not Allowed if
+															the file does not exist</p></li>
+												</ul></li>
+											<li><p>
+													<code>DELETE</code>
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="nx">app</span><span class="p">.</span><span
+															class="k">delete</span><span class="p">(</span><span
+															class="s1">'*'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span> <span class="p">}</span> <span
+															class="p">)</span>
+</code>
+												</pre>
+
+												<ul>
+													<li>Delete the specified file: <code>fs.unlink(path.join(ROOT_DIR,
+															filePath))</code></li>
+												</ul></li>
+										</ul></li>
+									<li><p>
+											Implement an HTTP route for
+											<code>/path/to/directory</code>
+										</p>
+
+										<ul>
+											<li><p>
+													<code>GET</code>
+													:
+												</p>
+
+												<ul>
+													<li>Return a JSON encoded array of the names of
+														contained files</li>
+													<li><p>
+															Return an archive (e.g., zip, tar) when specified in the
+															<code>Accept</code>
+															header (e.g.,
+															<code>Accept: application/x-gtar</code>
+															)
+														</p>
+
+														<p>
+															Use the <a href="https://www.npmjs.com/package/archiver"><code>archiver</code>
+																package</a>:
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="kd">let</span> <span class="nx">file_system</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'fs'</span><span
+																	class="p">)</span>
+<span class="kd">let</span> <span class="nx">archiver</span> <span
+																	class="o">=</span> <span class="nx">require</span><span
+																	class="p">(</span><span class="s1">'archiver'</span><span
+																	class="p">)</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span
+																	class="p">(</span><span class="s1">'*'</span><span
+																	class="p">,</span> <span class="p">(</span><span
+																	class="nx">req</span><span class="p">,</span> <span
+																	class="nx">res</span><span class="p">)</span> <span
+																	class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// If req.url points to a directory...</span>
+    <span class="kd">let</span> <span class="nx">archive</span> <span
+																	class="o">=</span> <span class="nx">archiver</span><span
+																	class="p">(</span><span class="s1">'zip'</span><span
+																	class="p">)</span>
+    <span class="nx">archive</span><span class="p">.</span><span
+																	class="nx">pipe</span><span class="p">(</span><span
+																	class="nx">res</span><span class="p">);</span>
+    <span class="nx">archive</span><span class="p">.</span><span
+																	class="nx">bulk</span><span class="p">([</span>
+        <span class="p">{</span> <span class="na">expand</span><span
+																	class="p">:</span> <span class="kc">true</span><span
+																	class="p">,</span> <span class="na">cwd</span><span
+																	class="p">:</span> <span class="s1">'source'</span><span
+																	class="p">,</span> <span class="na">src</span><span
+																	class="p">:</span> <span class="p">[</span><span
+																	class="s1">'**'</span><span class="p">],</span> <span
+																	class="na">dest</span><span class="p">:</span> <span
+																	class="s1">'source'</span><span class="p">}</span>
+    <span class="p">])</span>
+    <span class="nx">archive</span><span class="p">.</span><span
+																	class="nx">finalize</span><span class="p">()</span>
+<span class="p">})</span>
+</code>
+														</pre></li>
+												</ul></li>
+											<li><p>
+													<code>HEAD</code>
+													:
+												</p>
+
+												<ul>
+													<li>Return an empty body with accurate <code>Content-Type</code>
+														and <code>Content-Length</code> headers
+													</li>
+													<li>Include these headers when sending the <code>GET</code>
+														response
+													</li>
+												</ul></li>
+											<li><p>
+													<code>PUT</code>
+													:
+												</p>
+
+												<ul>
+													<li>Success: Create a directory at the specified path.
+														Ignore body contents.
+
+														<ul>
+															<li>(optional) If an archive <code>Content-Type</code>
+																header is passed, create a directory with the contents
+																of the archive in the body
+															</li>
+														</ul>
+													</li>
+													<li>Failure: Return 405 Method Not Allowed if the file
+														or directory exists</li>
+												</ul></li>
+											<li><p>
+													<code>POST</code>
+												</p>
+
+												<ul>
+													<li>Return 405 Method Not Allowed<br></li>
+												</ul></li>
+											<li><p>
+													<code>DELETE</code>
+												</p>
+
+												<ul>
+													<li><p>
+															Delete the specified directory and all its contents using
+															the <a href="https://www.npmjs.com/package/rimraf"><code>rimraf</code></a>
+															package
+														</p>
+
+														<p>
+															<strong>WARNING: Be careful with this! Common
+																mistakes occur when joining empty strings with the user
+																path. DON'T ACCIDENTALLY DELETE YOUR PROJECT DIRECTORY!</strong>
+														</p> <pre class="highlight javascript">
+															<code>
+																<span class="kr">const</span> <span class="nx">ROOT_DIR</span> <span
+																	class="o">=</span> <span class="nx">argv</span><span
+																	class="p">.</span><span class="nx">dir</span> <span
+																	class="c1">// Oops, --dir is empty!</span>
+
+<span class="c1">// path.join('', '/') COULD DELETE YOUR ROOT DIRECTORY!</span>
+<span class="nx">rimraf</span><span class="p">(</span><span class="nx">path</span><span
+																	class="p">.</span><span class="nx">join</span><span
+																	class="p">(</span><span class="nx">ROOT_DIR</span><span
+																	class="p">,</span> <span class="nx">filePath</span><span
+																	class="p">))</span>
+</code>
+														</pre></li>
+												</ul></li>
+										</ul></li>
+									<li><p>
+											(optional) Use <a
+												href="https://docs.nodejitsu.com/articles/HTTP/servers/how-to-create-a-HTTPS-server">HTTPS</a>
+											by default, and redirect from HTTP
+										</p></li>
+									<li><p>Add a CLI</p>
+
+										<ul>
+											<li>If passed, the value of the <code>dir</code>
+												argument should be used instead of the CWD (e.g., <code>node
+													index.js --dir /some/root/dir</code>)
+											</li>
+										</ul></li>
+									<li><p>Allow clients to connect and synchronize a
+											directory via TCP</p>
+
+										<p>One of Dropbox's greatest features is its simplicity;
+											It's just a folder synchronized across devices. In order to
+											synchronize filesystem updates across devices, updates will
+											need to be pushed to clients in realtime.</p>
+
+										<p>The Server will normally be running remotely, unable to
+											connect to an HTTP server running on the client. Because of
+											this, the client needs to initiate the connection with the
+											server, and the server needs to push requests across that
+											connection. This is a perfect use case for a TCP server.</p>
+
+										<p>
+											We don't recommend using the core TCP (<a
+												href="https://nodejs.org/docs/latest/api/net.html"><code>net</code></a>)
+											module for this since it's low-level. Instead, consider one
+											of the following packages: <a
+												href="https://www.npmjs.com/package/nssocket"><code>nssocket</code></a>,
+											<a
+												href="https://github.com/sebastianseilund/node-json-socket"><code>json-socket</code></a>,
+											<a href="https://www.npmjs.com/package/json-over-tcp"><code>json-over-tcp</code></a>
+										</p>
+
+										<p>
+											<em>Note:</em> Finding and analyzing <a
+												href="http://guides.codepath.com/nodejs/Package-Recommendations">3rd-party
+												packages</a> is an important aspect of node.js development.
+										</p>
+
+										<ul>
+											<li><p>
+													Create a TCP server for clients to connect to on port
+													<code>8001</code>
+												</p>
+
+												<p>
+													<em>Hint:</em> Which module you choose, will determine how
+													your server is created. Regardless, create the server and
+													listen for connections at the top level, <strong>not</strong>
+													in the route callbacks and store the connected socket(s) in
+													a variable.
+												</p></li>
+											<li><p>
+													Sync
+													<code>PUT</code>
+													,
+													<code>POST</code>
+													and
+													<code>DELETE</code>
+													updates to TCP connected clients by sending them JSON
+													payloads. Send the payload to the connected client
+													socket(s) in the route callbacks.
+												</p>
+
+												<ul>
+													<li><p>Consider implementing a custom JSON
+															payload. Here's is one example:</p> <pre
+															class="highlight javascript">
+															<code>
+																<span class="p">{</span>
+    <span class="s2">"action"</span><span class="err">:</span> <span
+																	class="s2">"write"</span><span class="p">,</span>                          <span
+																	class="c1">// or "delete"</span>
+    <span class="s2">"path"</span><span class="err">:</span> <span
+																	class="s2">"/path/to/file/from/root"</span><span
+																	class="p">,</span>
+    <span class="s2">"type"</span><span class="err">:</span> <span
+																	class="s2">"dir"</span><span class="p">,</span>                               <span
+																	class="c1">// or "file"</span>
+    <span class="s2">"updated"</span><span class="err">:</span> <span
+																	class="mi">1427851834642</span>                    <span
+																	class="c1">// time of creation/deletion/update</span>
+<span class="p">}</span>
+</code>
+														</pre>
+
+														<p>
+															<em>Note:</em> Use
+															<code>"write"</code>
+															for file creation <strong>and</strong> update since on
+															the client, they have the same effect: "Write the
+															contents of this file to this path."
+														</p></li>
+													<li><p>
+															On the client, make an
+															<code>HTTP GET</code>
+															request to the server to get the contents that should be
+															written (e.g.,
+															<code>GET
+																http://127.0.0.1:8000/path/to/file/from/root</code>
+															). If the file has been deleted since the update arrived,
+															ignore the
+															<code>"write"</code>
+															update and wait for the incoming
+															<code>"delete"</code>
+															update.
+														</p></li>
+												</ul></li>
+											<li><p>
+													Watch for local filesystem modifications, creations and
+													deletions and sync to the client using the same JSON
+													payload. Use
+													<code>fs.watch</code>
+													, the <a href="https://www.npmjs.com/package/chokidar">chokidar</a>
+													package or similar packages.
+												</p>
+
+												<p>
+													For example, when a file is deleted via
+													<code>rm path/to/file</code>
+													, send the same TCP JSON payload that would result from a
+													call to the equivalent HTTP
+													<code>DELETE</code>
+													API above.
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// One-liner for current directory, ignores .dotfiles </span>
+<span class="nx">chokidar</span><span class="p">.</span><span class="nx">watch</span><span
+															class="p">(</span><span class="s1">'.'</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="na">ignored</span><span class="p">:</span> <span
+															class="sr">/</span><span class="se">[\/\\]\.</span><span
+															class="sr">/</span><span class="p">})</span>
+<span class="p">.</span><span class="nx">on</span><span class="p">(</span><span
+															class="s1">'all'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">event</span><span
+															class="p">,</span> <span class="nx">path</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span
+															class="nx">log</span><span class="p">(</span><span
+															class="nx">event</span><span class="p">,</span> <span
+															class="nx">path</span><span class="p">)</span>
+<span class="p">})</span>
+</code>
+												</pre></li>
+											<li><p>(optional) Accept TCP JSON payloads from the
+													client for create, delete and update</p></li>
+										</ul></li>
+								</ul>
+
+								<!--
+- For requests to port 80 (or 443 for https), serve the static files located in `/public` of the starter project (e.g., `http://127.0.0.1/` should serve `project_root/public/index.js`)
+
+    ```node
+    app.use(express.static('public'))
+    ```
+    - Ensure all of the above features work for the web interface provided in the [starter-project](https://github.com/CrabDude/nodejs-dropbox-demo/)
+-->
+
+								<ul>
+									<li>(optional) Add FTP support so that an FTP client can
+										be used to access the files</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-client" href="#heading-client"><span
+										class="glyphicon glyphicon-link"></span></a>Client
+								</h3>
+
+								<ul>
+									<li>Should be runnable by executing: <code>npm run
+											client</code> (See the <a
+										href="https://docs.npmjs.com/files/package.json#scripts">package.json
+											"scripts" entry</a>)
+									</li>
+									<li>Use the CWD as the root of your file path: <code>process.cwd()</code></li>
+									<li><p>Connect to the server using TCP (See the server
+											"Add TCP Support" recommendations above)</p>
+
+										<ul>
+											<li><p>
+													Once the client has connected, download the initial archive
+													of the directory from the server and use <a
+														href="https://www.npmjs.com/package/tar#tar-extract-options"><code>tar</code></a>
+													or <a
+														href="https://www.npmjs.com/package/tar-stream#extracting"><code>tar-stream</code></a>
+													to write the files to disk:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="kd">let</span> <span class="nx">options</span> <span
+															class="o">=</span> <span class="p">{</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s1">'https://127.0.0.1:8000/'</span><span
+															class="p">,</span>
+   <span class="na">headers</span><span class="p">:</span> <span
+															class="p">{</span><span class="s1">'Accept'</span><span
+															class="p">:</span> <span class="s1">'application/x-gtar'</span><span
+															class="p">}</span>
+<span class="p">}</span>
+<span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span
+															class="p">,</span> <span class="s1">'http://127.0.0.1:8000/'</span><span
+															class="p">).</span><span class="nx">pipe</span><span
+															class="p">(</span><span class="nx">tarExtractStream</span><span
+															class="p">)</span>
+</code>
+												</pre></li>
+											<li><p>Create, delete or update the contents of
+													files when the corresponding packets are received from the
+													server</p>
+
+												<p>The goal is to keep the client directory in sync in
+													realtime with the state of the server directory.</p>
+
+												<p>
+													<em>Hint:</em> Move all the VFS operations to a module so
+													the code can be shared by both client and server. (See the
+													<a
+														href="http://guides.codepath.com/nodejs/Modules-&amp;-Packages">Modules
+														&amp; Packages Guide</a>)
+												</p></li>
+											<li><p>(optional) Support multiple clients.</p></li>
+											<li><p>
+													(optional) Watch the CWD for file changes with
+													<code>fs.watch</code>
+													or the <a href="https://www.npmjs.com/package/chokidar">chokidar</a>
+													package, and send
+													<code>PUT</code>
+													,
+													<code>POST</code>
+													and
+													<code>DELETE</code>
+													updates to the server using the server TCP JSON API
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// One-liner for current directory, ignores .dotfiles </span>
+<span class="nx">chokidar</span><span class="p">.</span><span class="nx">watch</span><span
+															class="p">(</span><span class="s1">'.'</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="na">ignored</span><span class="p">:</span> <span
+															class="sr">/</span><span class="se">[\/\\]\.</span><span
+															class="sr">/</span><span class="p">})</span>
+<span class="p">.</span><span class="nx">on</span><span class="p">(</span><span
+															class="s1">'all'</span><span class="p">,</span> <span
+															class="p">(</span><span class="nx">event</span><span
+															class="p">,</span> <span class="nx">path</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span
+															class="nx">log</span><span class="p">(</span><span
+															class="nx">event</span><span class="p">,</span> <span
+															class="nx">path</span><span class="p">)</span>
+<span class="p">})</span>
+</code>
+												</pre></li>
+											<li><p>
+													(optional) Eliminate the need for the extra
+													<code>GET</code>
+													request by sending the file contents in TCP updates (or
+													through another means).
+												</p></li>
+											<li><p>(optional) Support conflict resolution:</p>
+
+												<ul>
+													<li>If the incoming "modified" date preceeds the
+														file's current modified date, place the current contents
+														into a new file prepended with "Conflict (1427851834642):
+														" where "1427851834642" is the preceeding modified date
+														and replace with the modified contents</li>
+												</ul></li>
+										</ul></li>
+									<li><p>Add a CLI</p>
+
+										<ul>
+											<li><p>
+													Use
+													<code>--dir</code>
+													as the root, default to
+													<code>process.cwd()</code>
+													:
+												</p> <pre class="highlight shell">
+													<code>bodemon index.js --dir /some/root/dir
+</code>
+												</pre></li>
+											<li><p>
+													(optional) Use
+													<code>--server</code>
+													as the url location for the TCP server
+												</p></li>
+										</ul></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-additional-requirements"
+										href="#heading-additional-requirements"><span
+										class="glyphicon glyphicon-link"></span></a>Additional
+									Requirements
+								</h3>
+
+								<!--
+- Must pass all "REQUIRED" unit tests
+-->
+
+								<ul>
+									<li>Must not use any <code>*Sync</code> APIs
+									</li>
+									<li>Download/Upload must be streamed using the Stream
+										module</li>
+									<li>Should be runnable by running <code>git clone</code>,
+										<code>npm install</code> and finally <code>npm start</code>
+										(server) and <code>npm run client</code> (client).
+									</li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-help" href="#heading-help"><span
+										class="glyphicon glyphicon-link"></span></a>Help
+								</h3>
+
+								<h4>
+									<a class="anchor" id="heading-walkthrough-video"
+										href="#heading-walkthrough-video"><span
+										class="glyphicon glyphicon-link"></span></a>Walkthrough Video
+								</h4>
+
+								<p>You can watch the video below to get started with the
+									basic implementation which should leave you with more time to
+									explore the optional features.</p>
+
+								<ul>
+									<li><span class="glyphicon glyphicon-film"></span>&nbsp;<a
+										href="./dropbox-clone.html"
+										alt="Dropbox Walkthrough Video"
+										title="Dropbox Walkthrough Video">Dropbox Walkthrough
+											Video</a> - This video covers the virtual-filesystem API portion
+										of the application.</li>
+								</ul>
+
+								<h4>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h4>
+
+								<ul>
+									<li><a href="http://guides.codepath.com/nodejs/Filesystem">Filesystem
+											API</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Control-flow">Control-flow</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Express-&amp;-Middleware">Express-&amp;-Middleware</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/CLI">Command-Line
+											Interfaces</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/Streams">Streams</a></li>
+								</ul>
+
+								<h4>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h4>
+
+								<ul>
+									<li><a
+										href="http://www.hansenb.pdx.edu/DMKB/dict/tutorials/mime_typ.php">List
+											of Mime-Types</a></li>
+									<li><a href="https://gist.github.com/caspyin/2288960"><code>curl</code>
+											Tutorial</a></li>
+								</ul>
+
+								<h5>
+									<a class="anchor" id="heading-packages-used-in-walkthrough"
+										href="#heading-packages-used-in-walkthrough"><span
+										class="glyphicon glyphicon-link"></span></a>Packages Used in
+									Walkthrough
+								</h5>
+
+								<ul>
+									<li><a
+										href="http://expressjs.com/starter/hello-world.html"><code>express</code></a></li>
+									<li><a href="https://www.npmjs.com/package/morgan"><code>morgan</code></a></li>
+									<li><a href="https://www.npmjs.com/package/mime-types"><code>mime-types</code></a></li>
+									<li><a href="https://www.npmjs.com/package/rimraf"><code>rimraf</code></a></li>
+									<li><a href="https://www.npmjs.com/package/mkdirp"><code>mkdirp</code></a></li>
+									<li><a href="https://www.npmjs.com/package/songbird"><code>songbird</code></a></li>
+									<li><a href="https://www.npmjs.com/package/yargs"><code>yargs</code></a></li>
+								</ul>
+
+								<h5>
+									<a class="anchor" id="heading-http" href="#heading-http"><span
+										class="glyphicon glyphicon-link"></span></a>HTTP
+								</h5>
+
+								<ul>
+									<li><a
+										href="http://expressjs.com/starter/hello-world.html"><code>express</code></a>
+										(Recommended)</li>
+									<li><a href="https://nodejs.org/docs/latest/api/http.html"><code>http</code></a></li>
+									<li><a
+										href="https://nodejs.org/docs/latest/api/https.html"><code>https</code></a></li>
+									<li><a href="http://hapijs.com"><code>hapi</code></a></li>
+									<li><a href="https://www.npmjs.com/package/koa"><code>koa</code></a></li>
+									<li><a href="https://www.npmjs.com/package/sails"><code>sails</code></a></li>
+								</ul>
+
+								<h5>
+									<a class="anchor" id="heading-tcp" href="#heading-tcp"><span
+										class="glyphicon glyphicon-link"></span></a>TCP
+								</h5>
+
+								<ul>
+									<li><a href="https://nodejs.org/docs/latest/api/net.html"><code>tcp</code></a></li>
+									<li><a href="https://www.npmjs.com/package/nssocket"><code>nssocket</code></a></li>
+									<li><a
+										href="https://github.com/sebastianseilund/node-json-socket"><code>json-socket</code></a></li>
+									<li><a href="https://www.npmjs.com/package/json-over-tcp"><code>json-over-tcp</code></a></li>
+								</ul>
+
+								<!-- TODO: Add example
+### Other example submissions
+
+![yili|250]()
+-->
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="hints">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h1>
+									<a class="anchor" id="heading-redirection"
+										href="#heading-redirection"><span
+										class="glyphicon glyphicon-link"></span></a>Redirection
+								</h1>
+
+								<h4>
+									<a class="anchor" id="heading-express" href="#heading-express"><span
+										class="glyphicon glyphicon-link"></span></a>Express
+								</h4>
+
+								<p>
+									Use
+									<code>res.redirect(String)</code>
+									for sending a location header with the proper status code:
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="c1">// Remember to include the url path</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span
+											class="p">(</span><span class="nx">protocol</span> <span
+											class="o">+</span> <span class="nx">hostname</span> <span
+											class="o">+</span> <span class="nx">path</span><span
+											class="p">)</span>
+</code>
+								</pre>
+
+								<h4>
+									<a class="anchor" id="heading-curl" href="#heading-curl"><span
+										class="glyphicon glyphicon-link"></span></a>Curl
+								</h4>
+
+								<p>
+									Curl doesn't follow redirects by default. Use the <a
+										href="http://curl.haxx.se/docs/faq.html#How_do_I_tell_curl_to_follow_HTT"><code>-L</code>
+										argument</a> to have it do so.
+								</p>
+
+								<h1>
+									<a class="anchor" id="heading-body-parsing"
+										href="#heading-body-parsing"><span
+										class="glyphicon glyphicon-link"></span></a>Body parsing
+								</h1>
+
+								<p>You have a couple options for dealing with the file
+									contents in the request body. Ideally, you would use a TCP
+									payload or package that could support streaming, but that's
+									difficult without effectively reimplementing HTTP.</p>
+
+								<p>
+									Instead, use the <a
+										href="https://github.com/expressjs/body-parser#bodyparserrawoptions"><code>body-parser</code>
+										middleware</a> and one of two following options:
+								</p>
+								<pre class="highlight javascript">
+									<code>
+										<span class="kd">let</span> <span class="nx">bodyParser</span> <span
+											class="o">=</span> <span class="nx">require</span><span
+											class="p">(</span><span class="s1">'body-parser'</span><span
+											class="p">)</span>
+<span class="c1">// ...</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+											class="p">(</span><span class="nx">bodyParser</span><span
+											class="p">.</span><span class="nx">text</span><span class="p">())</span> <span
+											class="c1">// Assume body is text (req.body is a String)</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span
+											class="p">(</span><span class="nx">bodyParser</span><span
+											class="p">.</span><span class="nx">raw</span><span class="p">())</span> <span
+											class="c1">// For non-text support (req.body is a Buffer)</span>
+</code>
+								</pre>
+
+								<h1>
+									<a class="anchor" id="heading-code-reuse"
+										href="#heading-code-reuse"><span
+										class="glyphicon glyphicon-link"></span></a>Code Reuse
+								</h1>
+
+								<p>
+									The client and server will share a lot of code for the CRUD
+									file operations. Move all the shared functionality to a single
+									module to <a
+										href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>
+									up your code. (See the <a
+										href="http://guides.codepath.com/nodejs/Modules-&amp;-Packages">Modules
+										&amp; Packages Guide</a>).
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="milestone">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor" id="heading-group-milestone-brainstorming"
+										href="#heading-group-milestone-brainstorming"><span
+										class="glyphicon glyphicon-link"></span></a>Group Milestone -
+									Brainstorming
+								</h2>
+
+								<p>
+									In this program, we want to ensure that each of you leaves the
+									class with the ability to conceptualize, design and most
+									importantly <strong>architect your own apps from
+										scratch</strong>. Many engineers at larger organizations understand the
+									server codebase and can fix bugs or add features to an existing
+									app. We want to take a step back and provide you the ability to
+									architect apps which requires an even deeper understanding of
+									server and product development.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-generating-ideas"
+										href="#heading-generating-ideas"><span
+										class="glyphicon glyphicon-link"></span></a>Generating Ideas
+								</h3>
+
+								<p>
+									There will be no group work in this week's lab. Outside of
+									class, focus on brainstorming app ideas in small groups as well
+									as reviewing how to evaluate the ideas to identify the best
+									projects to build. When brainstorming with your group, be sure
+									to enter the top ideas into the <a
+										href="https://docs.google.com/spreadsheets/d/19yFB0vzQYNWyIIjhwxotUsMthVt3FM3BknByR2st1KQ/edit?usp=sharing">Project
+										Brainstorming Spreadsheet</a>.
+								</p>
+
+								<h3>
+									<a class="anchor" id="heading-evaluating-ideas"
+										href="#heading-evaluating-ideas"><span
+										class="glyphicon glyphicon-link"></span></a>Evaluating Ideas
+								</h3>
+
+								<p>When evaluating projects consider the following:</p>
+
+								<ul>
+									<li><strong>Story:</strong> How compelling is the story
+										around this app once completed?
+
+										<ul>
+											<li>How clear is the value of this app to your audience?</li>
+											<li>How well would your friends or peers respond to this
+												product idea?</li>
+										</ul></li>
+									<li><strong>Market:</strong> How large or unique is the
+										market for this app?
+
+										<ul>
+											<li>What's the size and scale of your potential user
+												base?</li>
+											<li>Does this app provide huge value to a niche group of
+												people?</li>
+											<li>Do you have a well-defined audience of people for
+												this app?</li>
+										</ul></li>
+									<li><strong>Habit:</strong> How habit-forming or addictive
+										is this app?
+
+										<ul>
+											<li>How frequently would an average user open and use
+												this app?</li>
+											<li>Does an average user just consume your app or do
+												they create?</li>
+										</ul></li>
+									<li><strong>Scope:</strong> How well-formed is the scope
+										for this app?
+
+										<ul>
+											<li>How technically challenging will it be to complete
+												this app by the end of the program?</li>
+											<li>Is a stripped-down version of this app still
+												interesting to build?</li>
+											<li>How clearly defined is the product you want to
+												build?</li>
+										</ul></li>
+								</ul>
+
+								<p>Our goal is to infuse you with not just technical but
+									also product knowledge. You need to be able to tell a great
+									story to convince people of your ideas. If you're trying to
+									raise funding for a startup idea, you'll need to sell investors
+									on your story. If you're trying to recruit other engineers, you
+									need to be able to articulate these points to convince them to
+									join you.</p>
+
+								<p>Remember that you can have a great story but small
+									market. Try to assess the strengths of one criteria against the
+									other ones.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="exercises">
+						<div class="panel panel-default">
+							<div class="panel-body markdown-body">
+								<h2>
+									<a class="anchor"
+										id="heading-week-1-challenge-recursivereaddir"
+										href="#heading-week-1-challenge-recursivereaddir"><span
+										class="glyphicon glyphicon-link"></span></a>Week 1 Challenge -
+									recursiveReaddir
+								</h2>
+
+								<p>
+									This exercise is to build an API for recursively listing the
+									files in a directory in parallel. The purpose of this exercise
+									is to <strong>practice control-flow</strong>, specifically
+									running operations in serial and parallel. Additionally, this
+									exercise will explore the <a
+										href="https://nodejs.org/docs/latest/api/fs.html">filesystem</a>
+									and <a href="https://nodejs.org/docs/latest/api/http.html">http</a>
+									modules from core.
+								</p>
+
+								<p>
+									<strong>IMPORTANT: Review the <a
+										href="http://guides.codepath.com/nodejs/Control-flow">Control-flow
+											Guide</a> to familiarize yourself with <code>async/await</code>
+										and <code>Promise</code></strong>
+								</p>
+
+								<h4>
+									<a class="anchor" id="heading-getting-started"
+										href="#heading-getting-started"><span
+										class="glyphicon glyphicon-link"></span></a>Getting Started
+								</h4>
+
+								<p>The checkpoints below should be implemented as pairs. In
+									pair programming, there are two roles: supervisor and driver.</p>
+
+								<p>The supervisor makes the decision on what step to do
+									next. Their job is to describe the step using high level
+									language ("Let's print out something when the user is
+									scrolling"). They also have a browser open in case they need to
+									do any research. The driver is typing and their role is to
+									translate the high level task into code ("Set the scroll view
+									delegate, implement the didScroll method).</p>
+
+								<p>After you finish each checkpoint, switch the supervisor
+									and driver roles. The person on the right will be the first
+									supervisor.</p>
+
+								<h4>
+									<a class="anchor" id="heading-milestones"
+										href="#heading-milestones"><span
+										class="glyphicon glyphicon-link"></span></a>Milestones
+								</h4>
+
+								<ol>
+									<li><p>Setup:</p>
+
+										<ul>
+											<li>Complete the steps in the <a
+												href="http://guides.codepath.com/nodejs/Setup">Setting
+													Up Nodejs</a> Guide (especially the aliases <code>bode</code>
+												and <code>bodemon</code>)
+											</li>
+											<li>Create a new project directory, run <code>npm
+													init</code> and follow the prompts using the defaults
+											</li>
+											<li>Install <a
+												href="https://www.npmjs.com/package/songbird">songbird</a>
+												for Promise support: <code>npm install songbird
+													--save</code></li>
+											<li>Install <a
+												href="https://www.npmjs.com/package/lodash">lodash</a> for
+												various utilities like <a
+												href="https://lodash.com/docs#flatten">_.flatten</a>: <code>npm
+													install lodash --save</code></li>
+											<li><p>
+													Create and add the following to the
+													<code>index.js</code>
+													file:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="kd">let</span> <span class="nx">http</span> <span
+															class="o">=</span> <span class="nx">require</span><span
+															class="p">(</span><span class="s1">'http'</span><span
+															class="p">)</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span
+															class="p">((</span><span class="nx">req</span><span
+															class="p">,</span> <span class="nx">res</span><span
+															class="p">)</span> <span class="o">=&gt;</span> <span
+															class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span
+															class="p">(</span><span class="mi">200</span><span
+															class="p">,</span> <span class="p">{</span><span
+															class="s1">'Content-Type'</span><span class="p">:</span> <span
+															class="s1">'text/plain'</span><span class="p">})</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span
+															class="p">(</span><span class="s1">'Hello World\n'</span><span
+															class="p">)</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span
+															class="mi">8000</span><span class="p">,</span> <span
+															class="s1">'127.0.0.1'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span
+															class="p">(</span><span class="s1">'Server running at http://127.0.0.1:8000/'</span><span
+															class="p">)</span>
+</code>
+												</pre></li>
+											<li><p>
+													Run your server
+													<code>bodemon index.js</code>
+													and test it with
+													<code>curl http://127.0.0.1:8000/</code>
+												</p></li>
+										</ul></li>
+									<li><p>Implement an HTTP API for fs.readdir</p>
+
+										<ul>
+											<li>Require the <a
+												href="https://nodejs.org/docs/latest/api/fs.html">fs
+													module</a>: <code>let fs = require('fs')</code></li>
+											<li><p>
+													Use <a
+														href="http://nodejs.org/api/all.html#all_fs_readdir_path_callback">fs.readdir</a>
+													to get the list of files in <a
+														href="https://nodejs.org/docs/latest/api/globals.html#globals_dirname"><code>__dirname</code></a>:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// BAD: Callback style</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span
+															class="p">(</span><span class="nx">__dirname</span><span
+															class="p">,</span> <span class="p">(</span><span
+															class="nx">err</span><span class="p">,</span> <span
+															class="nx">files</span><span class="p">)</span> <span
+															class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Do something with files</span>
+<span class="p">})</span>
+
+<span class="c1">// BETTER: Promise style</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'songbird'</span><span
+															class="p">)</span> <span class="c1">// Gives us Function/Object.prototype.promise</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">promise</span><span
+															class="p">.</span><span class="nx">readdir</span><span
+															class="p">(</span><span class="nx">__dirname</span><span
+															class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">((</span><span
+															class="nx">files</span><span class="p">)</span> <span
+															class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Do something with files</span>
+<span class="p">})</span>
+<span class="c1">// Log any errors that occur</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span
+															class="nx">e</span> <span class="o">=&gt;</span> <span
+															class="nx">console</span><span class="p">.</span><span
+															class="nx">log</span><span class="p">(</span><span
+															class="nx">e</span><span class="p">.</span><span
+															class="nx">stack</span><span class="p">))</span>
+
+<span class="c1">// BEST: Async/await</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'songbird'</span><span
+															class="p">)</span>
+<span class="c1">// Mark function as 'async' to use 'await'</span>
+<span class="nx">async</span> <span class="kd">function</span> <span
+															class="nx">ls</span><span class="p">(){</span>
+    <span class="c1">// Use 'await' to wait for the promise to resolve</span>
+    <span class="kd">let</span> <span class="nx">files</span> <span
+															class="o">=</span> <span class="nx">await</span> <span
+															class="nx">fs</span><span class="p">.</span><span
+															class="nx">promise</span><span class="p">.</span><span
+															class="nx">readdir</span><span class="p">(</span><span
+															class="nx">__dirname</span><span class="p">)</span>
+    <span class="c1">// Do something with files</span>
+<span class="p">}</span>
+
+<span class="c1">// Log errors</span>
+<span class="nx">ls</span><span class="p">().</span><span class="k">catch</span><span
+															class="p">(</span><span class="nx">e</span> <span
+															class="o">=&gt;</span> <span class="nx">console</span><span
+															class="p">.</span><span class="nx">log</span><span
+															class="p">(</span><span class="nx">e</span><span
+															class="p">.</span><span class="nx">stack</span><span
+															class="p">))</span>
+</code>
+												</pre></li>
+											<li><p>
+													Seralize the file list with <a
+														href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a>
+												</p></li>
+											<li><p>
+													Send the serialized list on the response with <a
+														href="http://nodejs.org/api/http.html#http_response_end_data_encoding_callback"><code>res.end()</code></a>
+												</p></li>
+											<li><p>
+													Set the
+													<code>Content-Type</code>
+													header to
+													<code>application/json</code>
+													with <a
+														href="http://nodejs.org/docs/v0.12.0/api/http.html#http_response_setheader_name_value"><code>res.setHeader()</code></a>
+												</p></li>
+											<li><p>
+													Exclude subdirectories from the response (<a
+														href="http://nodejs.org/api/all.html#all_fs_stat_path_callback">See
+														<code>fs.stat</code>
+													</a>)
+												</p></li>
+											<li><p>
+													Allow the directory path to be passed in on the url path
+													(i.e., <a
+														href="http://127.0.0.1:8000/home/codepath/path/to/some/dir">http://127.0.0.1:8000/home/codepath/path/to/some/dir</a>)
+													(See <a
+														href="http://nodejs.org/api/all.html#all_url_parse_urlstr_parsequerystring_slashesdenotehost">url.parse</a>
+													and
+													<code>req.url</code>
+													in <a
+														href="http://nodejs.org/api/all.html#all_http_incomingmessage">http.incomingMessage</a>)
+												</p></li>
+										</ul></li>
+									<li><p>Extend the HTTP API to be recursive</p>
+
+										<ul>
+											<li>List subdirectory contents recursively instead of
+												excluding them</li>
+											<li><p>Parallelize the directory traversal</p>
+
+												<p>
+													<em>Hint:</em> Use <a
+														href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"><code>Promise.all(promiseArray)</code></a>:
+												</p> <pre class="highlight javascript">
+													<code>
+														<span class="c1">// Example of how to parallelize with Promise.all</span>
+<span class="nx">async</span> <span class="kd">function</span><span
+															class="p">(</span><span class="nx">items</span><span
+															class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">promises</span> <span
+															class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span
+															class="nx">item</span> <span class="nx">of</span> <span
+															class="nx">items</span><span class="p">)</span> <span
+															class="p">{</span>
+        <span class="nx">promises</span><span class="p">.</span><span
+															class="nx">push</span><span class="p">(</span><span
+															class="nx">asyncFn</span><span class="p">(</span><span
+															class="nx">item</span><span class="p">))</span>
+    <span class="p">}</span>
+    <span class="c1">// Wait in parallel for the above async operations</span>
+    <span class="kd">let</span> <span class="nx">results</span> <span
+															class="o">=</span> <span class="nx">await</span> <span
+															class="nx">Promise</span><span class="p">.</span><span
+															class="nx">all</span><span class="p">(</span><span
+															class="nx">promises</span><span class="p">)</span>
+<span class="p">}</span>
+</code>
+												</pre>
+
+												<ul>
+													<li>Given a list of subdirectories, <code>fs.stat</code>
+														calls for each of the subdirectories should run in
+														parallel (<em>Hint:</em> <code>fs.stat</code> should be
+														the first operation in <code>ls()</code>)
+													</li>
+													<li>Given a list of subdirectories, <code>fs.readdir</code>
+														should wait only for its one corresponding <code>fs.stat</code>:
+													</li>
+													<li>Recursive <code>ls</code> calls for subdirectories
+														should run in parallel
+													</li>
+												</ul></li>
+											<li><p>Verify your server returns a single flat
+													JSON-encoded recursive array of all files in a directory</p></li>
+										</ul>
+
+										<p>
+											<em>Hint:</em> You will need to use <a
+												href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"><code>Array.prototype.concat()</code></a>
+											or a utility library like <a href="https://lodash.com/docs"><code>lodash</code></a>
+											with <a href="https://lodash.com/docs#flatten"><code>_.flatten</code></a>
+											to flatten the resulting recursive arrays.
+										</p></li>
+									<li><p>Add support for Dropbox</p>
+
+										<ul>
+											<li>Allow consumers to choose a store type in the
+												querystring (e.g., <a
+												href="http://127.0.0.1:8000/home/codepath/vfs?store=local">http://127.0.0.1:8000/home/codepath/vfs?store=local</a>).
+												Default to "local".
+											</li>
+											<li>Send a 400 for unsupported store types</li>
+											<li>Add support for "dropbox" and for now send an empty
+												array</li>
+											<li>Signup at <a href="https://developers.dropbox.com">developer.dropbox.com</a>,
+												create a "Dropbox XXXXX" app (e.g., CodePath-VFS) and click
+												configure.
+											</li>
+											<li>Set the redirect_uri to "<a
+												href="http://127.0.0.1:8000/auth/dropbox/callback">http://127.0.0.1:8000/auth/dropbox/callback</a>"
+												(We'll be using this later)
+											</li>
+											<li><p>Generate a "Developer token" and copy it, the
+													client_id and client_secret and add them to your app:</p> <pre
+													class="highlight javascript">
+													<code>
+														<span class="kr">const</span> <span class="nx">DROPBOX_KEY</span> <span
+															class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXX'</span>
+<span class="kr">const</span> <span class="nx">DROPBOX_SECRET</span> <span
+															class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXX'</span>
+<span class="kr">const</span> <span class="nx">DROPBOX_TOKEN</span> <span
+															class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXX'</span>
+
+<span class="c1">// ... the rest of your code</span>
+</code>
+												</pre></li>
+										</ul></li>
+								</ol>
+								<pre class="highlight plaintext">
+									<code>- Use the Dropbox node.js SDK, [dropbox package](http://npmjs.com/package/dropbox) to make API calls.
+
+    ```javascript
+    let Dropbox = require('dropbox')
+    let dropboxClient = new Dropbox.Client({
+        key: DROPBOX_KEY,
+        secret: DROPBOX_SECRET,
+        token: DROPBOX_TOKEN
+    })
+    async function main() {
+        await dropboxClient.promise.authenticate()
+        // client is ready to use
+        // ... rest of your code
+    }
+    ```
+
+- Create abstractions for `fs.readdir` and `fs.stat` and when `store=dropbox`, use corresponding Dropbox API calls instead:
+
+    ```node
+    async function readDir(dirPath) {
+        // if store=dropbox
+        // call dropbox's readdir equivalent
+        // else call fs.promise.readdir(...)
+        return files
+    }
+
+    async function isDirectory(filePath) {
+        let isDir = false
+        // if store=dropbox
+        // call dropbox's stat equivalent
+        // else call fs.promise.stat(...)
+        return isDir
+    }
+    ```
+
+    **IMPORTANT: Start with a directory with only a few files. Dropbox rate limits API access. A smaller directory will require fewer calls.**
+
+    *Note:* Dropbox will return `429 Too Many Requests` when you hit the rate limit.
+</code>
+								</pre>
+
+								<ol>
+									<li><p>Expose a CLI for the same functionality</p> <pre
+											class="highlight shell">
+											<code>
+												<span class="gp">$ </span>bode index.js ./ --store<span
+													class="o">=</span><span class="nb">local</span>
+<span class="o">[</span> <span class="s2">"index.js"</span>, <span
+													class="s2">"package.json"</span><span class="o">]</span>
+</code>
+										</pre></li>
+									<li><p>
+											<em>Bonus:</em> Implement the readFile API - If the path
+											points to a file, send the file contents back for all
+											supported store types - Add the appropriate "Content-Type"
+											and "Content-Length" headers
+										</p></li>
+									<li><p>
+											<em>Bonus:</em> Implement Box support using the <a
+												href="https://developers.box.com/docs/">Box Content HTTP
+												API</a> and the <a href="http://npmjs.com/package/request">request
+												package</a>
+										</p></li>
+								</ol>
+
+								<h3>
+									<a class="anchor" id="heading-guides" href="#heading-guides"><span
+										class="glyphicon glyphicon-link"></span></a>Guides
+								</h3>
+
+								<ul>
+									<li><a href="http://guides.codepath.com/nodejs/Filesystem">Filesystem
+											API</a></li>
+									<li><a
+										href="http://guides.codepath.com/nodejs/Control-flow">Control-flow</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/CLI">CLI</a></li>
+									<li><a href="http://guides.codepath.com/nodejs/Setup">Setup</a></li>
+								</ul>
+
+								<h3>
+									<a class="anchor" id="heading-references"
+										href="#heading-references"><span
+										class="glyphicon glyphicon-link"></span></a>References
+								</h3>
+
+								<ul>
+									<li><a href="https://nodejs.org/docs/latest/api/fs.html"><code>fs</code></a></li>
+									<li><a href="https://nodejs.org/docs/latest/api/http.html"><code>http</code></a></li>
+									<li><a href="http://npmjs.com/package/songbird"><code>songbird</code></a></li>
+									<li><a href="http://npmjs.com/package/bluebird"><code>bluebird</code></a></li>
+									<li><a href="http://npmjs.com/package/lodash"><code>lodash</code></a></li>
+									<li><a href="http://npmjs.com/package/dropbox"><code>dropbox</code></a></li>
+									<li><a href="http://npmjs.com/package/yargs"><code>yargs</code></a></li>
+									<li><a href="http://npmjs.com/package/request"><code>request</code></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../javascripts/jquery.js" type="text/javascript"></script>
+	<script src="../../javascripts/jquery-ujs.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/sugar.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/typeahead.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/pdfobject.min.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/jquery.fitvids.js"
+		type="text/javascript"></script>
+	<script src="../../javascripts/oauth.js" type="text/javascript"></script>
+	<script src="../../javascripts/application.js"
+		type="text/javascript"></script>
+</body>
+</html>
